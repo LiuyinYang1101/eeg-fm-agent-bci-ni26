@@ -1,0 +1,3 @@
+# T2-D227: ShallowNet-EA under vp2-180 + vr: vr_psw25 and vr_psw50 (as the FBCNet files), the T2-D215r seeds 168-179 (reference = D215r's vr runs), kit + seen1, copies SWA over the last 25 % / 50 % of epochs, pooled net = the vr line
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_psw25 --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_psw50 --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser

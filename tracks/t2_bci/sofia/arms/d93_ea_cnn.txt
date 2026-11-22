@@ -1,0 +1,5 @@
+# D93 Euclidean alignment on the competition split: causal EA with a population warm-start prior (n0 windows of the training mean covariance), + the non-causal session-EA oracle (diagnostic only)
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9 --models fbcnet --aligns ea --n0 10
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9 --models fbcnet --aligns ea --n0 30
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9 --models shallow --aligns ea --n0 30
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9 --models fbcnet,shallow --aligns eafull   # oracle (non-causal), never shipped

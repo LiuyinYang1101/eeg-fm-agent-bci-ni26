@@ -1,0 +1,2 @@
+# T2-D365 (outlier B6-1): ShallowNet-EA + user-level feature re-styling (ustyle 0.5, s 0.75), seeds 156-167 (paired with nm35's sh_tv8c = t2d296r_sh), kit + seen1, copies, plain + tv8 + tv8c
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_us5 --seeds 156,157,158,159,160,161,162,163,164,165,166,167 --peruser --tta-vp 8 --tta-copies

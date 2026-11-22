@@ -1,0 +1,2 @@
+# T2-D442: the same line + --fm-tilt 0.15 (the tilt twin), half b, seen1
+NSHARDS=1 --seeds 406,407,408,409,410,411 --protocols seen1 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15

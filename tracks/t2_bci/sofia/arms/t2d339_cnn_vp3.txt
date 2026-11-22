@@ -1,0 +1,3 @@
+# T2-D339 (backlog: CNN vp 15 mm on the current recipe): both shipped CNN lines with the 15 mm bank (vp 3), seeds paired with the shipped tv8c members (FBCNet 192-203, ShallowNet-EA 156-167), kit + seen1, per-user copies, plain + tv8 + tv8c in one training
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp3_e180_vr_rc75 --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser --tta-vp 8 --tta-copies
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp3_e180_vr --seeds 156,157,158,159,160,161,162,163,164,165,166,167 --peruser --tta-vp 8 --tta-copies

@@ -1,0 +1,2 @@
+# T2-D376 (the user's S2 replicate, relayed 08:3x): LP-FT 10 + head lr 3e-3 (swap for r12) on FRESH seeds 48,49,50,51,52,53,54,55,56,57,58,59 (never used for an ST-L member); otherwise t2d272_stl_lplh_seen1.txt's exact line
+NSHARDS=1 --protocols seen1 --seeds 48,49,50,51,52,53,54,55,56,57,58,59 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lr-head 3e-3 --fm-lp-epochs 10

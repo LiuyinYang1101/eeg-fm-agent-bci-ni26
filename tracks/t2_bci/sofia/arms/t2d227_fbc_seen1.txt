@@ -1,0 +1,3 @@
+# T2-D227: FBCNet B3 under vp2-180 + vr: per-user copies weight-averaged (SWA) over their last 25 % (vr_psw25) and 50 % (vr_psw50) of epochs vs none, pooled net = the vr line, the T2-D215r seeds 204-215 (reference = D215r's vr runs), seen1, the copies otherwise PERUSER
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_psw25 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_psw50 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser

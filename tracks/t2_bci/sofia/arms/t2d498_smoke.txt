@@ -1,0 +1,2 @@
+# T2-D498 smoke: the plain line on lc9 at 1 epoch (empty val split, 10 folds, public checkpoint)
+NSHARDS=1 --protocols lc9 --seeds 769 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 1 --car

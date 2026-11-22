@@ -1,0 +1,2 @@
+# T2-D512: stlcartl ST-L member seed 823 on K = 9 folds lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 (half b), public ST-L checkpoint, 100 epochs, spectral tilt 0.15 (P2)
+NSHARDS=1 --protocols lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 --seeds 823 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car --fm-tilt 0.15

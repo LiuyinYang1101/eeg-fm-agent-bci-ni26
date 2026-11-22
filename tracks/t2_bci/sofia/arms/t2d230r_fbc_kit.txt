@@ -1,0 +1,2 @@
+# T2-D230r: the replicate of T2-D230's candidate (FBCNet B3 under vp2-180 + vr, pooled training windows re-coloured toward a random other training user at strength 0.5, copies = the vr line's) on T2-D215's seeds 192-203 (reference = D215's vr runs), kit
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc5 --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser

@@ -1,0 +1,3 @@
+# T2-D111 (iv): ST-L fine-tune on seen1 (D94 recipe: gain input + align sz, 30 epochs) from the CPT v1-recipe checkpoint whose
+# PROTEUS pool is seen1_out (P01 P02 P03 P05 P06 P07 P08), seeds 0-5. 1 process per GPU (ST-L ~70 GB)
+--protocols seen1 --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-wout/checkpoint-cpt.pth

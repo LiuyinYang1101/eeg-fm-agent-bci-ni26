@@ -1,0 +1,2 @@
+# T2-D484: T2-D475's CAR ST-L line (M7's member line, 100 epochs, --car) fine-tuned from the CAR-view CPT ni26-t2p-cpt-d484-car-kit (the only difference from T2-D475's CAR nets), kit, seeds 480,481,482 (part 3 of 4 of 472-485)
+NSHARDS=1 --protocols kit --seeds 480,481,482 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d484-car-kit/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car

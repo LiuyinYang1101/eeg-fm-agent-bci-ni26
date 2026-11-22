@@ -1,0 +1,2 @@
+# T2-D125 smoke: 1 epoch, kit seed 0, MAE TTA lr 1e-5 (code path + timing only)
+--protocols kit --seeds 0 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-epochs 1 --tta-mae 1e-5

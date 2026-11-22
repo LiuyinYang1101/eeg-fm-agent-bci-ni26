@@ -1,0 +1,2 @@
+# D90 ST-L fusion (1 process per GPU: ~70 GB at batch 64)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns none --fm-fuse fbcnet   # F3

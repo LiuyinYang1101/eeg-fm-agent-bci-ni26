@@ -1,0 +1,3 @@
+# T2-D313 (research screen; the user's NeuroRVQ request): NeuroRVQ-EEG v1 with the shipped ST-L FT recipe where it applies (sz, gain, mean, mixup 0.4, rc 0.75, LLRD 0.75, 30 epochs, lr 1e-4 / head 1e-3; no CPT), FRESH seeds 24-35 = T2-D312's k1 ST-L seeds. Sofia (moved from the local queue 2026-10-31): S1_EXPORT=NSHARDS=4 s1 submit ni26 tracks/t2_bci/sofia/t2p_multi.slurm --job-name=ni26-t2p-d313-nrvq -- <this>
+--protocols kit --seeds 24,25,26,27,28,29,30,31,32,33,34,35 --models fm:neurorvq:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75
+--protocols seen1 --seeds 24,25,26,27,28,29,30,31,32,33,34,35 --models fm:neurorvq:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

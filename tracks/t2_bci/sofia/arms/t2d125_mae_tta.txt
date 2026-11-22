@@ -1,0 +1,4 @@
+# T2-D125: the adopted ST-L member (CPT v1 + gain-sz + mixup 0.4, 30 epochs), kit + seen1, seeds 0-5; main files = the anchor
+# review 2026-10-16 (T2 P2e): this --fm-ckpt's pools hold P10 sessions 2-3 (a seen1 / kitp10 TEST stream): t2p_bench now refuses its seen1 / kitp10 lines; those numbers are LEAKY (kit lines are clean)
+# (no TTA), twins mae1e-05 = streamed test-time MAE CPT (DECISIONS_T2, pre-registered 2026-10-15 15:10). 1 process per GPU
+--protocols kit,seen1 --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --tta-mae 1e-5

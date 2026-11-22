@@ -1,0 +1,2 @@
+# T2-D561 (the owner's family-bias question): ifnet at syn 0.2, ALIGN NONE (the syn path's requirement), the re-drawn calib-3 bank, fresh seeds 340-345, kit + seen1, copies + tv8c
+--protocols kit,seen1 --models ifnet --aligns none --recipe r1_pulx_vp2_e180_vr_mf20 --seeds 340,341,342,343,344,345 --peruser --tta-vp 8 --tta-copies --syn-bank outputs/t2_d561/bank_{protocol}_final3.npz

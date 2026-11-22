@@ -1,0 +1,2 @@
+# T2-D325 (new-user swing 2): ShallowNet-EA at 80 / 80 filters (shallow_w2, T2-D221 / D222's sw2) under the shipped r1_pulx_vp2_e180_vr recipe, the SAME seeds as T2-D296r's sh_tv8c member (156-167, paired), kit + seen1, per-user copies, plain + tv8 + tv8c in one training
+--protocols kit,seen1 --models shallow_w2 --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 156,157,158,159,160,161,162,163,164,165,166,167 --peruser --tta-vp 8 --tta-copies

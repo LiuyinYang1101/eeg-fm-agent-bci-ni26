@@ -1,0 +1,2 @@
+# T2-D561 (the synthetic-dose question; insight only): D413c's line at syn 0.2 (synthetic = 20 % of each real batch), D413c's calib-3 bank re-drawn from the same checkpoints (outputs/t2_d561/bank_<protocol>_final3.npz), FRESH seeds 340-345, kit + seen1, copies + tv8c
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15_mf20 --seeds 340,341,342,343,344,345 --peruser --tta-vp 8 --tta-copies --syn-bank outputs/t2_d561/bank_{protocol}_final3.npz

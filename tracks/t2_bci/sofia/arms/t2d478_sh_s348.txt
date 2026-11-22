@@ -1,0 +1,2 @@
+# T2-D478: M7's shallow recipe (copies + tv8c, EA) with sb16, seeds 348-359 = T2-D429's control (paired)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_sb16 --seeds 348,349,350,351,352,353,354,355,356,357,358,359 --peruser --tta-vp 8 --tta-copies

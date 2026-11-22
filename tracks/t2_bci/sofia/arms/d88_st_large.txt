@@ -1,0 +1,4 @@
+# D88 ST-L (1 process per GPU: ~70 GB at batch 64)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns wz
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns wz --fm-epochs 12   # H2
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns sz --fm-calib gain   # H9

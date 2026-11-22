@@ -1,0 +1,2 @@
+# T2-D410: the learning curve over the number of training users, FBCNet rc75 (M6's pooled CNN base, D253's OOF line), lc3 / lc5 / lc7 / lc9 x 10 cyclic folds, seed 400
+NSHARDS=4 --protocols lc3,lc5,lc7,lc9 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 400

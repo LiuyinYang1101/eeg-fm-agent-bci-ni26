@@ -1,0 +1,2 @@
+# T2-D561: D413c's syn 0.5 line (the dose D413 / D413c ran) on the same re-drawn bank, the same fresh seeds 340-345
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15_mf50 --seeds 340,341,342,343,344,345 --peruser --tta-vp 8 --tta-copies --syn-bank outputs/t2_d561/bank_{protocol}_final3.npz

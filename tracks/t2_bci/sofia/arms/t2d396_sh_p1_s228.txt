@@ -1,0 +1,2 @@
+# T2-D396: M6's shallow line FINE-TUNED from the Scherer2015 supervised pretraining (t2p_cnn_p1.py; $S1_ROOT/runs/ni26/ni26-t2p-d396-p1-sh/p1.pt), FRESH seeds 228-239, kit + seen1
+NSHARDS=1 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 228,229,230,231,232,233,234,235,236,237,238,239 --peruser --tta-vp 8 --tta-copies --cnn-init $S1_ROOT/runs/ni26/ni26-t2p-d396-p1-sh/p1.pt --cnn-init-tag p1

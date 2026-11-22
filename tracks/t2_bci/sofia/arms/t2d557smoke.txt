@@ -1,0 +1,2 @@
+# T2-D557 SMOKE: the CAR SD line (seed 836) lc9_0, 2 + 1 epochs (arm b), with the combined augmentation (fm-aug 0.2:30:0.1 + mixup 0.8), side dump
+NSHARDS=1 --protocols lc9_0 --seeds 836 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 2 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean --fm-cont-epochs 1 --fm-cont-lr 0.1 --fm-cont-arms b

@@ -1,0 +1,5 @@
+# T2-D413b Phase B batch 2 (kit; after batch 1: wfm30kc leads at AUC 0.755 with (b) + (c); MeanFlow few-step sampling poor; resamples only,
+# no new training): MeanFlow proper + spectral calibration, and filter-bank spatial re-colouring + gains (calib 3) on both nets.
+wmf30kc | --from-ckpt outputs/t2_d413b/gen_kit_wmf30k.pt --sample eu50 --calib 1 --bank-mult 1
+wfm30kc3 | --from-ckpt outputs/t2_d413b/gen_kit_wfm30k.pt --sample eu100 --calib 3 --bank-mult 1
+wmf30kc3 | --from-ckpt outputs/t2_d413b/gen_kit_wmf30k.pt --sample eu50 --calib 3 --bank-mult 1

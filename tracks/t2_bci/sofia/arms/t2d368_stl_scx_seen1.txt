@@ -1,0 +1,2 @@
+# T2-D368 (the user's 06:2x question via the manager): the shipped ST-L line (stl_rcll: CPT + sz + gain, mixup 0.4, rc 0.75, LLRD 0.75) + T2-D127's cross-user SupCon (lambda 0.1, tau 0.1, xuser), seeds 24-35 (paired with nm35's r24 = T2-D326 s24), seen1
+NSHARDS=1 --protocols seen1 --seeds 24,25,26,27,28,29,30,31,32,33,34,35 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-supcon 0.1 --fm-supcon-mode xuser --fm-supcon-tau 0.1

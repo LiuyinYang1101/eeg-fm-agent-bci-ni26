@@ -1,0 +1,5 @@
+# T2-D283 (pre-registered 2026-10-27 10:26, before any number; the TTT panel's Step 1, the user's paste 2026-10-27): the adopted ST-L (T2-D247 rcll: CPT + gain + sz +
+# mixup 0.4 + --fm-rc 0.75 --fm-llrd 0.75, 30 epochs), kit, seeds 0-11, re-trained in-job (the TTA needs state_last), then the LayerNorm-affine test-time
+# MAE (--tta-mae 1e-05, the CPT's decoder frozen, mask 0.75) arms P (prefix 30, one step, frozen) and K (one step per 8-window buffer, 0.99 restoration).
+# Writes the plain stem + mae1e-05P / mae1e-05K twins per seed. 1 process per H200
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --tta-mae 1e-05 --tta-arms P,K

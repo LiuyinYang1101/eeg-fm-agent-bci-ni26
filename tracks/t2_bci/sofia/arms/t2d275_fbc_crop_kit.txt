@@ -1,0 +1,5 @@
+# T2-D275 (pre-registered 2026-10-26 10:44, before any D275 number; the panel's T2 item 3, user-approved 2026-10-26): two EXTRA FBCNet members of the adopted
+# FBCNet recipe (B3 bank under vp2-180 + vr + re-colouring 0.75, per-user copies) on window samples 0-240 (1-3 s after the cue) and 240-480
+# (3-5 s), T2-D231's seeds 204-215 (the fbc_rc75 member's), kit. FBCNet: 3 shards per H200 (the job default)
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser --crop 0:240
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser --crop 240:480

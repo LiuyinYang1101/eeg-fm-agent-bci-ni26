@@ -1,0 +1,2 @@
+# T2-D348: T2-D247's shipped ST-L fine-tune (seen1) from the 2000-step CPT ni26-t2p-cpt-d348se1-s02k, seeds 0-11 (paired with stl_rcll = the 5k members)
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d348se1-s02k/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

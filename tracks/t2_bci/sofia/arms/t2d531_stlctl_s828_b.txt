@@ -1,0 +1,2 @@
+# T2-D531 (W18 fresh-draw FM members): stl ST-L FRESH seed 828 (D512's tilt line) without the side input (control), folds lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 (half b)
+NSHARDS=1 --protocols lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 --seeds 828 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15

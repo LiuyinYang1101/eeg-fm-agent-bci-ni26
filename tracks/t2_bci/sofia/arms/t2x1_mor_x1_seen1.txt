@@ -1,0 +1,2 @@
+# T2-X1 arm: the same MOR + the amplitude side input (--aligns none: the FM zwin gives the same encoder input; --fm-side amp), seeds 12-23, seen1
+NSHARDS=1 --protocols seen1 --seeds 12,13,14,15,16,17,18,19,20,21,22,23 --models fm:mor_p1v2:mean --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --aligns none --fm-side amp

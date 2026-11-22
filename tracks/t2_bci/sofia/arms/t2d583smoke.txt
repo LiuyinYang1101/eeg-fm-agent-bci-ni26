@@ -1,0 +1,2 @@
+# T2-D583 SMOKE (registered 2026-11-18): t2d558_aug_plain_s840_p0's line on lc9_0 only, 1 + 1 epochs, + --fm-recomb 4:0.5 (the recombination count per epoch logged)
+NSHARDS=1 --protocols lc9_0 --seeds 840 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-recomb 4:0.5 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 1 --fm-tilt 0.15 --side dcmean --fm-side dcmean --fm-cont-epochs 1 --fm-cont-lr 0.1 --fm-cont-arms b

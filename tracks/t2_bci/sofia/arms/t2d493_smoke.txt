@@ -1,0 +1,2 @@
+# T2-D493 smoke: the soup path end to end (1 epoch, kit, seed 730): main + soup5 + soup5m1..m4 must all be written
+NSHARDS=1 --protocols kit --seeds 730 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 1 --fm-soup 5 --fm-soup-members

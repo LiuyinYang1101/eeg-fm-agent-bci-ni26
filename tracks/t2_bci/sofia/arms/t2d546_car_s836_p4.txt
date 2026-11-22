@@ -1,0 +1,2 @@
+# T2-D546 (the owner's warm-start continuation; registered 2026-11-16 20:11:20): D531's SD CAR line exactly at seed 836 (confirm (819-821, fresh seed)), folds lc9_8,lc9_9; the base (100 epochs) then arms a / b from its state (25 epochs, lr x 0.1, cosine to 0) -> twins ca / cb
+NSHARDS=1 --protocols lc9_8,lc9_9 --seeds 836 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean --fm-cont-epochs 25 --fm-cont-lr 0.1 --fm-cont-arms a,b

@@ -1,0 +1,2 @@
+# T2-D312 (multi-seed ST-L slot, fresh seeds): the shipped ST-L recipe (T2-D247r rcll arm, unchanged), kit, seeds 48-59. 1 process per H200
+NSHARDS=1 --protocols kit --seeds 48,49,50,51,52,53,54,55,56,57,58,59 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

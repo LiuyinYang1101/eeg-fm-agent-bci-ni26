@@ -1,0 +1,2 @@
+# T2-D438: ShallowNet (M7 pooled recipe r1_pulx_vp2_e180_vr, causal EA), user-level boosting bag (--bag ub5: K leave-one-user-out nets give the user errors, then K nets on re-weighted user shares), seeds 372-383 (paired with T2-D437 seed bag), kit + seen1.
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 372,373,374,375,376,377,378,379,380,381,382,383 --bag ub5

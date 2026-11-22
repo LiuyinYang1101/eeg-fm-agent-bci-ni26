@@ -1,0 +1,2 @@
+# T2-D302 (the tv8 family): as t2d302_fbc_kit.txt, seen1
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser --tta-vp 8 --tta-shift 8 --tta-copies

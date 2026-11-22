@@ -1,0 +1,4 @@
+# T2-D270, arm lpws (pre-registered 2026-10-26 08:27, before any D270 number): the adopted ST-L (T2-D247r: the D112a recipe + --fm-rc 0.75 --fm-llrd 0.75)
+# as T2-D267's LP-FT (--fm-lp-epochs 10) + WiSE-FT 0.5 (--fm-wise 0.5: the evaluated weights = the midpoint of the fine-tune's end and the probe's
+# end, the CPT'd encoder + the probed head; training unchanged; tag ws0.5 after lp10, before cpt), kit, seeds 0-11, vs the stl_rcll runs of T2-D247 on disk. 1 process per H200
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lp-epochs 10 --fm-wise 0.5

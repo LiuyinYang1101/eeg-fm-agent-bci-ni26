@@ -1,0 +1,3 @@
+# T2-D642 smoke: slot fm_1's line, ss8_P01 only, 1 epoch, B then C (the user-balanced FM path end to end)
+NSHARDS=1 --protocols ss8_P01 --seeds 901 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 1 --fm-tilt 0.15 --side dcmean --fm-side dcmean
+NSHARDS=1 --protocols ss8_P01 --seeds 901 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 1 --fm-tilt 0.15 --side dcmean --fm-side dcmean --user-balance

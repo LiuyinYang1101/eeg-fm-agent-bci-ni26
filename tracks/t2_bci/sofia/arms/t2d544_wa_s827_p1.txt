@@ -1,0 +1,2 @@
+# T2-D544 (word-α; registered 2026-11-16 20:03:46): word-α member, nomination (816-818), in place of W18 SD s827; D531's SD line exactly from the 0.5 root + 0.5 word-expert checkpoint, folds lc9_2,lc9_3
+NSHARDS=1 --protocols lc9_2,lc9_3 --seeds 827 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-d544-wordalpha/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15 --side dcmean --fm-side dcmean

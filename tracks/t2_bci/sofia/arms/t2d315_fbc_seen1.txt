@@ -1,0 +1,3 @@
+# T2-D315: FBCNet rc75 anchor + gd3, seen1, fresh seeds 216-227
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 216,217,218,219,220,221,222,223,224,225,226,227 --peruser
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_gd3 --seeds 216,217,218,219,220,221,222,223,224,225,226,227 --peruser

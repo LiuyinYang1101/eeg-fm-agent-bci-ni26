@@ -1,0 +1,4 @@
+# T2-D109 fine-tune: ST-L from CPT v2 (RUN_NAME ni26-t2p-cpt-stlarge-d109: the D89 MAE recipe on the D89 pools + every
+# exported BCI corpus, labels unused, sqrt sampling, token-scaled micro-batches, 15k steps), the D94 recipe (gain input +
+# align sz, 30 epochs), seeds 0-11, vs the CPT v1 runs on disk (D94 1455390 seeds 0-5, D95 1455765 seeds 6-11)
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d109/checkpoint-cpt.pth

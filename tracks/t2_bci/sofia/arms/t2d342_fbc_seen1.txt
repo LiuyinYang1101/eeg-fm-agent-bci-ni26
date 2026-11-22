@@ -1,0 +1,2 @@
+# T2-D342 (the CNN TTA view dose, never dosed: T2-D296 'K 8 fixed'): t2d296r_fbc_seen1.txt with --tta-vp 16 (same recipes and seeds; per-seed determinism keeps the nets = the shipped tv8c members' nets)
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser --tta-vp 16 --tta-copies

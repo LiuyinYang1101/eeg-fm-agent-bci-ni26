@@ -1,0 +1,12 @@
+# T2-D453 stage 1: ShallowNet (M7's pooled recipe, EA; pooled net only, no copies / views), seeds 436-447: control, + all nine Scherer2015 users, + ONE Scherer user at a time
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-users 1
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-users 2
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-users 3
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-users 4
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-users 5
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-users 6
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-users 7
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-users 8
+NSHARDS=3 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 436,437,438,439,440,441,442,443,444,445,446,447 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-users 9

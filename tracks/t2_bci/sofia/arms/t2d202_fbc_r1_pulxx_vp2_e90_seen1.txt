@@ -1,0 +1,2 @@
+# T2-D202: FBCNet B3 r1_pulxx_vp2_e90, arm: pooled 90 epochs, FRESH seeds 144-155, seen1, with per-user copies (blend r 1/3 locally)
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e90 --seeds 144,145,146,147,148,149,150,151,152,153,154,155 --peruser

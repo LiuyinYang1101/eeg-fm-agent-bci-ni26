@@ -1,0 +1,2 @@
+# T2-D423 Stage B CONTROL: M7's ShallowNet-EA recipe (r1_pulx_vp2_e180_vr, copies + tv8c) on the PLAIN export, fresh seeds 336-347, kit + seen1
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 336,337,338,339,340,341,342,343,344,345,346,347 --peruser --tta-vp 8 --tta-copies

@@ -1,0 +1,2 @@
+# T2-D470: the same for IFNet (causal EA)
+--protocols kit,seen1 --models ifnet --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 540,541,542,543,544,545,546,547,548,549,550,551 --tta-bn 0.01,0.05

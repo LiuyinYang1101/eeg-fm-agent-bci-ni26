@@ -1,0 +1,2 @@
+# T2-D460: pretrained st_base (public checkpoint, no CPT) through M7's ST-L member recipe (100 epochs), kit, fresh seeds 486-499
+NSHARDS=1 --protocols kit --seeds 486,487,488,489,490,491,492,493,494,495,496,497,498,499 --models fm:st_base:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100

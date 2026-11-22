@@ -1,0 +1,2 @@
+# T2-D382: M6's ifnet line at 180 epochs (r1_pulx_vp2_e180_vr) on FRESH seeds 180-191, kit + seen1, copies, plain + tv8 + tv8c (the PAIRED 180-epoch control on the same seeds)
+NSHARDS=1 --protocols kit,seen1 --models ifnet --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 180,181,182,183,184,185,186,187,188,189,190,191 --peruser --tta-vp 8 --tta-copies

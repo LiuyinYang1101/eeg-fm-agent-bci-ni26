@@ -1,0 +1,2 @@
+# T2-D298 (backlog 72): as t2d298_fbc_kit.txt, seen1
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_pv10 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser --tta-vp 8

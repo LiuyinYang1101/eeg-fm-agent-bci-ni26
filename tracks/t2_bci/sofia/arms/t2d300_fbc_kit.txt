@@ -1,0 +1,2 @@
+# T2-D300 (backlog 74): a random spectral tilt per window (amplitude sd 0.15), FBCNet B3 rc75 line, the anchor's seeds 204-215, kit
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser

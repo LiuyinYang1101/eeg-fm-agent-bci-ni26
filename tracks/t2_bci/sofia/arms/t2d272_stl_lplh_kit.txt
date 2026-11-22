@@ -1,0 +1,4 @@
+# T2-D272, arm lplh (pre-registered 2026-10-26 10:04, before any D272 / D272r number): the adopted ST-L (T2-D247r: the D112a recipe + --fm-rc 0.75 --fm-llrd 0.75)
+# with T2-D267's LP-FT (--fm-lp-epochs 10) and T2-D266's head lr x 3 (--fm-lr-head 3e-3) stacked (backlog row 35; base lp10 by T2-D270's read: KILLED);
+# stem lh0.003 ... rc0.75lp10, kit, seeds 0-11, vs the stl_rcll runs of T2-D247 / D247r on disk. 1 process per H200
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lr-head 3e-3 --fm-lp-epochs 10

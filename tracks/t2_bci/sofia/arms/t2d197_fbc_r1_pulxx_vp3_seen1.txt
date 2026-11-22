@@ -1,0 +1,2 @@
+# T2-D197: FBCNet B3 r1_pulxx_vp3, arm: 15 mm, FRESH seeds 108-119, seen1, with per-user copies (blend r 1/3 locally)
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp3 --seeds 108,109,110,111,112,113,114,115,116,117,118,119 --peruser

@@ -1,0 +1,2 @@
+# T2-D200: ShallowNet-EA r1_pulx_vp2, anchor: the adopted vp2 (copies unaugmented), FRESH seeds 84-95, kit + seen1, with per-user copies (blend r 1/2 locally)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2 --seeds 84,85,86,87,88,89,90,91,92,93,94,95 --peruser

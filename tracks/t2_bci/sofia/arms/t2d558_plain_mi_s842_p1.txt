@@ -1,0 +1,2 @@
+# T2-D558 (the second FM-seed set for D555 / D557, registered 2026-11-17 before any number): t2d555_mi_s832_p1's line at seed 842 (was 832)
+NSHARDS=1 --protocols lc9_2,lc9_3 --seeds 842 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d529-mi-root/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15

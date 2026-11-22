@@ -1,0 +1,2 @@
+# T2-D531 (W18 fresh-draw FM members): stlcar ST-L FRESH seed 829 (D512's tilt line) + the window-mean side head, folds lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 (half a)
+NSHARDS=1 --protocols lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 --seeds 829 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean

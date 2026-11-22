@@ -1,0 +1,2 @@
+# T2-D382: M6's shallow line at 180 epochs (r1_pulx_vp2_e180_vr) on FRESH seeds 192-203, kit + seen1, copies, plain + tv8 + tv8c (the PAIRED 180-epoch control on the same seeds)
+NSHARDS=1 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser --tta-vp 8 --tta-copies

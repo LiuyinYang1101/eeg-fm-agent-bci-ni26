@@ -1,0 +1,2 @@
+# T2-D195: ShallowNet-EA r1_pulx_vp2, arm: virtual participants 10 mm, FRESH seeds 60-71, kit + seen1, with per-user copies (blend r 1/2 locally)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2 --seeds 60,61,62,63,64,65,66,67,68,69,70,71 --peruser

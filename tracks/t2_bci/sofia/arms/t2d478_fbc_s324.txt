@@ -1,0 +1,2 @@
+# T2-D478: M7's FBCNet line (copies + tv8c) with stream-balanced batches + the per-stream prior-blind loss (sb16), seeds 324-335 = T2-D419's control (paired)
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_sb16 --seeds 324,325,326,327,328,329,330,331,332,333,334,335 --peruser --tta-vp 8 --tta-copies

@@ -1,0 +1,36 @@
+# data / outputs (workspace policy: never in-repo; ./data and ./outputs are symlinks). ANCHORED on purpose:
+# an unanchored data/ would also drop src/<pkg>/data (SOFIA_OPS §6)
+/data
+/outputs
+results/
+ckpt/
+wandb/
+*.h5
+*.hdf5
+*.zarr
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.joblib
+*.mat
+*.set
+*.fif
+*.edf
+*.gdf
+*.zip
+*.parquet
+# benchopt artefacts
+__cache__/
+benchopt_data/
+# python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+*.egg-info/
+# external kit (cloned at a pinned commit by scripts/get_kit.sh, not vendored)
+third_party/

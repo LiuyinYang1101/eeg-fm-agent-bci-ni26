@@ -1,0 +1,2 @@
+# T2-D430 (panel P7 I1 = M1, stranger-safe copies): ShallowNet copies with pu_kl 1 (control = D429's sh-ctl dir), FRESH seeds 348-359, kit + seen1.
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_kl1 --seeds 348,349,350,351,352,353,354,355,356,357,358,359 --peruser --tta-vp 8 --tta-copies

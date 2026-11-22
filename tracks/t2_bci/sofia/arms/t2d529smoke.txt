@@ -1,0 +1,2 @@
+# T2-D529 SMOKE: the MI-expert stage-2 path (--fm-ckpt from the root-started preft) on fold lc9_0, 1 epoch
+NSHARDS=1 --protocols lc9_0 --seeds 820 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d529-mi-root/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 1 --fm-tilt 0.15

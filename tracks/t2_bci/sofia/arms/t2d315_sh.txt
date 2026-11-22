@@ -1,0 +1,3 @@
+# T2-D315: ShallowNet vr anchor + gd3, kit + seen1, fresh seeds 180-191
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 180,181,182,183,184,185,186,187,188,189,190,191 --peruser
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_gd3 --seeds 180,181,182,183,184,185,186,187,188,189,190,191 --peruser

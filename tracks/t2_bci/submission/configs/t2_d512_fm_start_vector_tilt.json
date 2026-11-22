@@ -1,0 +1,28 @@
+{
+ "fm": [
+  0.4386,
+  0.2681,
+  0.2933
+ ],
+ "classes": [
+  "mi",
+  "sub",
+  "word"
+ ],
+ "base_shipped_W14lite_fm": [
+  0.4305,
+  0.2585,
+  0.311
+ ],
+ "k9_ctl_fm": [
+  0.3485,
+  0.2947,
+  0.3568
+ ],
+ "k9_tilt_fm": [
+  0.3561,
+  0.3065,
+  0.3374
+ ],
+ "rule": "T2-D512 (approximation, written before any build): W14-lite's shipped fm start vector (T2-D459's rule on A13's draws, T2-D496) scaled per class by the tilt / control ratio of the fm family's stranger-mean posterior on the SAME K = 9 protocol (D512's members 820-825, every fold's held-out user), renormalised; no A13-harness read of CAR tilt members exists"
+}

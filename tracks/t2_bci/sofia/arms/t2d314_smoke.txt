@@ -1,0 +1,5 @@
+# T2-D314 smoke (zero-number gate, ≈ 15 min): (1) / (2) the 100M role-LoRA MOR at E1, LoRA dropout 0, micro 1 vs 2 -> probabilities equal up to bf16 noise (the micro path's exactness);
+# (3) TA568 role-LoRA at E1, micro 2 -> fits on one H200 (else micro 4). 1 process per H200.
+NSHARDS=1 --protocols kit --seeds 0 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 1 --fm-lr-enc 1e-3 --fm-lora-in 16 --fm-lora-in-roles --fm-lora-in-dropout 0.0
+NSHARDS=1 --protocols kit --seeds 0 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 1 --fm-lr-enc 1e-3 --fm-lora-in 16 --fm-lora-in-roles --fm-lora-in-dropout 0.0 --fm-micro 2
+NSHARDS=1 --protocols kit --seeds 0 --models fm:ta568:mean --aligns wz --fm-epochs 1 --fm-lr-enc 1e-3 --fm-lora-in 16 --fm-lora-in-roles --fm-lora-in-dropout 0.1 --fm-micro 2

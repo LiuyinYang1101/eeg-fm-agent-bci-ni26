@@ -1,0 +1,2 @@
+# T2-D412: M6's tilt FBCNet line with CLASS-CONDITIONAL re-colouring (rc_cls 1, the GA panel's rcc) on FRESH seeds 276-287, kit + seen1, copies + tv8c
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75cc_tl15 --seeds 276,277,278,279,280,281,282,283,284,285,286,287 --peruser --tta-vp 8 --tta-copies

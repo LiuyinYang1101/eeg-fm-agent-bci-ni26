@@ -1,0 +1,3 @@
+# T2-D428: M7's ShallowNet recipe (r1_pulx_vp2_e180_vr, copies + tv8c) with FORGETTING broadband EA (ni26.stream "eaf", gamma 0.98), fresh seeds 336-347, kit + seen1.
+# The paired control is the local ni26-t2p-d424-sh-ctl-5090 (arm file t2d423_sh_ctl_s336, same seeds, same hardware).
+--protocols kit,seen1 --models shallow --aligns eaf --recipe r1_pulx_vp2_e180_vr --seeds 336,337,338,339,340,341,342,343,344,345,346,347 --peruser --tta-vp 8 --tta-copies

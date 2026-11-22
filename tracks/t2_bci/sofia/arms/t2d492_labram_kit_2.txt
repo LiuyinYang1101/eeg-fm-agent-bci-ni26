@@ -1,0 +1,2 @@
+# T2-D492: T2-D452's labram line (sz, gain, mixup 0.4, rc 0.75, LLRD 0.75, 100 epochs) fine-tuned from the protocol's in-domain CPT (t2p_cpt_fm.py), seeds paired with D452 (part 2 of 3)
+NSHARDS=1 --protocols kit --seeds 432,433,434,435 --models fm:labram:mean --aligns sz --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d492-labram-kit/checkpoint-cpt.pth

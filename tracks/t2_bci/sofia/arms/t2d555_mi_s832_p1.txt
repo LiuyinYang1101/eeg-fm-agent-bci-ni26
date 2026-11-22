@@ -1,0 +1,2 @@
+# T2-D555: W18's head-less MI member at seed 832 (D541's confirm line exactly) re-run with NI26_FEAT_DUMP=1 (pooled features + main head), fold pair p1
+NSHARDS=1 --protocols lc9_2,lc9_3 --seeds 832 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d529-mi-root/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15

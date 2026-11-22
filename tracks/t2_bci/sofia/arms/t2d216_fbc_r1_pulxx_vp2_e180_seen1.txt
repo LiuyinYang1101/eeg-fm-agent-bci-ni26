@@ -1,0 +1,2 @@
+# T2-D216: FBCNet B3 r1_pulxx_vp2_e180, FRESH seeds 204-215, seen1, with per-user copies (blend r 1/3 locally)
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser

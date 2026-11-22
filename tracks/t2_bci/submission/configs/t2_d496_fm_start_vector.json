@@ -1,0 +1,28 @@
+{
+ "fm": [
+  0.4305,
+  0.2585,
+  0.311
+ ],
+ "fm_5plain_3car_same_draws": [
+  0.4303,
+  0.2545,
+  0.3152
+ ],
+ "fm_5plain_same_draws": [
+  0.4289,
+  0.2439,
+  0.3272
+ ],
+ "fm_shipped_W13_D442_draws": [
+  0.4294,
+  0.2426,
+  0.328
+ ],
+ "classes": [
+  "mi",
+  "sub",
+  "word"
+ ],
+ "rule": "T2-D459's rule on the fm family's own mix (three plain + three CAR, equal weights), A13's draws (T2-D496)"
+}

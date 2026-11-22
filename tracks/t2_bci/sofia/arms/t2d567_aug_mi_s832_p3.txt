@@ -1,0 +1,2 @@
+# T2-D567 (registered 2026-11-18 before any job / number): t2d555_mi_s832_p3's line + D557's augmentation (--fm-aug 0.2:30:0.1, --fm-mixup 0.8; the MI root unchanged)
+NSHARDS=1 --protocols lc9_6,lc9_7 --seeds 832 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d529-mi-root/checkpoint-cpt.pth --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15

@@ -1,0 +1,3 @@
+# T2-D236: FBCNet B3 under vp2-180 + vr, re-colouring at a random strength per window U(0.25, 1.0) (vr_rcu25) / U(0.5, 1.0) (vr_rcu50), copies = the vr line's, T2-D231's seeds 204-215 (reference = D231's rc75 runs), seen1
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rcu25 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rcu50 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser

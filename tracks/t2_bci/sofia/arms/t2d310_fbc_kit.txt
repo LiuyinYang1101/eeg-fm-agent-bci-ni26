@@ -1,0 +1,2 @@
+# T2-D310 (the stack read): pv10 copies + tv8 / tv8c on FRESH seeds (FBCNet 192-203), kit; one training writes pv10, pv10tv8, pv10tv8c
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_pv10 --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser --tta-vp 8 --tta-copies

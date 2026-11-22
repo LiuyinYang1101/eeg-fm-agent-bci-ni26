@@ -1,0 +1,4 @@
+# T2-D149: the pinned mor_p1v2 member recipe (role-LoRA r16, lr-enc 1e-3, E12, wz) with TP-1's front end (--fm-calib tp), seeds 6-11 (0-5 = T2-D147 1516333)
+# NSHARDS=1 = 1 process per H200 (hook LoRA memory, review T2 P3j)
+NSHARDS=1 --protocols kit --seeds 6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-calib tp
+NSHARDS=1 --protocols seen1 --seeds 6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-calib tp

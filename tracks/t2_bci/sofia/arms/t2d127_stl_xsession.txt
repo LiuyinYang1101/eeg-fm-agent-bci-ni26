@@ -1,0 +1,2 @@
+# T2-D127 arm 3 on ST-L: positives = same user + same cue, another session (kit only: P10 is the only multi-session training user)
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-supcon 0.1 --fm-supcon-mode xsession

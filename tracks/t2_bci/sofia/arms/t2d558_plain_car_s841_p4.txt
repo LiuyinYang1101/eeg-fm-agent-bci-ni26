@@ -1,0 +1,2 @@
+# T2-D558 (the second FM-seed set for D555 / D557, registered 2026-11-17 before any number): t2d555_car_s836_p4's line at seed 841 (was 836)
+NSHARDS=1 --protocols lc9_8,lc9_9 --seeds 841 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean --fm-cont-epochs 25 --fm-cont-lr 0.1 --fm-cont-arms b

@@ -1,0 +1,2 @@
+# T2-D296r (the user's request 2026-10-29): tv8 / tv8c on FRESH seeds (T2-D247r's: FBCNet 192-203), kit; one training writes plain (= the control), tv8 and tv8c
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser --tta-vp 8 --tta-copies

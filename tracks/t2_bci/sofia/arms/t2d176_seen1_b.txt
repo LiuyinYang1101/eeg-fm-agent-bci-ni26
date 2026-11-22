@@ -1,0 +1,2 @@
+# T2-D176: the shipped ST-L member recipe (T2-D112a / D137: CPT ni26-t2p-cpt-d111-with, gain + sz, mixup 0.4, 30 epochs), seen1 seeds 6,7,8,9,10,11, + a uniform soup of 3 same-recipe fine-tunes (seeds s, s+1000, s+2000)
+NSHARDS=1 --protocols seen1 --seeds 6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-soup 3

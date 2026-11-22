@@ -1,0 +1,2 @@
+# T2-D391: ONE ST-L member with BOTH of M6's ST-L levers: EA input alignment (T2-D378) + LP-FT 10 / head lr 3e-3 (T2-D376), FRESH seeds 108-119, kit; = t2d378_stl_ea_s36_kit.txt except seeds + the two LP-FT flags
+NSHARDS=1 --protocols kit --seeds 108,109,110,111,112,113,114,115,116,117,118,119 --models fm:st_large:mean --aligns ea --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lr-head 3e-3 --fm-lp-epochs 10

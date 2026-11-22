@@ -1,0 +1,2 @@
+# T2-D561: the paired control = M6's tilt FBCNet line as shipped (no synthetic), the same fresh seeds 340-345
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15 --seeds 340,341,342,343,344,345 --peruser --tta-vp 8 --tta-copies

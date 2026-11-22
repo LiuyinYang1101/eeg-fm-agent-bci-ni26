@@ -1,0 +1,2 @@
+# T2-D468 re-run of the large arm only, one shard (3 ST-L fine-tunes in parallel on one H200 ran out of memory in job 1608643)
+NSHARDS=1 --protocols kit --seeds 600,601,602 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-train-eval

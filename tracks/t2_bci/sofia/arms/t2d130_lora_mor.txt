@@ -1,0 +1,5 @@
+# T2-D130 LoRA bounded screen on the MOR (E12 wz), kit seeds 0-11; 3 shards per H200 (the role-specific line: 1, see NSHARDS=1)
+# review 2026-10-16 (T2 P3j): `NSHARDS=1` lines = 1 process per H200 (hook LoRA / retained-MAE memory); t2p_multi reads it per line
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lr-enc 1e-3
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 64 --fm-lr-enc 1e-3
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3

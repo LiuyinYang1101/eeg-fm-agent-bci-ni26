@@ -1,0 +1,2 @@
+# backlog 65 / T2-D295 (b): ShallowNet-EA on the vr line + a rigid cap shift of 10 mm RMS per virtual participant (vr_cap10), the anchor's seeds 168-179, kit + seen1, with per-user copies (unchanged); arm (a) is FBCNet only (ShallowNet re-colouring closed, T2-D233)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_cap10 --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser

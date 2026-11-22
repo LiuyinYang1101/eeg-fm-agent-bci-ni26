@@ -1,0 +1,2 @@
+# T2-D349b (c): LoRA r16 on the backbone (input-dropout LoRA) + grid, encoder lr 5e-4 (kit)
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:grid --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lora-in 16 --fm-lr-enc 5e-4

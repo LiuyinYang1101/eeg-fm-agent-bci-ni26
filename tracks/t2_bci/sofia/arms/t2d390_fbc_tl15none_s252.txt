@@ -1,0 +1,2 @@
+# T2-D390: M6's tilt FBCNet line with aligns none on FRESH seeds 252-263, kit + seen1, copies + tv8c (the PAIRED control = M6's alignment)
+NSHARDS=1 --protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15 --seeds 252,253,254,255,256,257,258,259,260,261,262,263 --peruser --tta-vp 8 --tta-copies

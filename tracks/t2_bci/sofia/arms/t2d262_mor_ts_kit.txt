@@ -1,0 +1,4 @@
+# T2-D262 (pre-registered 2026-10-26 02:15, before any D262 number): a circular time shift U{-30..30} samples (+-0.25 s at 120 Hz) on the MOR member's target training
+# windows (--fm-aug 0:30, no gain jitter: wz divides it out; tag aug0-30), kit, seeds 0-11, today's code; vs T2-D256's ctl. The package's MOR recipe otherwise
+# (role LoRA r16, wz, 12 epochs, lr 1e-3). 1 process per H200
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-epochs 12 --fm-aug 0:30

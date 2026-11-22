@@ -1,0 +1,2 @@
+# T2-D464: ST-L with the attention-residual readout (per-token learned softmax over all 24 layer outputs), M7's member recipe (100 epochs), seen1, fresh seeds 514-527
+NSHARDS=1 --protocols seen1 --seeds 514,515,516,517,518,519,520,521,522,523,524,525,526,527 --models fm:st_large:attnres --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100

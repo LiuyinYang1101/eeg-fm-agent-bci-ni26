@@ -1,0 +1,2 @@
+# T2-D524 fold fill (1620616 hit its 2:00 wall at 4/5 folds): stl ST-L seed 821 + the window-mean side head, fold lc9_9 only (half b); same line as t2d524_stlsd_s821_b.txt
+NSHARDS=1 --protocols lc9_9 --seeds 821 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15 --side dcmean --fm-side dcmean

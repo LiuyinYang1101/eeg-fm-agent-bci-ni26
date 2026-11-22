@@ -1,0 +1,2 @@
+# T2-D470: causal per-stream BN-statistics tracking (T2-D100 re-read under today's recipe), FBCNet pooled nets, fresh seeds 540-551
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 540,541,542,543,544,545,546,547,548,549,550,551 --tta-bn 0.01,0.05

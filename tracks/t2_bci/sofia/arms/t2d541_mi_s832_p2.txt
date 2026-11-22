@@ -1,0 +1,2 @@
+# T2-D541 confirm BASE (PREPARED 2026-11-16): W18's head-less MI member at the FRESH FM seed 832 = D532's MI line exactly, folds lc9_4,lc9_5 (fold pair p2: short walls backfill)
+NSHARDS=1 --protocols lc9_4,lc9_5 --seeds 832 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d529-mi-root/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15

@@ -1,0 +1,2 @@
+# T2-D555 (the FM main heads' in-stream refit; registered 2026-11-17 before any number): as T2-D553's arm, now ALSO with NI26_FEAT_DUMP=1 (pooled features + main head); D531's SD CAR line at seed 831 re-run with NI26_SIDE_DUMP=1 (pre-head logits + head + test z), half b
+NSHARDS=1 --protocols lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 --seeds 831 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean

@@ -1,0 +1,2 @@
+# T2-D477: M7's ifnet recipe (r1_pulx_vp2_e180_vr, copies + tv8c, EA) with the net as ifnet_b3 (input bands incl. 1-4 Hz), seeds 348-359 = T2-D429's control (paired)
+--protocols kit,seen1 --models ifnet_b3 --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 348,349,350,351,352,353,354,355,356,357,358,359 --peruser --tta-vp 8 --tta-copies

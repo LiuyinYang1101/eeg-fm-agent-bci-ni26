@@ -1,0 +1,4 @@
+# T2-D123 fine-tune: mor_p1v2 from its MAE-only close CPT (RUN_NAME ni26-t2p-cpt-mor-d123: PROTEUS kit train + val users +
+# Dreyer2023 wide + Scherer2015, P04 / P09 excluded), the D88 recipe (E12 + align wz, calib zwin), seeds 0-11, vs the
+# anchor 1457205 (arms/t2d106_mor_anchor.txt line 1)
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-mor-d123/checkpoint-cpt.pth

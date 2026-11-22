@@ -1,0 +1,20 @@
+# D88 REVE + LaBraM arms (competition split); LaBraM has only its final layer wired (no H1)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns wz
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns wz --fm-layer 11   # H1
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns wz --fm-epochs 12   # H2
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns wz --fm-ema 0.995   # H3
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns wz --fm-lora 8 --fm-lr-enc 1e-3   # H4
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:attn --aligns wz   # H5
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns wz --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1   # H6
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns wz --fm-mixup 0.4   # H7
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns sz --fm-calib gain   # H9
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns none --fm-calib gain   # H10
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:labram:mean --aligns wz
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:labram:mean --aligns wz --fm-epochs 12   # H2
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:labram:mean --aligns wz --fm-ema 0.995   # H3
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:labram:mean --aligns wz --fm-lora 8 --fm-lr-enc 1e-3   # H4
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:labram:attn --aligns wz   # H5
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:labram:mean --aligns wz --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1   # H6
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:labram:mean --aligns wz --fm-mixup 0.4   # H7
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:labram:mean --aligns sz --fm-calib gain   # H9
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:labram:mean --aligns none --fm-calib gain   # H10

@@ -1,0 +1,5 @@
+# T2-D294 (backlog 69): the FM teachers = the adopted ST-L recipe (T2-D247r's stl_rcll arm, seed 0) of kit and seen1, each followed by the distillation dump
+# (kdteacher__<protocol>__s0.npz: its probabilities of the protocol's training windows + 12,000 unlabelled Stieger2021 / Lee2019 windows on the 41 channels).
+# Submit with S1_EXPORT=RUN_NAME=ni26-t2p-d294-teacher so the student arms find the dumps at a fixed path.
+NSHARDS=1 --protocols kit --seeds 0 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-kd-dump --kd-pools $S1_ROOT/data/ni26/t2_proteus/cpt_pools/stieger2021_v1,$S1_ROOT/data/ni26/t2_proteus/cpt_pools/lee2019_mi_v1 --kd-n 12000
+NSHARDS=1 --protocols seen1 --seeds 0 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-kd-dump --kd-pools $S1_ROOT/data/ni26/t2_proteus/cpt_pools/stieger2021_v1,$S1_ROOT/data/ni26/t2_proteus/cpt_pools/lee2019_mi_v1 --kd-n 12000

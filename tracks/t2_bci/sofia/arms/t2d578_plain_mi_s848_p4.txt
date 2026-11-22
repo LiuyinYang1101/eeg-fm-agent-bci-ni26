@@ -1,0 +1,2 @@
+# T2-D578 (the fresh set D, registered 2026-11-18 before any job): t2d558_plain_mi_s842_p4.txt's line with the seed 842 -> 848 (W20+D557's member at a new seed)
+NSHARDS=1 --protocols lc9_8,lc9_9 --seeds 848 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d529-mi-root/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15

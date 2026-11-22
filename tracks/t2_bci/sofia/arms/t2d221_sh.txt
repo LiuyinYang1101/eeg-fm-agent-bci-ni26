@@ -1,0 +1,2 @@
+# T2-D221: ShallowNet-EA at 80 temporal / 80 spatial filters (shallow_w2) under r1_pulx_vp2_e180_vr (the upload-5 line), the T2-D215r seeds 168-179 (reference = D215r's vr runs), kit + seen1, with per-user copies
+--protocols kit,seen1 --models shallow_w2 --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser

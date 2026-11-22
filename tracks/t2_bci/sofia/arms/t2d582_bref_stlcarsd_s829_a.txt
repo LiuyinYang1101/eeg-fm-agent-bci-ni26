@@ -1,0 +1,2 @@
+# T2-D582 (registered 2026-11-18 before any job): t2d557_stlcarsd_s829_a.txt's line UNCHANGED (B REF = D557's dose, re-run with the feature dumps)
+NSHARDS=1 --protocols lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 --seeds 829 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean

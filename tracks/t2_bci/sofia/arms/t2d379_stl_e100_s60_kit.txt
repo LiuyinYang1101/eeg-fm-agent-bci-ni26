@@ -1,0 +1,2 @@
+# T2-D379: the shipped ST-L line at 100 epochs (T2-D361's e100 arm) on FRESH seeds 60-71 (0-59 used), kit
+NSHARDS=1 --protocols kit --seeds 60,61,62,63,64,65,66,67,68,69,70,71 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100

@@ -1,0 +1,3 @@
+# T2-D118 fourth CNN family candidates (DECISIONS_T2, pre-registered 2026-10-15): kit, r1, seeds 0-11; sofia t2p_multi (NSHARDS=4)
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models eegnet,eegtcnet,ifnet,deep4 --aligns none,ea
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models eegnex,atcnet,conformer --aligns none,ea

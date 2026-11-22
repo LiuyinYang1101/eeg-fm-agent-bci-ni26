@@ -1,0 +1,3 @@
+# T2-D555 SMOKE: (1) the CAR SD line (seed 836) lc9_0, 2 + 1 epochs (arm b), side + feature dumps; (2) the head-less MI line (seed 832, the MI root) lc9_0, 2 epochs, feature dump only
+NSHARDS=1 --protocols lc9_0 --seeds 836 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 2 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean --fm-cont-epochs 1 --fm-cont-lr 0.1 --fm-cont-arms b
+NSHARDS=1 --protocols lc9_0 --seeds 832 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d529-mi-root/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 2 --fm-tilt 0.15

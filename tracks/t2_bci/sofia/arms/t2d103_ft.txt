@@ -1,0 +1,3 @@
+# T2-D103 fine-tune from the supervised pre-FT checkpoint (RUN_NAME ni26-t2p-preft-d103), D94 recipe (gain + sz), seeds 0-11
+# vs the CPT-only ST-L runs of the same seeds (D94 1455390 seeds 0-5, D95 1455765 seeds 6-11); 1 process per GPU (ST-L)
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d103/checkpoint-cpt.pth

@@ -1,0 +1,2 @@
+# T2-D388: the PAIRED control: M6's tilt FBCNet with its plain copies (r1_pulxx_vp2_e180_vr_rc75_tl15) on FRESH seeds 240-251, kit + seen1, copies, plain + tv8 + tv8c
+NSHARDS=1 --protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15 --seeds 240,241,242,243,244,245,246,247,248,249,250,251 --peruser --tta-vp 8 --tta-copies

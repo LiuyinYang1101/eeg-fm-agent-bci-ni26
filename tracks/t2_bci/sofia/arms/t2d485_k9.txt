@@ -1,0 +1,15 @@
+# T2-D485: K = 9 (and K = 5) re-read of the five nearest CNN misses whose mechanism should grow with users; pooled members, last, seeds 400-404
+# controls = T2-D410's two base lines
+--protocols lc5,lc9 --seeds 400,401,402,403,404 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75
+--protocols lc5,lc9 --seeds 400,401,402,403,404 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr
+# D325: ShallowNet x2 width
+--protocols lc5,lc9 --seeds 400,401,402,403,404 --models shallow_w2 --aligns ea --recipe r1_pulx_vp2_e180_vr
+# D237: re-colouring toward Bures midpoints of two other training users
+--protocols lc5,lc9 --seeds 400,401,402,403,404 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75m1
+# D365: user-level feature re-styling (both families)
+--protocols lc5,lc9 --seeds 400,401,402,403,404 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_us5
+--protocols lc5,lc9 --seeds 400,401,402,403,404 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_us5
+# D297: same-class MixStyle across training users (FBCNet)
+--protocols lc5,lc9 --seeds 400,401,402,403,404 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_ms5
+# D346: EEGNeX as a third CNN family
+--protocols lc5,lc9 --seeds 400,401,402,403,404 --models eegnex --aligns ea --recipe r1_pulx_vp2_e180_vr

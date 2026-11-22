@@ -1,0 +1,2 @@
+# T2-D386: the MOR dose read, dose 0 = B's init (the pinned inhouse_fm MOR ck150k, via its contract link); T2-D256's rc 0.75 MOR line on FRESH seeds 24-35 (0-23 used), kit; 1 process per H200
+NSHARDS=1 --protocols kit --seeds 24,25,26,27,28,29,30,31,32,33,34,35 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-rc 0.75 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-d386-mor-ckpts/mor100.pt

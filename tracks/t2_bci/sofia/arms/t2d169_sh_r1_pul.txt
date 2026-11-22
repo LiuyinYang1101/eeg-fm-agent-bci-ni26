@@ -1,0 +1,2 @@
+# T2-D169: ShallowNet-EA recipe r1_pul (per-user FT lr 1e-3 + 20 epochs = arm; pooled = r1), FRESH seeds 36-47, kit + seen1, with per-user FT copies (blend r 1/2 locally)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pul --seeds 36,37,38,39,40,41,42,43,44,45,46,47 --peruser

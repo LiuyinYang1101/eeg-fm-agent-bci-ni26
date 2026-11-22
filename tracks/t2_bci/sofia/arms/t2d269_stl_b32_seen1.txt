@@ -1,0 +1,4 @@
+# T2-D269, arm b32 (pre-registered 2026-10-26 10:15, before any D269 number): the adopted ST-L (T2-D247r: the D112a recipe + --fm-rc 0.75 --fm-llrd 0.75)
+# at batch 32 (--fm-bs 32, an existing flag: twice the updates over the same 30 epochs; lrs, warm-up fraction and cosine unchanged; stem fmE30b32),
+# seen1, seeds 0-11, vs the stl_rcll runs of T2-D247 on disk. 1 process per H200
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-bs 32

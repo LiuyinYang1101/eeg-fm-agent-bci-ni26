@@ -1,0 +1,2 @@
+# T2-D346 (a 4th CNN family on the near-miss stack): T2-D118's other families (Deep4, EEGNeX, ATCNet, EEG-TCNet) with EA on the shipped ShallowNet line r1_pulx_vp2_e180_vr, seeds 156-167 (paired with sh_tv8c / the screen IFNet), kit + seen1, per-user copies, plain + tv8 + tv8c in one training
+--protocols kit,seen1 --models deep4,eegnex,atcnet,eegtcnet --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 156,157,158,159,160,161,162,163,164,165,166,167 --peruser --tta-vp 8 --tta-copies

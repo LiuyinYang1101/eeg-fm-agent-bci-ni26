@@ -1,0 +1,8 @@
+# T2-D413b Phase B batch 1 (kit; written after Phase A's diagnosis: 1-step under-powered, 50-step Euler near the real spectrum but AUC 1.0 on
+# many small band shifts; the real per-channel scale is artifact-dominated). Training-window fidelity only (t2_d413b_tune_eval.py).
+d413eu50 | --from-ckpt outputs/t2_d413/gen_kit_g0.pt --sample eu50 --bank-mult 1
+d413eu50c | --from-ckpt outputs/t2_d413/gen_kit_g0.pt --sample eu50 --calib 1 --bank-mult 1
+wfm30k | --norm white --p-eq 1.0 --steps 30000 --sample eu100 --bank-mult 1
+wfm30kc | --from-ckpt outputs/t2_d413b/gen_kit_wfm30k.pt --sample eu100 --calib 1 --bank-mult 1
+wmf30k | --norm white --steps 30000 --sample eu50 --bank-mult 1
+wmf30kmf2 | --from-ckpt outputs/t2_d413b/gen_kit_wmf30k.pt --sample mf2 --bank-mult 1

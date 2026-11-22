@@ -1,0 +1,4 @@
+# T2-D108 arm A fine-tune: mor_p1v2 from its 20k-step supervised pre-FT (RUN_NAME ni26-t2p-preft-d108a; checkpoint =
+# the save-at step with the best mean person-held-out BA over the 8 pools), the D88 recipe (E12 + align wz, calib zwin),
+# seeds 0-11, vs the no-pre-FT anchor already on disk (1457205 line 1 of arms/t2d106_mor_anchor.txt)
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d108a/checkpoint-cpt.pth

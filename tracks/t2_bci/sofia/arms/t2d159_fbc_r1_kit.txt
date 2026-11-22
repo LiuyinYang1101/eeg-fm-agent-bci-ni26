@@ -1,0 +1,2 @@
+# T2-D159 / D160: FBCNet B3 recipe r1 (the fresh-seed r1 control (anchor c0h); pooled training = r1), FRESH seeds 48-59, kit, with per-user FT copies (the D124c blend runs locally)
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1 --seeds 48,49,50,51,52,53,54,55,56,57,58,59 --peruser

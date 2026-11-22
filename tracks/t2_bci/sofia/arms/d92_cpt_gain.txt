@@ -1,0 +1,3 @@
+# D92 CPT x gain-input confirmation, ST-B on FRESH seeds 6-11 (pinned twin + CPT twin)
+--protocols kit --seeds 6,7,8,9,10,11 --models fm:st_base:mean --aligns sz --fm-calib gain   # pinned
+--protocols kit --seeds 6,7,8,9,10,11 --models fm:st_base:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # CPT

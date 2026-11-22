@@ -1,0 +1,4 @@
+# T2-D127 on the MOR (E12 wz, the D88 recipe; kit anchor = 1457205): seen1 anchor, arm 1 (kit + seen1), arm 3 (kit); 3 shards per H200
+--protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-supcon 0.1 --fm-supcon-mode xuser
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-supcon 0.1 --fm-supcon-mode xsession

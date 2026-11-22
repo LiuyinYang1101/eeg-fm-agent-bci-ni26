@@ -1,0 +1,2 @@
+# T2-D341 (a distinct pretrained FM as an extra member): CBraMod (braindecode 1.8.1, pinned weights, t2p_fm.CBraMod4) on the shipped ST-L fine-tune recipe (gain + sz, mixup 0.4, rc 0.75, LLRD 0.75, 30 epochs; no CPT), seeds 0-11, kit + seen1
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:cbramod:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

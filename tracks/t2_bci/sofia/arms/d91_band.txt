@@ -1,0 +1,4 @@
+# D91 FM input band-pass 4-40 Hz (FBCNet's filter-bank range), each arm = its D88 twin + --fm-band
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns none --fm-calib gain --fm-band 4:40   # B2 (twin: REVE gain none)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-band 4:40   # B3 (twin: st_base D82 recipe)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:mor_p1off:mean --aligns sz --fm-calib gain --fm-band 4:40   # B4 (twin: mor_p1off gain sz)

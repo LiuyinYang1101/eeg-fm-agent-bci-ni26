@@ -1,0 +1,2 @@
+# T2-D398: M6's line fine-tuned from the MULTI-SOURCE pretraining (7 labelled MI corpora, one head per source; $S1_ROOT/runs/ni26/ni26-t2p-d398-p1m-sh/p1.pt); seeds = T2-D396's (its no-init controls are reused)
+NSHARDS=1 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 228,229,230,231,232,233,234,235,236,237,238,239 --peruser --tta-vp 8 --tta-copies --cnn-init $S1_ROOT/runs/ni26/ni26-t2p-d398-p1m-sh/p1.pt --cnn-init-tag p1m

@@ -1,0 +1,2 @@
+# T2-D146 (sofia, deviation 2026-10-19): ShallowNet-EA recipe r1_mx4, seeds 0-11, kit + seen1 (control = T2-D148's sofia r1 shared nets)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_mx4 --seeds 0,1,2,3,4,5,6,7,8,9,10,11

@@ -1,0 +1,2 @@
+# T2-D302 (the tv8 family): ShallowNet-EA vr line, the anchor's seeds 168-179, kit + seen1, plain + tv8 twin from one training
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser --tta-vp 8 --tta-shift 8 --tta-copies

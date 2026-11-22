@@ -1,0 +1,2 @@
+# T2-D176 smoke: the shipped ST-L member recipe, kit, seed 0, 1 epoch, soup of 2 (code path + soup twin)
+NSHARDS=1 --protocols kit --seeds 0 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-epochs 1 --fm-soup 2

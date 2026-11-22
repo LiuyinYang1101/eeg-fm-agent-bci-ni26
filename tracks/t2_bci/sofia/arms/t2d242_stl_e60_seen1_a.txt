@@ -1,0 +1,3 @@
+# T2-D242: ST-L (the D112a recipe: CPT d111-with + gain + sz + mixup 0.4) fine-tuned 60 epochs instead of 30 (--fm-epochs 60; base = D112a, T2-D241's verdict named no arm),
+# seen1, seeds 0,1,2,3,4,5 (half a of 0-11), vs the stl member on disk. 1 process per H200 (ST-L ~70 GB)
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-epochs 60

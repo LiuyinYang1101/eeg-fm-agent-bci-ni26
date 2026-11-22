@@ -1,0 +1,4 @@
+# T2-D151 (TP-W) read: arm B warm-start CPT of the pinned mor_p1v2 (ni26-fm-tpw-B ckpt_s10000) as the MOR start, the shipped role-LoRA recipe (r16, lr-enc 1e-3, E12, wz) + calib tp, seeds 0-11, kit + seen1; anchor = T2-D149's mortp (pinned start, same recipe + front end)
+# NSHARDS=1 = 1 process per H200 (hook LoRA memory, review T2 P3j)
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-calib tp --fm-ckpt $S1_ROOT/runs/ni26/ni26-fm-tpw-B/pilot/ckpt_s10000/checkpoint-cpt.pt
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-calib tp --fm-ckpt $S1_ROOT/runs/ni26/ni26-fm-tpw-B/pilot/ckpt_s10000/checkpoint-cpt.pt

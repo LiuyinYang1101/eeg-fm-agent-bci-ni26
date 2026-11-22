@@ -1,0 +1,2 @@
+# T2-D296 (backlog 71): CNN test-time averaging over the vp bank (identity + 7 draws), FBCNet B3 rc75 line, the anchor's seeds 204-215, kit; one training writes the plain file (= the control) and the <recipe>tv8 twin
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser --tta-vp 8

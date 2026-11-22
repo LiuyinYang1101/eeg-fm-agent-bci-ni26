@@ -1,0 +1,2 @@
+# T2-D383: M6's ShallowNet line at 360 epochs (r1_pulx_vp2_e360_vr) on FRESH seeds 204-215 (192-203 = T2-D382's post-hoc single), kit + seen1, copies, plain + tv8 + tv8c
+NSHARDS=1 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e360_vr --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser --tta-vp 8 --tta-copies

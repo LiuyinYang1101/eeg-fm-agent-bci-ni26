@@ -1,0 +1,2 @@
+# T2-D413b: Step 1 exactly as T2-D413 (syn 0.5) on the TUNED bank (whitened flow matching + spectral calibration, outputs/t2_d413b/bank_<protocol>_final.npz) on FRESH seeds 300-311, kit + seen1, copies + tv8c
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15_mf50 --seeds 300,301,302,303,304,305,306,307,308,309,310,311 --peruser --tta-vp 8 --tta-copies --syn-bank outputs/t2_d413b/bank_{protocol}_final.npz

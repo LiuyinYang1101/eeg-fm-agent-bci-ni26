@@ -1,0 +1,3 @@
+# T2-D454: ST-L from the 'ctl' first stage, kit protocol, fresh seeds 460-471: (FT) the shipped 30-epoch fine-tune; (LP) encoder frozen for 29 of 30 epochs = only the head learns from PROTEUS
+NSHARDS=1 --protocols kit --seeds 460,461,462,463,464,465,466,467,468,469,470,471 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth
+NSHARDS=1 --protocols kit --seeds 460,461,462,463,464,465,466,467,468,469,470,471 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-lp-epochs 29

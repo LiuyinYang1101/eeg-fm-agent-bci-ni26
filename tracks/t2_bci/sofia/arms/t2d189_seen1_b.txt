@@ -1,0 +1,2 @@
+# T2-D189: the shipped ST-L member recipe (CPT ni26-t2p-cpt-d111-with, gain + sz, mixup 0.4, 30 epochs) = the same-job anchor, seen1 seeds 6,7,8,9,10,11, + per-user LoRA r16 deltas (own + routed-other episodes; r 1/2 in weight space)
+NSHARDS=1 --protocols seen1 --seeds 6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-peruser-lora

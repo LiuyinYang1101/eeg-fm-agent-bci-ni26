@@ -1,0 +1,2 @@
+# T2-D388: M6's ShallowNet with S1's pv10 copies (r1_pulx_vp2_e180_vr_pv10) on FRESH seeds 216-227, kit + seen1, copies, plain + tv8 + tv8c
+NSHARDS=1 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_pv10 --seeds 216,217,218,219,220,221,222,223,224,225,226,227 --peruser --tta-vp 8 --tta-copies

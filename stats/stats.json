@@ -1,0 +1,122 @@
+{
+  "competition": "NeurIPS 2026 EEG/EMG Foundation Challenge, Track 2 (BCI decoding)",
+  "dates": {
+    "start": "2026-10-05",
+    "sealed_phase_closed": "2026-11-21",
+    "days": 48
+  },
+  "result": {
+    "final_sealed_score": 0.844,
+    "metric": "cell-mean balanced accuracy",
+    "rank": 13,
+    "ranked_entries": 302,
+    "rank_source": "my reading of the final live board (the human supervisor)",
+    "leaders": [
+      0.872,
+      0.867,
+      0.865
+    ],
+    "final_runtime_s": 2795.3,
+    "runtime_budget_s": 3600
+  },
+  "sealed_history": [
+    {
+      "upload": "first-day packages (3)",
+      "date": "2026-11-05",
+      "score_after_rerun": [
+        0.798,
+        0.798,
+        0.799
+      ],
+      "score_before_rerun": [
+        0.805,
+        0.806,
+        0.808
+      ]
+    },
+    {
+      "upload": "M7",
+      "date": "2026-11-10",
+      "score_after_rerun": 0.819,
+      "score_before_rerun": 0.825
+    },
+    {
+      "upload": "W14-lite",
+      "date": "2026-11-15",
+      "score": 0.827
+    },
+    {
+      "upload": "W18",
+      "date": "2026-11-17",
+      "score": 0.835
+    },
+    {
+      "upload": "W25-ALL6",
+      "date": "2026-11-21",
+      "score": 0.844,
+      "final": true
+    },
+    {
+      "upload": "W30",
+      "date": "2026-11-21",
+      "score": 0.838
+    }
+  ],
+  "work": {
+    "decision_entries_track2_log": 572,
+    "decision_id_range": "T2-D99..T2-D659",
+    "commits_touching_track2": 2122,
+    "commits_total_private_repo": 6647,
+    "python_files": 517,
+    "python_lines": 86766,
+    "shell_files": 413,
+    "slurm_files": 66,
+    "job_script_lines": 18297,
+    "arm_definition_files": 1542,
+    "test_files": 112,
+    "submission_templates": 16,
+    "decision_outcomes_572": {
+      "shipped": 43,
+      "adopted_then_superseded": 51,
+      "closed": 302,
+      "killed_early": 70,
+      "withdrawn": 5,
+      "descriptive": 89,
+      "never_read": 12
+    },
+    "entries_catalogued_total": 603
+  },
+  "compute": {
+    "cluster_jobs_track2": 2293,
+    "h200_gpu_hours_track2": 2395.6,
+    "ledger_until": "2026-11-20",
+    "job_states": {
+      "completed": 2007,
+      "cancelled": 177,
+      "failed": 86,
+      "timeout": 3,
+      "pending_at_snapshot": 20
+    },
+    "local_gpu": "1 x RTX 5090, not metered"
+  },
+  "agent_usage_whole_challenge": {
+    "sessions": 23,
+    "model_calls": 84228,
+    "output_tokens": 69315038,
+    "cache_read_tokens": 27802674682,
+    "cache_write_tokens": 401645843,
+    "fresh_input_tokens": 253061,
+    "total_tokens_processed": 28273888624
+  },
+  "agent_usage_track2_worker_sessions": {
+    "sessions": 5,
+    "model_calls": 21473,
+    "output_tokens": 20724301,
+    "cache_read_tokens": 7972618014
+  },
+  "human_supervisor_messages": {
+    "all_sessions": 725,
+    "track2_worker_sessions": 71,
+    "manager_sessions": 466
+  }
+}

@@ -1,0 +1,2 @@
+# T2-D561: the paired ifnet control at ALIGN NONE (the shipped line is EA; the dose question is read at align none for all three arms)
+--protocols kit,seen1 --models ifnet --aligns none --recipe r1_pulx_vp2_e180_vr --seeds 340,341,342,343,344,345 --peruser --tta-vp 8 --tta-copies

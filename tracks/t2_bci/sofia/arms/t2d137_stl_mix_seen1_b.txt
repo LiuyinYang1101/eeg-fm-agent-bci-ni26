@@ -1,0 +1,4 @@
+# T2-D137 (plan 3 T2 item 2): the ST-L member for the seen1 package shape = the D112a recipe (mixup 0.4, gain + sz, 30 epochs)
+# from the seen1-CLEAN CPT whose PROTEUS pool is `seen1` (1458289: P01-03 + P05-08 + P04 s1 + P10 s1; the seen1 analog of the
+# sealed twin's all-user CPT). Seeds 6-11 here, 0-5 in _a. 1 process per H200 (ST-L ~70 GB). t2p_bench's leak guard checks the pool.
+NSHARDS=1 --protocols seen1 --seeds 6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4

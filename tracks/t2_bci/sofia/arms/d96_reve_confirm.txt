@@ -1,0 +1,2 @@
+# D96 fresh-seed confirmation of FBCNet-none + REVE (gain, align none = D88 adopted recipe): REVE seeds 6-11 (FBCNet-none 6-11 exist)
+--protocols kit --seeds 6,7,8,9,10,11 --models fm:reve:mean --aligns none --fm-calib gain

@@ -1,0 +1,4 @@
+# T2-D147: TP-1 arm A END checkpoint as the MOR start with TP-1's own front end (--fm-calib tp), the D130 / D133 role-LoRA recipe at lr-enc 3e-4, seeds 0-5, kit + seen1
+# NSHARDS=1 = 1 process per H200 (hook LoRA memory, review T2 P3j)
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 3e-4 --fm-calib tp --fm-ckpt $S1_ROOT/runs/ni26/ni26-fm-tp1-A/pilot/ckpt_s19665/checkpoint-cpt.pt
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 3e-4 --fm-calib tp --fm-ckpt $S1_ROOT/runs/ni26/ni26-fm-tp1-A/pilot/ckpt_s19665/checkpoint-cpt.pt

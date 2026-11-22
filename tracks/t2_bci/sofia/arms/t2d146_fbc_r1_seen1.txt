@@ -1,0 +1,2 @@
+# T2-D146 (sofia, deviation 2026-10-19): FBCNet B3 recipe r1, seeds 12-23, seen1, with per-user FT copies (the D124c blend runs locally after the fetch)
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1 --seeds 12,13,14,15,16,17,18,19,20,21,22,23 --peruser

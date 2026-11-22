@@ -1,0 +1,2 @@
+# T2-FM-D6: ST-L + P1 (t2fm-p1-seen1, p1s) checkpoint step 5000 -> the plain recipe (seen1), seeds 0,1,2,3,4,5,6,7,8,9,10,11
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/fm/t2fm-p1-seen1/ck_p1s_s05000/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

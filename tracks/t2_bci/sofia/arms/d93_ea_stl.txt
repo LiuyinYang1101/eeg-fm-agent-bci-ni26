@@ -1,0 +1,3 @@
+# D93 EA for ST-L (1 process per GPU)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns ea
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns ea --n0 30

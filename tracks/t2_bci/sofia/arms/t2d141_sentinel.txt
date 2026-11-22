@@ -1,0 +1,4 @@
+# T2-D141 sentinel (reported beside, never deciding): the pinned mor_p1v2 role-LoRA member, seed 0, kit + seen1, on the current code
+# vs the D130 (1459941) / D133 (1460136) files that are the step-1 / step-2 comparator
+NSHARDS=1 --protocols kit --seeds 0 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3
+NSHARDS=1 --protocols seen1 --seeds 0 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3

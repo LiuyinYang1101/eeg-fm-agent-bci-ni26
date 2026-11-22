@@ -1,0 +1,5 @@
+# T2-D128 MOR FT stability screen, one knob per arm vs E12 wz (anchor 1457205), kit, seeds 0-11; 3 shards per H200
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-qkv-lr-mult 0.3
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-drop-path 0.1
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-layer-clip
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-mixup 0.4

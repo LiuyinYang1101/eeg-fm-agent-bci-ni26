@@ -1,0 +1,2 @@
+# T2-D507 arm H25: CAR + Scherer2015 on its own head, w 0.25
+NSHARDS=3 --protocols lc9 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 780,781,782,783,784,785 --car --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-head --extra-w 0.25

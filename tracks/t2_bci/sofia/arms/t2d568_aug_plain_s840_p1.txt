@@ -1,0 +1,2 @@
+# T2-D568 (D557's augmentation at a stronger dose, one arm; registered 2026-11-18 11:34:11 before any job): t2d558_aug_plain_s840_p1.txt's line with --fm-aug 0.3:45:0.15 --fm-mixup 1.0 (was 0.2:30:0.1 / 0.8)
+NSHARDS=1 --protocols lc9_2,lc9_3 --seeds 840 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.3:45:0.15 --fm-mixup 1.0 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15 --side dcmean --fm-side dcmean --fm-cont-epochs 25 --fm-cont-lr 0.1 --fm-cont-arms b

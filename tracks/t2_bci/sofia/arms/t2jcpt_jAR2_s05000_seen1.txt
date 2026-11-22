@@ -1,0 +1,2 @@
+# J-CPT (ni26-t2p-jcpt-AR2, jAR2) checkpoint step 05000 -> the shipped ST-L fine-tune (seen1), seeds 0-11
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-jcpt-AR2/ck_jAR2_s05000/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

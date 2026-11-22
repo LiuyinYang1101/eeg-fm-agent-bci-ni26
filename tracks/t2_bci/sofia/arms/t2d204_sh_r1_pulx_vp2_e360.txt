@@ -1,0 +1,2 @@
+# T2-D204: ShallowNet-EA r1_pulx_vp2_e360, arm: pooled 360 epochs, FRESH seeds 132-143, kit + seen1, with per-user copies (blend r 1/2 locally)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e360 --seeds 132,133,134,135,136,137,138,139,140,141,142,143 --peruser

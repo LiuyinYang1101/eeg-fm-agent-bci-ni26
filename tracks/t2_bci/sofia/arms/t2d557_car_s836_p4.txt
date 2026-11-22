@@ -1,0 +1,2 @@
+# T2-D557 (the combined FM augmentation part, registered 2026-11-17 before any number): T2-D553's arm with --fm-aug 0.2:30:0.1 (gain jitter 0.2, ± 0.25 s shift, channel dropout 0.1) and --fm-mixup 0.8 (in place of 0.4); NI26_SIDE_DUMP=1
+NSHARDS=1 --protocols lc9_8,lc9_9 --seeds 836 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean --fm-cont-epochs 25 --fm-cont-lr 0.1 --fm-cont-arms b

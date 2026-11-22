@@ -1,0 +1,2 @@
+# T2-D417: ST-L member AUD 1 dose: lp20 + lh3 + vp2, fresh seeds 108-119, kit (read as M7's lp10 slot swap)
+NSHARDS=1 --protocols kit --seeds 108,109,110,111,112,113,114,115,116,117,118,119 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lr-head 3e-3 --fm-lp-epochs 20 --fm-vp 2

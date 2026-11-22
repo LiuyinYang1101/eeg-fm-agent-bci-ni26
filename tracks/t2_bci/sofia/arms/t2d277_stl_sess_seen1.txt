@@ -1,0 +1,4 @@
+# T2-D277, arm sess (pre-registered 2026-10-26 10:52, before any D277 number; the panel's T2 item 5, user-approved 2026-10-26): the adopted ST-L fine-tune
+# (T2-D247r: the D112a recipe + --fm-rc 0.75 --fm-llrd 0.75) from T2-D277's seen1 CPT (CPT v1's recipe, PROTEUS pool seen1 + the session crops under the seen1 rule, --extra-proteus-pool seen1),
+# seen1, seeds 0-11, vs the stl_rcll runs of T2-D247 on disk (CPT d89b / d111-with). 1 process per H200
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d277-seen1/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

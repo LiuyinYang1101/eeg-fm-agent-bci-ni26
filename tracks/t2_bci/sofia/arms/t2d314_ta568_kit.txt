@@ -1,0 +1,2 @@
+# T2-D314 (TA568 role-LoRA research screen, the manager's seed within GO 330): T2's MOR recipe (T2-D130 / D133: role-LoRA r16, alpha 32, input dropout 0.1, lr 1e-3, E12, wz, zwin) on the xl TA568, kit, seeds 0-11 (paired with the 100M role-LoRA MOR runs 1459941 / 1460136); micro 2 (gradient accumulation; set by the smoke). 1 process per H200
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:ta568:mean --aligns wz --fm-epochs 12 --fm-lr-enc 1e-3 --fm-lora-in 16 --fm-lora-in-roles --fm-lora-in-dropout 0.1 --fm-micro 2

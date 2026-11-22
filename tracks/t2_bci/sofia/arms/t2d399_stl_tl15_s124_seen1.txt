@@ -1,0 +1,2 @@
+# T2-D399 (backlog 94): the shipped plain ST-L line + --fm-tilt 0.15 (the CNN tilt dose), FRESH seeds 124-135, seen1
+NSHARDS=1 --protocols seen1 --seeds 124,125,126,127,128,129,130,131,132,133,134,135 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-tilt 0.15

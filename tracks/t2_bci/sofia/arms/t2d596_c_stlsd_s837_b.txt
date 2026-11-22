@@ -1,0 +1,2 @@
+# T2-D596 (the WORD-margin loss, registered 2026-11-18 before any number): t2d558_aug_stlsd_s837_b.txt's line + --fm-wmargin 0.3 (C, seeds 837-841)
+NSHARDS=1 --protocols lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 --seeds 837 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15 --side dcmean --fm-side dcmean --fm-wmargin 0.3

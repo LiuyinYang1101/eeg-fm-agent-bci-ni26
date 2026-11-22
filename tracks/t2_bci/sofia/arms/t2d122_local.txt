@@ -1,0 +1,5 @@
+# T2-D122 FBCNet bank widening (B1 +1-4 Hz, B2 +40-58 Hz, B3 both) and crop members (C1 samples 0:240 = 1-3 s after the cue,
+# C2 240:480 = 3-5 s); kit + seen1, seeds 0-11, LOCAL (run_arms_local.sh). DECISIONS_T2 pre-registered 2026-10-15 15:10
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet_b14,fbcnet_b4058,fbcnet_bboth --aligns none
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --crop 0:240
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --crop 240:480

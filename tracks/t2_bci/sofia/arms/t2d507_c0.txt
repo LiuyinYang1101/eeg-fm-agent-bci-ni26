@@ -1,0 +1,2 @@
+# T2-D507 arm C0: delivered reference, no Scherer (descriptive: CAR own effect)
+NSHARDS=3 --protocols lc9 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 780,781,782,783,784,785

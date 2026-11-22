@@ -1,0 +1,8 @@
+# T2-D115 FBCNet hyperparameters (H1-H4 + H8 as model variants, H5 / H6 epochs, H7 lr 3e-4) and T2-D117 user bagging vs seed
+# bagging (DECISIONS_T2, pre-registered 2026-10-15 11:44); kit + seen1, seeds 0-11, LOCAL (run_arms_local.sh); anchor = T2-D111 A0
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet_s2,fbcnet_s8,fbcnet_f16,fbcnet_f64,fbcnet_b830 --aligns none
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --epochs 30
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --epochs 120
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --recipe r1_lowlr
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --bag users
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --bag seeds

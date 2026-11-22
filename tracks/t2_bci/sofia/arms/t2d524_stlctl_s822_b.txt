@@ -1,0 +1,2 @@
+# T2-D524 control: stl ST-L seed 822, D512's tilt line RETRAINED without the side input, folds lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 (half b)
+NSHARDS=1 --protocols lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 --seeds 822 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15

@@ -1,0 +1,2 @@
+# T2-D100 causal within-session BN-statistics adaptation of FBCNet-none: twins + 4 momenta from the same weights, seeds 0-11
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --tta-bn 0.02,0.05,0.1,0.2

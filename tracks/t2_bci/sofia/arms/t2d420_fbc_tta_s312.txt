@@ -1,0 +1,4 @@
+# T2-D420 (sweep (a), backlog 104 + the anchored TTT): causal test-time adaptation kill test on M7's POOLED FBCNet recipe (r1_pulxx_vp2_e180_vr_rc75,
+# align none), FRESH seeds 312-323, kit + seen1; twins plEA1 / plEA2 = EATA-filtered IM (lr 1e-5 / 3e-5), plAT1 / plAT2 = anchored mean-teacher TTT
+# (lr 1e-5 / 3e-5), each streamed per stream from a fresh copy; no copies / views (member level)
+NSHARDS=1 --protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 312,313,314,315,316,317,318,319,320,321,322,323 --tta-pl EA1,EA2,AT1,AT2

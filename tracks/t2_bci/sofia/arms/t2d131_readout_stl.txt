@@ -1,0 +1,4 @@
+# T2-D131 readout settlement on ST-L (adopted recipe), kit seeds 0-11, vs mean pooling (1458293); 1 process per GPU
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:early --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mlmean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:grid --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4

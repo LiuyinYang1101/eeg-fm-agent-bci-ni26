@@ -1,0 +1,2 @@
+# T2-D442: M7 plain 100-epoch ST-L member (t2d379 line) on FRESH seeds, half a, seen1; the PAIRED control and the fresh M7 slot
+NSHARDS=1 --seeds 400,401,402,403,404,405 --protocols seen1 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100

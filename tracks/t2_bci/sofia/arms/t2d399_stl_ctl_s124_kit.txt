@@ -1,0 +1,2 @@
+# T2-D399: the PAIRED control (no tilt) on the same seeds, kit
+NSHARDS=1 --protocols kit --seeds 124,125,126,127,128,129,130,131,132,133,134,135 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

@@ -1,0 +1,2 @@
+# T2-D568 B ARM (registered 2026-11-18 11:34:11): t2d557_stlsd_s827_b.txt's line with --fm-aug 0.3:45:0.15 --fm-mixup 1.0 (was 0.2:30:0.1 / 0.8); feature dumps
+NSHARDS=1 --protocols lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 --seeds 827 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.3:45:0.15 --fm-mixup 1.0 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15 --side dcmean --fm-side dcmean

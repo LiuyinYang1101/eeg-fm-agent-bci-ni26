@@ -1,0 +1,3 @@
+# T2-D228: FBCNet B3 under vp2-180 + vr: per-user copies that train the classifier only (vr_phead) or everything but the classifier (vr_pfeat) vs every part, pooled net = the vr line, the T2-D215r seeds 204-215 (reference = D215r's vr runs), kit, the copies otherwise PERUSER
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_phead --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_pfeat --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser

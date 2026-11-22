@@ -1,0 +1,2 @@
+# T2-D413: M6's tilt FBCNet line + MeanFlow synthetic new-people windows at 0.5 x the batch (syn 0.5; the protocol's generator-seed-0 bank) on FRESH seeds 300-311, kit + seen1, copies + tv8c
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15_mf50 --seeds 300,301,302,303,304,305,306,307,308,309,310,311 --peruser --tta-vp 8 --tta-copies --syn-bank outputs/t2_d413/bank_{protocol}_g0.npz

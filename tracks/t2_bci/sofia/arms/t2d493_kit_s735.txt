@@ -1,0 +1,2 @@
+# T2-D493: T2-D455's control ST-L line (M7's member recipe, 100 epochs) as a 5-soup (members seed + 1000 j, j = 0..4), each member written (soup5m<j>), kit, seed 735
+NSHARDS=1 --protocols kit --seeds 735 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-soup 5 --fm-soup-members

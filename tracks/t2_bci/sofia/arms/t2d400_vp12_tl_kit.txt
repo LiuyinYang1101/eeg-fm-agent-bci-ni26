@@ -1,0 +1,2 @@
+# T2-D400: M6's vp12 ST-L member (t2d333_stl_vp2_s12_kit.txt's exact line, the same seeds) + --fm-tilt 0.15; its control = the existing member
+NSHARDS=1 --protocols kit --seeds 12,13,14,15,16,17,18,19,20,21,22,23 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-vp 2 --fm-tilt 0.15

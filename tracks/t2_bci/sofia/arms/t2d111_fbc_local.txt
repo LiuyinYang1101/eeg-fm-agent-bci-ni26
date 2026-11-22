@@ -1,0 +1,9 @@
+# T2-D111 / D112b / D113 FBCNet arms (DECISIONS_T2, pre-registered 2026-10-15 11:06), kit + seen1, seeds 0-11, LOCAL RTX 5090
+# (tracks/t2_bci/scripts/run_arms_local.sh). A0 = FBCNet-none r1, also writing the D113 self-training twins (plV1..V4) and
+# the (iii) per-user fine-tune twin (pu); (i) aux user-id head; (ii) soft user-expert head (+ its gs twin); D112b G1-G4
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --tta-pl V1,V2,V3,V4 --peruser
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet_uid,fbcnet_moe --aligns none
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --recipe r1_gj
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --recipe r1_ts
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --recipe r1_cd
+--protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fbcnet --aligns none --recipe r1_aug

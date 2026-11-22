@@ -1,0 +1,2 @@
+# T2-D400: M6's lplh48 ST-L member (t2d376_lplh_s48_kit.txt's exact line, the same seeds) + --fm-tilt 0.15; its control = the existing member
+NSHARDS=1 --protocols kit --seeds 48,49,50,51,52,53,54,55,56,57,58,59 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lr-head 3e-3 --fm-lp-epochs 10 --fm-tilt 0.15

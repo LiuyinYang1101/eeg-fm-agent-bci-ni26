@@ -1,0 +1,5 @@
+# T2 seen-user later-session DIAGNOSTIC (user-approved 2026-10-14): protocol kitp10 = kit train minus P10 sessions 2-3,
+# review 2026-10-16 (T2 P2e): this --fm-ckpt's pools hold P10 sessions 2-3 (a seen1 / kitp10 TEST stream): t2p_bench now refuses its seen1 / kitp10 lines; those numbers are LEAKY (kit lines are clean)
+# test = P10 sessions 2-3 (4 cells); the D95 members (FBCNet-none; ST-L CPT + gain-sz). 1 process per GPU (ST-L ~70 GB)
+--protocols kitp10 --seeds 0,1,2,3,4,5 --models fbcnet --aligns none
+--protocols kitp10 --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth

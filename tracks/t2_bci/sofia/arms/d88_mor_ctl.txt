@@ -1,0 +1,5 @@
+# D88 the in-house FM project controls (user's P1 alignment question): P1-off and MOR100 under the baseline and the faithful-input H9
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:mor_p1off:mean --aligns wz
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:mor_p1off:mean --aligns sz --fm-calib gain   # H9
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:mor100:mean --aligns wz
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:mor100:mean --aligns sz --fm-calib gain   # H9

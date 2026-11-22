@@ -1,0 +1,2 @@
+# T2-D440: ShallowNet (M7 pooled recipe r1_pulx_vp2_e180_vr, causal EA), three nets per seed (--bag ovr: s3 = three plain 3-class nets, ovr = one-vs-rest, pair = pairwise + coupling, ovc = ovr on class-specific channel sets), FRESH seeds 384-395, kit + seen1.
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 384,385,386,387,388,389,390,391,392,393,394,395 --bag ovr

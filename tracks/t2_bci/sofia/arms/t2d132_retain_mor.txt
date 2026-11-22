@@ -1,0 +1,5 @@
+# T2-D132 MOR: E12 wz from the T2-D123 MAE-only CPT; seen1 anchor without the term, then the retained-MAE arm (kit + seen1); 3 shards per H200 (the retained-MAE line: 1)
+# review 2026-10-16 (T2 P2e): the --fm-ckpt pools here hold P10 sessions 2-3 (seen1 TEST): t2p_bench now refuses these seen1 lines (the D132 seen1 numbers are LEAKY); a clean rerun needs a seen1_out CPT
+# review 2026-10-16 (T2 P3j): `NSHARDS=1` lines = 1 process per H200 (hook LoRA / retained-MAE memory); t2p_multi reads it per line
+--protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-mor-d123/checkpoint-cpt.pth
+NSHARDS=1 --protocols kit,seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-mor-d123/checkpoint-cpt.pth --fm-mae-retain 2

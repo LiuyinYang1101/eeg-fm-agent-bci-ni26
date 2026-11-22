@@ -1,0 +1,2 @@
+# T2-D480: M7's ST-L member line (100 epochs) on surface-Laplacian input (--lap), kit, seeds 472-475 (part 1 of 4 of T2-D475's 472-485; the CAR pair's line with --car -> --lap)
+NSHARDS=1 --protocols kit --seeds 472,473,474,475 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --lap

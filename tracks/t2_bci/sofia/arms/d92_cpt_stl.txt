@@ -1,0 +1,3 @@
+# D89 C1 (= C2: ST-L keeps the D82 recipe) and D92 ST-L CPT x gain-sz (twins = D88 st_large runs, seeds 0-5); 1 process per GPU
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns wz --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth   # D89 C1
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth   # D92 ST-L

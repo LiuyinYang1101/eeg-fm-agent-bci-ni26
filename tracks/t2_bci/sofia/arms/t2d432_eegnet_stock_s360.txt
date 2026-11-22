@@ -1,0 +1,2 @@
+# T2-D432: STOCK braindecode EEGNet (the kit's baseline architecture), base recipe r1, causal EA, FRESH seeds 360-371, kit + seen1.
+--protocols kit,seen1 --models eegnet --aligns ea --recipe r1 --seeds 360,361,362,363,364,365,366,367,368,369,370,371

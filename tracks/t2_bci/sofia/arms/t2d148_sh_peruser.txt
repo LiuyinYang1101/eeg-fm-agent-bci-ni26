@@ -1,0 +1,3 @@
+# T2-D148: ShallowNet-EA (recipe r1, the (c) member) seeds 0-11, kit + seen1, with its per-user FT copies (--peruser = ni26.train.PERUSER);
+# the shared nets' own files are the r = 0 control of the blend (t2p_fpcalib blend --model shallow --align ea, run locally after the fetch)
+--protocols kit,seen1 --models shallow --aligns ea --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --peruser

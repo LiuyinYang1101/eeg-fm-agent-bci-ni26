@@ -1,0 +1,12 @@
+# D88 FM harnessing arms for st_base (competition split); first line = the D82 recipe baseline
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-layer 6   # H1
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-epochs 12   # H2
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-ema 0.995   # H3
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-lora 8 --fm-lr-enc 1e-3   # H4
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:attn --aligns wz   # H5
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1   # H6
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-mixup 0.4   # H7
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-drop-path 0.1   # H8
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns sz --fm-calib gain   # H9
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns none --fm-calib gain   # H10

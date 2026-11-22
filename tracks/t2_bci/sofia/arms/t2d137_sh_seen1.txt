@@ -1,0 +1,3 @@
+# T2-D137 (plan 3 T2 item 2): the ShallowNet-EA member for the seen1 package shape, the package recipe (EA n0 0, shrink 0.05,
+# recipe r1, 60 epochs; = the kit sh_kit runs), seeds 0-11. CNN: the job default 3 shards per H200.
+--protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models shallow --aligns ea

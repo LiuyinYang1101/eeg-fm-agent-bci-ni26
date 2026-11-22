@@ -1,0 +1,2 @@
+# T2-D385: M6's EA ST-L member (T2-D378 line) at 100 epochs on FRESH seeds 96-107, seen1; = t2d378_stl_ea_s36_seen1.txt except seeds + --fm-epochs 100
+NSHARDS=1 --protocols seen1 --seeds 96,97,98,99,100,101,102,103,104,105,106,107 --models fm:st_large:mean --aligns ea --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100

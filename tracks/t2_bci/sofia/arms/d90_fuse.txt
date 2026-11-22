@@ -1,0 +1,4 @@
+# D90 joint FM + FBCNet feature fusion (FuseClf); align none = the adopted CNN base's input (the FM's own prep z-scores per window)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns none --fm-fuse fbcnet   # F1
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:reve:mean --aligns none --fm-calib gain --fm-fuse fbcnet   # F2 (REVE's D88 recipe)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns none --fm-fuse fbcnet --fm-epochs 60   # F4 (FBCNet's 60 epochs)

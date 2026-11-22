@@ -1,0 +1,2 @@
+# T2-D498: D475's CAR ST-L line on the K = 9 panel (lc9, 10 folds), from the PUBLIC ST-L checkpoint (no CPT), seed 763
+NSHARDS=1 --protocols lc9 --seeds 763 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car

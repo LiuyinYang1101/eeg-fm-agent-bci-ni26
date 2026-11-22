@@ -1,0 +1,2 @@
+# T2-D129 MOR E12 wz from the continuous-session MAE-only CPT, kit seeds 0-11, vs T2-D123's FT (1459190); 3 shards per H200
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-mor-d129/checkpoint-cpt.pth

@@ -1,0 +1,2 @@
+# T2-D346r: the 4th-family winner EEGNeX-EA on FRESH seeds 168-179 (kit + seen1, per-user copies, plain + tv8 + tv8c)
+--protocols kit,seen1 --models eegnex --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser --tta-vp 8 --tta-copies

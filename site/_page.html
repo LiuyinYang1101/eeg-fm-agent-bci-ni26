@@ -1,0 +1,507 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>EEG Agents Logbook</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one centred column, 720px. Text, figures, lists and tables all share its two edges; sections are separated by one hairline. */
+:root {
+  --bg: #fbfcfd;
+  --panel: #f1f4f7;
+  --ink: #10161d;
+  --ink-2: #414c58;
+  --muted: #5a6675;
+  --rule: #dde3e9;
+  --accent: #2a78d6;
+  --accent-ink: #1c5cab;
+  --deemph: #7a838d;
+  --tip-bg: #10161d;
+  --tip-ink: #f3f6f8;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --small: 0.875rem;
+  --label: 0.75rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101418; --panel: #171d23; --ink: #e9eef2; --ink-2: #b9c3cc; --muted: #8e9aa7; --rule: #27313b;
+    --accent: #3987e5; --accent-ink: #86b6ef; --deemph: #7f8891; --tip-bg: #e9eef2; --tip-ink: #10161d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101418; --panel: #171d23; --ink: #e9eef2; --ink-2: #b9c3cc; --muted: #8e9aa7; --rule: #27313b;
+  --accent: #3987e5; --accent-ink: #86b6ef; --deemph: #7f8891; --tip-bg: #e9eef2; --tip-ink: #10161d;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 752px; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--accent-ink); text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+p { margin: 0 0 14px; color: var(--ink-2); text-wrap: pretty; }
+p:last-child { margin-bottom: 0; }
+h1, h2, h3 { color: var(--ink); text-wrap: balance; }
+.label { font-family: var(--mono); font-size: var(--label); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); }
+
+/* top bar and opening */
+.top { display: flex; flex-wrap: wrap; gap: 0 24px; justify-content: space-between; align-items: baseline; padding-block: 14px; border-bottom: 1px solid var(--rule); font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); }
+.top a { color: var(--ink-2); display: inline-block; padding-block: 6px; }
+.hero { padding-block: 56px 0; }
+.hero .label { margin: 0 0 16px; }
+h1 { font-size: clamp(2rem, 6.2vw, 2.75rem); line-height: 1.14; font-weight: 600; letter-spacing: -0.015em; margin: 0 0 20px; }
+.lede { font-size: 1.125rem; }
+.lede strong { color: var(--ink); font-weight: 600; }
+
+/* one component for every row of figures */
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 24px; margin-top: 32px; }
+.stats.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.stat { border-top: 1px solid var(--rule); padding-block: 12px 18px; min-width: 0; }
+.stat .v { font-size: 1.625rem; font-weight: 600; line-height: 1.2; letter-spacing: -0.015em; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.stat .s { font-size: var(--small); line-height: 1.45; color: var(--muted); margin-top: 4px; }
+@media (max-width: 640px) { .stats, .stats.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.note { font-size: var(--small); line-height: 1.55; color: var(--muted); margin-top: 4px; }
+
+/* sections */
+section { margin-top: 56px; padding-top: 48px; border-top: 1px solid var(--rule); }
+h2 { font-size: 1.5rem; line-height: 1.25; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 14px; }
+.figure { margin-top: 32px; }
+.figure h3 { font-size: 1rem; line-height: 1.4; font-weight: 600; margin: 0; }
+.figure .sub { font-size: var(--small); line-height: 1.5; color: var(--muted); margin: 2px 0 16px; }
+
+/* the team */
+.org { margin-top: 28px; }
+.tier { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 10px; }
+.box { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 8px 10px; border: 1px solid var(--deemph); border-radius: 4px; text-align: center; font-size: 0.9375rem; line-height: 1.3; font-weight: 500; color: var(--ink); }
+.box.me { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.box.hot { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.box.call { border-style: dashed; color: var(--ink-2); }
+.link { width: 1px; height: 18px; background: var(--deemph); margin-inline: auto; }
+.org .note { text-align: center; margin-top: 10px; }
+.roles { margin: 28px 0 0; }
+.roles div { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 4px 20px; padding-block: 12px; border-top: 1px solid var(--rule); }
+.roles dt { padding-top: 4px; }
+.roles dd { margin: 0; font-size: 1rem; line-height: 1.55; color: var(--ink-2); }
+@media (max-width: 560px) { .roles div { grid-template-columns: 1fr; } .roles dt { padding-top: 0; } }
+.after { margin-top: 28px; }
+
+/* charts: every row is name, number, track */
+#scorechart { width: 100%; }
+#scorechart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.axis-text { font-family: var(--mono); font-size: 12px; fill: var(--muted); }
+.label-text { font-family: var(--sans); font-size: 13px; fill: var(--ink); font-weight: 500; }
+.label-sub { font-family: var(--sans); font-size: 12px; fill: var(--muted); }
+.rows { display: grid; gap: 8px; }
+.row { display: grid; grid-template-columns: 250px 3.4rem minmax(0, 1fr); gap: 14px; align-items: center; font-size: 0.9375rem; line-height: 1.4; }
+.row .name { color: var(--ink-2); min-width: 0; }
+.row.hot .name { color: var(--ink); font-weight: 600; }
+.row .tag { font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); font-weight: 400; margin-left: 6px; white-space: nowrap; }
+.row .num { font-family: var(--mono); font-size: var(--small); text-align: right; color: var(--ink); font-variant-numeric: tabular-nums; }
+.row .track { height: 14px; position: relative; }
+.row .fill { display: block; height: 100%; min-width: 2px; background: var(--deemph); border-radius: 0 4px 4px 0; }
+.row.hot .fill { background: var(--accent); }
+.row:hover .fill, .row:hover .dot { filter: brightness(1.12); }
+@media (min-width: 601px) { .dots .row { grid-template-columns: 270px 3.6rem 3.4rem minmax(0, 1fr); } }
+@media (max-width: 600px) { .dots .row { grid-template-columns: minmax(0, 1fr) auto auto; } }
+.row .size { font-family: var(--mono); font-size: var(--small); text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.row.head span { font-family: var(--mono); font-size: var(--label); letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+.dots .track { margin-inline: 6px; }
+.dots .track::before { content: ""; position: absolute; left: -6px; right: -6px; top: 50%; border-top: 1px solid var(--rule); }
+.dot { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%; background: var(--deemph); box-shadow: 0 0 0 2px var(--bg); }
+.row.fm .dot { background: var(--accent); }
+.row.fm .name { color: var(--ink); font-weight: 600; }
+.row.cl .dot { background: var(--bg); box-shadow: inset 0 0 0 2px var(--deemph), 0 0 0 2px var(--bg); }
+.row.axis .track { height: 18px; }
+.row.axis .track::before { display: none; }
+.tick { position: absolute; top: 2px; transform: translateX(-50%); font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+.tick:first-child { transform: none; margin-left: -6px; }
+@media (max-width: 600px) { .row { grid-template-columns: minmax(0, 1fr) auto; gap: 3px 12px; } .row .track { grid-column: 1 / -1; } .row.axis .name, .row.axis .num, .row.axis .size { display: none; } }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: var(--small); color: var(--ink-2); margin: 0 0 14px; }
+.key { white-space: nowrap; }
+.k-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--deemph); margin-right: 6px; vertical-align: -1px; }
+.k-dot.fm { background: var(--accent); }
+.k-dot.cl { background: transparent; box-shadow: inset 0 0 0 2px var(--deemph); }
+
+details { margin-top: 10px; }
+summary { cursor: pointer; font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); padding-block: 8px; }
+.table-wrap { overflow-x: auto; margin-top: 4px; }
+table { border-collapse: collapse; font-size: var(--small); line-height: 1.45; min-width: 100%; }
+th, td { text-align: left; padding: 7px 18px 7px 0; border-bottom: 1px solid var(--rule); vertical-align: top; color: var(--ink-2); }
+th { font-family: var(--mono); font-size: var(--label); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 500; }
+td.n { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink); }
+
+/* lists of findings */
+.items { margin-top: 24px; }
+.item { border-top: 1px solid var(--rule); padding-block: 16px 18px; }
+.item h3 { font-size: 1.0625rem; line-height: 1.4; font-weight: 600; margin: 0 0 6px; }
+.item p { font-size: 1rem; line-height: 1.6; }
+.item blockquote { margin: 12px 0 0; padding-left: 14px; border-left: 2px solid var(--rule); font-family: var(--mono); font-size: var(--small); line-height: 1.5; color: var(--ink); }
+.item blockquote cite { display: block; font-style: normal; color: var(--muted); font-size: var(--label); margin-top: 4px; }
+.items + p { margin-top: 8px; padding-top: 18px; border-top: 1px solid var(--rule); }
+
+/* closing */
+.cta { background: var(--panel); margin-top: 64px; padding-block: 48px; }
+.cta h2 { margin-bottom: 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 10px 12px; margin: 22px 0 0; padding: 0; list-style: none; }
+.links a { display: inline-block; padding: 9px 16px; border: 1px solid var(--ink); border-radius: 4px; color: var(--ink); text-decoration: none; font-weight: 500; font-size: 0.9375rem; }
+.links a.primary { background: var(--ink); color: var(--bg); }
+.links a:hover { border-color: var(--accent); }
+.more { margin-top: 18px; font-size: 1rem; }
+footer { padding-block: 24px 40px; }
+footer p { font-size: var(--small); line-height: 1.55; color: var(--muted); margin-bottom: 6px; }
+
+#tip { position: fixed; z-index: 20; pointer-events: none; background: var(--tip-bg); color: var(--tip-ink); font-size: 13px; line-height: 1.35; padding: 7px 10px; border-radius: 4px; max-width: 260px; }
+#tip b { font-weight: 600; display: block; }
+</style>
+
+<div class="wrap">
+  <div class="top">
+    <span>Liuyin · 22 November 2026</span>
+    <a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26">Code and logs on GitHub</a>
+  </div>
+
+  <header class="hero">
+    <p class="label">NeurIPS 2026 EEG/EMG Foundation Challenge · Track 2, BCI decoding</p>
+    <h1>I let AI agents run my EEG competition entry for 48 days.</h1>
+    <p class="lede">I have worked on EEG foundation models for years: networks pre-trained on many people's brain recordings and then adapted to a new task. In October I entered one, ST-EEGFormer, which I co-authored, in a brain–computer interface competition and let Claude agents do the work. I typed instructions and made the uploads; they did the rest. <strong>The agents and I finished 13th of 302.</strong> Not so great. Maybe that is as far as these models go on this task. More likely, my supervision was the weak part. The code, the decision log, the prompts that changed things and the mistakes are in the repository.</p>
+
+    <div class="stats four">
+      <div class="stat"><div class="label">Our final score</div><div class="v">0.844</div></div>
+      <div class="stat"><div class="label">Place</div><div class="v">13th of 302</div></div>
+      <div class="stat"><div class="label">Best entry</div><div class="v">0.872</div></div>
+      <div class="stat"><div class="label">Our first day</div><div class="v">0.799</div></div>
+    </div>
+    <p class="note">The score is accuracy averaged over the three classes (balanced accuracy) on a test set we never saw; guessing gives 0.333. I read the place off the live leaderboard when it closed. The public page lists only the top ten.</p>
+  </header>
+
+<main>
+  <section aria-labelledby="h-task">
+    <h2 id="h-task">The task</h2>
+    <p>Work out which of three things a person is doing in their head (imagined movement, mental arithmetic or word association) from four seconds of EEG, 41 electrodes at 120 samples a second. The test covers ten people the model has earlier recordings of and ten it has never seen. It gets one window at a time and is never told who the person is or whether it was right.</p>
+  </section>
+
+  <section aria-labelledby="h-who">
+    <h2 id="h-who">How the agents were organised</h2>
+    <p>It was not one agent. It was a small team of Claude sessions with fixed roles: a manager, one worker for each competition track, and in the last days a reviewer. I typed. They read the rules, wrote the code, queued the jobs, checked each other's work and built the submission files. I uploaded each file myself; the agents were never allowed to.</p>
+
+    <div class="org" role="img" aria-label="The team, top to bottom: me; the manager agent; three worker agents, one per track, and a review agent; below them, helper agents and expert panels that were called when needed.">
+      <div class="tier"><div class="box me">Me, the human supervisor</div></div>
+      <div class="link"></div>
+      <div class="tier"><div class="box">Manager agent</div></div>
+      <div class="link"></div>
+      <div class="tier">
+        <div class="box">Worker, Track 1</div>
+        <div class="box hot">Worker, Track 2</div>
+        <div class="box">Worker, Track 3</div>
+        <div class="box">Review agent</div>
+      </div>
+      <div class="link"></div>
+      <div class="tier">
+        <div class="box call">Helper agents</div>
+        <div class="box call">Expert panels</div>
+      </div>
+      <p class="note">Dashed: called when needed. Blue outline: the track this page is about.</p>
+    </div>
+
+    <dl class="roles">
+      <div><dt class="label">Me</dt><dd>I set the goals, asked questions, and approved or refused what the agents proposed. I made every upload.</dd></div>
+      <div><dt class="label">Manager agent</dt><dd>Ran no experiments. Kept the plan and the list of what waited on me, checked in every hour, read the leaderboard, passed findings between tracks and called the panels.</dd></div>
+      <div><dt class="label">Worker agents</dt><dd>One per competition track: decoding images from EEG, BCI decoding, and predicting sleep onset. Each kept its own decision log. The Track 2 worker wrote and ran all the code behind this page.</dd></div>
+      <div><dt class="label">Review agent</dt><dd>Added for the last four days. Recomputed results independently and read each change before a file went out.</dd></div>
+      <div><dt class="label">Helper agents</dt><dd>Short-lived. A worker or the manager started one for a single bounded job: read a long log, check a build, review a change with fresh eyes.</dd></div>
+      <div><dt class="label">Expert panels</dt><dd>Called for important decisions and code. Each worker wrote a short brief. A model from another company and agents with no memory of our plan were asked to attack it. The manager wrote up the conclusion.</dd></div>
+    </dl>
+
+    <p class="after">Three rules held this together. A worker writes down what result would count as a pass before it runs the experiment. Nothing becomes an upload without a line I type in that worker's own session. Every candidate is scored as the packaged file, the way the organisers would run it. The rules were not always kept, and the lapses are in the log.</p>
+    <p>Over the whole challenge that came to about 300 helper agents, 25 panel rounds and 140 written reviews.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="label">Messages I typed</div><div class="v">725</div><div class="s">typed or pasted, across all four tracks</div></div>
+      <div class="stat"><div class="label">Submissions scored</div><div class="v">8</div><div class="s">four of the last five raised our score</div></div>
+      <div class="stat"><div class="label">Requests to the model</div><div class="v">84,228</div><div class="s">69.3 million tokens written, all four tracks</div></div>
+      <div class="stat"><div class="label">Git commits</div><div class="v">2,122</div><div class="s">to this track alone</div></div>
+      <div class="stat"><div class="label">Lines of Python</div><div class="v">86,766</div><div class="s">517 files, plus 479 job scripts</div></div>
+      <div class="stat"><div class="label">GPU-hours</div><div class="v">≈ 2,400</div><div class="s">2,293 jobs on NVIDIA H200 GPUs</div></div>
+    </div>
+    <p class="note">The message, request and token counts are for the whole challenge: four tracks, plus the agents that managed and reviewed them. The Track 2 worker agents alone made 21,473 requests and wrote 20.7 million tokens, which is a lower bound for this track.</p>
+  </section>
+
+  <section aria-labelledby="h-score">
+    <h2 id="h-score">The score, upload by upload</h2>
+    <p>The steps were small: 0.02 once, then less than 0.01 each time. The gap to the best entry never closed. A last upload on the final evening scored lower than the one before it.</p>
+    <div class="figure">
+      <h3>Score of each upload on the hidden test set</h3>
+      <p class="sub">Accuracy averaged over three classes. The axis starts at 0.79; chance is 0.333. Dashed line: the best entry when the leaderboard closed.</p>
+      <div id="scorechart" role="img" aria-label="Line chart of the score of each upload: 0.799 on November 5, 0.819 on November 10, 0.827 on November 15, 0.835 on November 17 and 0.844 on November 21. A last upload later on November 21 scored 0.838. The best entry when the leaderboard closed scored 0.872."></div>
+      <details>
+        <summary>Show as table</summary>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Date</th><th scope="col">Upload</th><th scope="col">Score</th><th scope="col">Note</th></tr></thead>
+            <tbody>
+              <tr><td>Nov 5</td><td>three files on the first day</td><td class="n">0.798 to 0.799</td><td>first shown as 0.805 to 0.808; the organisers re-ran every entry on Nov 10</td></tr>
+              <tr><td>Nov 10</td><td>M7</td><td class="n">0.819</td><td>first shown as 0.825, same re-run</td></tr>
+              <tr><td>Nov 15</td><td>W14-lite</td><td class="n">0.827</td><td></td></tr>
+              <tr><td>Nov 17</td><td>W18</td><td class="n">0.835</td><td></td></tr>
+              <tr><td>Nov 21</td><td>W25-ALL6</td><td class="n">0.844</td><td>the score that counts</td></tr>
+              <tr><td>Nov 21</td><td>W30</td><td class="n">0.838</td><td>uploaded later the same evening</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-ideas">
+    <h2 id="h-ideas">Most of what we tried did not work</h2>
+    <p>The agents logged 572 decisions for this track, nearly all with the pass or fail rule written down before the result, and 43 of them ended up in a submitted model. For each of the others the log gives the number that was measured and the reason it was dropped. I expect that list to be more useful to other people than our score.</p>
+    <div class="figure">
+      <h3>What happened to the 572 logged decisions</h3>
+      <p class="sub">One label per entry, assigned afterwards. 372 of 572 were tested and dropped, or stopped early.</p>
+      <div class="rows" id="bars-outcome"></div>
+    </div>
+    <div class="figure">
+      <h3>What they were about</h3>
+      <p class="sub">The same 572 entries, by topic. Blue: foundation-model work.</p>
+      <div class="rows" id="bars-theme"></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-models">
+    <h2 id="h-models">Which models did best on their own</h2>
+    <p>Before a model went into the ensemble, the agents usually scored it alone. The chart collects those scores for one test setup from early November: four people, three of them new to the model, and in most rows 12 training runs per model. It is put together from 21 log entries written over ten days, so small gaps mean nothing.</p>
+    <div class="figure">
+      <h3>Score of each model alone, on the same four people</h3>
+      <p class="sub">Accuracy averaged over three classes. The axis starts at chance, 0.333. Size is the number of parameters in one network, counted from our code for this task. Classical pipelines are not networks.</p>
+      <p class="legend"><span class="key"><span class="k-dot fm"></span>Foundation model (FM)</span><span class="key"><span class="k-dot"></span>Convolutional network (CNN)</span><span class="key"><span class="k-dot cl"></span>Classical pipeline</span></p>
+      <div class="rows dots" id="dots-models"></div>
+      <details>
+        <summary>Show as table</summary>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Model</th><th scope="col">Kind</th><th scope="col">Parameters</th><th scope="col">Score</th><th scope="col">How it was scored</th><th scope="col">Log entry</th></tr></thead>
+            <tbody id="table-models"></tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+    <div class="items">
+      <div class="item"><h3>The foundation model was level with the best small network, or slightly ahead.</h3><p>FBCNet, a filter-bank convolutional network, read 0.742. One fine-tuned ST-EEGFormer network read 0.739 after 30 training epochs and 0.757 after 100, and three of them voting read 0.774. The two are not scored in the same form: FBCNet is taken as it sat in the ensemble, with per-person copies, and the ST-EEGFormer networks have none. In a later check on ten new people, six ST-EEGFormer networks together read 0.703, against 0.678 for FBCNet, 0.648 for IFNet and 0.637 for ShallowNet (three runs each).</p></div>
+      <div class="item"><h3>The other foundation models did not get there.</h3><p>MOR, an in-house model, came closest at 0.727 with three networks voting. REVE, LaBraM and CBraMod stayed between 0.48 and 0.58. Most of these got one configuration and little tuning, so this says they were not competitive as we tried them. It is not a ranking of the models.</p></div>
+      <div class="item"><h3>Classical pipelines were far behind.</h3><p>The best, a filter-bank Riemannian classifier with logistic regression, read 0.585. Filter-bank CSP with LDA read 0.536.</p></div>
+      <div class="item"><h3>A model's score alone did not decide whether it helped.</h3><p>Adding ST-EEGFormer to the October ensemble was worth 0.017. Adding MOR was worth 0.0005. A small tree model that read only 0.469 alone on ten new people added 0.012 to the ensemble, because its errors were almost uncorrelated with the rest.</p></div>
+      <div class="item"><h3>By size, the final entry was almost all foundation model.</h3><p>It held 521 networks and three small tree models, about 1.84 billion parameters in all. The six ST-EEGFormer networks hold 98.9% of them. The 495 small convolutional networks together hold 18 million.</p></div>
+    </div>
+    <p>One caveat works in the foundation model's favour: its extra pre-training had seen unlabelled recordings of three of these four people. The convolutional networks had never seen two of them. The ten-person check used the released weights without that step. All 38 single-model results, the other test setups and the caveats are in <a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26/blob/main/docs/MODEL_COMPARISON.md">the model comparison</a>.</p>
+  </section>
+
+  <section aria-labelledby="h-learned">
+    <h2 id="h-learned">What I think we learned</h2>
+    <p>This is one entry in one competition. Read these as observations, not findings. "Our own validation" means data we held back ourselves, not the official test.</p>
+    <div class="items">
+      <div class="item"><h3>The foundation model helped, but not enough.</h3><p>In early November, taking the fine-tuned ST-EEGFormer networks out of the ensemble cost about 0.036 on our own validation. The largest single gain of the last week was a better data-augmentation setup for them. A smaller version that we pre-trained from scratch on open data only was 0.12 behind and unusable. (The published checkpoint we started from was not pre-trained on open data only.)</p></div>
+      <div class="item"><h3>The biggest gain came from a fact about the test, not from a model.</h3><p>Every recording contains the three tasks equally often. Correcting the predictions as they come in, so that they stay balanced, was worth about 0.12 on our own validation: 0.07 on recordings that were already easy and 0.15 on the hard ones. Refitting the foundation model's small output heads on our own predictions during the test helped a little (about 0.003). Changing its network weights during the test never helped where we tried it.</p></div>
+      <div class="item"><h3>The features look good enough. What is missing is knowledge of the person.</h3><p>As a check, we fitted a simple classifier on the foundation model's features using a new person's own earlier windows and the true answers, which the real test never gives. It beat our whole system by 0.040. With our own predictions in place of the true answers, it lost 0.064.</p></div>
+      <div class="item"><h3>Less than half of the measured gain survived the hidden test.</h3><p>For the one step we could measure, the gain on our own validation showed up at 37 to 48% of its size in the official score. The last candidate, a small gain by our measure, scored 0.006 lower than the file it was built on.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-wrong">
+    <h2 id="h-wrong">What went wrong</h2>
+    <p>The expensive mistakes were errors of judgement under time pressure, not bugs.</p>
+    <div class="items">
+      <div class="item"><h3>Our validation did not train the way the submitted model did.</h3><p>Until 19 November the validation runs trained on one recording session per person, while the submitted models trained on all 14 public sessions, where two people hold 43% of the data. A panel found the mismatch two days before the close.</p></div>
+      <div class="item"><h3>The agents decided the metric was wrong.</h3><p>One agent argued that our validation metric was biased, and it was re-weighted. A second-opinion review asked for one check. The argument failed it and was withdrawn the same day.</p></div>
+      <div class="item"><h3>They judged our chances from an old leaderboard.</h3><p>The public page was two days out of date. We thought third place stood at 0.848. It was already 0.862.</p></div>
+      <div class="item"><h3>I asked for every small gain to be included.</h3><p>The rule the agents wrote from that sentence had no separate check for people the model had seen before. The last candidate passed it and scored 0.838, which is 0.006 below the file it was built on.</p>
+        <blockquote>"now, any small gain is plausible and should be included"<cite>Me to the manager agent, 20 November, 16:30</cite></blockquote></div>
+    </div>
+    <p>The <a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26/blob/main/docs/MILESTONES.md">milestone page</a> shows which of my prompts changed the direction, and whether that helped. Why 13th and not higher? It could be the foundation model, the agents, or me. One run cannot separate the three. My guess is me.</p>
+  </section>
+</main>
+</div>
+
+<div class="cta">
+  <div class="wrap">
+    <h2>What would you have done differently?</h2>
+    <p>The competition is closed, but two questions are still open for me. Can an EEG foundation model do better on this task than we managed? And was this a good way to run AI agents on a research problem: one manager, one worker per track, panels for the big decisions, rules written before results, and me typing a few lines a day?</p>
+    <p>I would like to hear ideas on either one: the model, the agent set-up, the workflow, or the way I supervised. The code and the full decision log are in the repository. The data and the trained weights are not; the data comes from the organisers. Open an issue, or run it yourself. I will test the model ideas that look most promising when I have spare time and GPUs, and log what happens in the same format, including when it fails.</p>
+    <ul class="links">
+      <li><a class="primary" href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26">Repository</a></li>
+      <li><a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26/issues/new/choose">Suggest a model idea or a workflow change</a></li>
+    </ul>
+    <p class="more">Also in the repository: <a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26/blob/main/docs/MILESTONES.md">the timeline, with my prompts</a>, <a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26/blob/main/docs/IDEAS_TRIED.md">everything we tried</a>, <a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26/blob/main/docs/MODEL_COMPARISON.md">the model comparison</a> and <a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26/blob/main/docs/OPEN_IDEAS.md">what we did not get to</a>.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <footer>
+    <p>The foundation-model checkpoint we started from was not pre-trained on open data only. The <a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26/blob/main/docs/PROVENANCE.md">provenance page</a> lists what it was trained on.</p>
+    <p>How each number on this page was counted: <a href="https://github.com/LiuyinYang1101/eeg-fm-agent-bci-ni26/blob/main/docs/STATS.md">docs/STATS.md</a>. Code: MIT. Documents: CC BY 4.0. The agents were Claude models running in Claude Code.</p>
+  </footer>
+</div>
+
+<div id="tip" hidden></div>
+
+<script>
+(function () {
+  "use strict";
+  var css = function (name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); };
+  var span = function (cls, text) { var s = document.createElement("span"); s.className = cls; if (text != null) s.textContent = text; return s; };
+
+  /* ---------- tooltip (pointer only; every value is also printed or in a table) ---------- */
+  var tip = document.getElementById("tip");
+  function showTip(el, x, y) {
+    tip.textContent = "";
+    var b = document.createElement("b"); b.textContent = el.getAttribute("data-v");
+    tip.appendChild(b); tip.appendChild(document.createTextNode(el.getAttribute("data-t")));
+    tip.hidden = false;
+    var r = tip.getBoundingClientRect();
+    var left = Math.min(Math.max(8, x + 14), window.innerWidth - r.width - 8);
+    var top = y - r.height - 12; if (top < 8) top = y + 18;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  }
+  function hideTip() { tip.hidden = true; }
+  function wire(el) {
+    el.addEventListener("pointermove", function (e) { showTip(el, e.clientX, e.clientY); });
+    el.addEventListener("pointerleave", hideTip);
+  }
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  /* ---------- ranked bars ---------- */
+  function bars(id, rows, total, hot) {
+    var host = document.getElementById(id); host.setAttribute("role", "list");
+    var max = Math.max.apply(null, rows.map(function (r) { return r[1]; }));
+    rows.forEach(function (r) {
+      var row = document.createElement("div"); row.className = "row" + (hot.indexOf(r[0]) >= 0 ? " hot" : ""); row.setAttribute("role", "listitem");
+      var share = Math.round(1000 * r[1] / total) / 10;
+      row.setAttribute("data-v", r[1] + " of " + total + " (" + share + "%)"); row.setAttribute("data-t", r[0]);
+      var t = span("track"); var f = span("fill"); f.style.width = (100 * r[1] / max) + "%"; t.appendChild(f);
+      row.appendChild(span("name", r[0])); row.appendChild(span("num", String(r[1]))); row.appendChild(t);
+      host.appendChild(row); wire(row);
+    });
+  }
+  bars("bars-outcome", [
+    ["Tested, then dropped", 302], ["Measurement only", 89], ["Stopped early", 70], ["Used, later replaced", 51],
+    ["In a submitted model", 43], ["Launched or planned, never read", 12], ["Withdrawn", 5]
+  ], 572, ["In a submitted model"]);
+  bars("bars-theme", [
+    ["Convolutional networks", 84], ["Foundation-model networks", 66], ["Ensemble weights", 61], ["Building submissions", 55],
+    ["Decoding at test time", 48], ["Per-user models", 48], ["Adapting during a recording", 45], ["Evaluation and diagnostics", 45],
+    ["Foundation model: augmentation", 29], ["Features and classical models", 23], ["Foundation model: pre-training", 21], ["Budget and bookkeeping", 16],
+    ["Runtime and packaging", 12], ["Person-independent training", 11], ["Extra labelled data", 8]
+  ], 572, ["Foundation-model networks", "Foundation model: augmentation", "Foundation model: pre-training"]);
+
+  /* ---------- models alone: dots on one scale ---------- */
+  (function () {
+    var rows = [
+      ["ST-EEGFormer large", "fm", 0.757, "one network, 100 epochs (0.739 at 30)", "T2-D361"],
+      ["FBCNet", "cnn", 0.742, "as in our ensemble, with per-person copies", "T2-D491"],
+      ["IFNet", "cnn", 0.731, "as in our ensemble, with per-person copies", "T2-D491"],
+      ["MOR (in-house)", "fm", 0.727, "three networks voting", "T2-D463"],
+      ["ST-EEGFormer base", "fm", 0.713, "three networks voting", "T2-D460"],
+      ["ShallowNet", "cnn", 0.709, "as in our ensemble, with per-person copies", "T2-D491"],
+      ["EEGConformer", "cnn", 0.657, "one network", "T2-D465"],
+      ["EEGNeX", "cnn", 0.628, "with per-person copies", "T2-D346"],
+      ["ST-EEGFormer base, open data", "fm", 0.624, "one network, pre-trained by us from scratch", "T2-FM-D2"],
+      ["ATCNet", "cnn", 0.617, "with per-person copies", "T2-D346"],
+      ["Tangent space + LR", "cl", 0.585, "one fit, filter bank", "T2-D328"],
+      ["REVE", "fm", 0.584, "one network", "T2-D452"],
+      ["Deep4", "cnn", 0.568, "with per-person copies", "T2-D346"],
+      ["Random convolutions + LR", "cl", 0.544, "one fit", "T2-D433"],
+      ["Filter-bank CSP + LDA", "cl", 0.536, "one fit", "T2-D467"],
+      ["EEG-TCNet", "cnn", 0.499, "with per-person copies", "T2-D346"],
+      ["CBraMod", "fm", 0.488, "one network", "T2-D355"],
+      ["LaBraM", "fm", 0.484, "one network", "T2-D452"],
+      ["EEGNet", "cnn", 0.475, "one network, library defaults", "T2-D432"],
+      ["Riemannian MDM", "cl", 0.403, "one fit", "T2-D467"]
+    ];
+    var kind = { fm: "foundation model", cnn: "convolutional network", cl: "classical pipeline" };
+    var tag = { fm: "FM", cnn: "CNN", cl: "classical" };
+    /* parameters of one network, built from our code for 41 channels and 4 s windows (the in-house model from its checkpoint record) */
+    var size = { "ST-EEGFormer large": "302M", "FBCNet": "27k", "IFNet": "14k", "MOR (in-house)": "100M", "ST-EEGFormer base": "85M", "ShallowNet": "70k",
+      "EEGConformer": "462k", "EEGNeX": "57k", "ST-EEGFormer base, open data": "85M", "ATCNet": "59k", "REVE": "69M", "Deep4": "290k",
+      "EEG-TCNet": "4.6k", "CBraMod": "4.9M", "LaBraM": "5.8M", "EEGNet": "2.5k" };
+    var lo = 1 / 3, hi = 0.8;
+    var P = function (s) { return (100 * (s - lo) / (hi - lo)).toFixed(2) + "%"; };
+    var host = document.getElementById("dots-models"); host.setAttribute("role", "list");
+    var body = document.getElementById("table-models");
+    var head = document.createElement("div"); head.className = "row head"; head.setAttribute("aria-hidden", "true");
+    head.appendChild(span("name", "Model")); head.appendChild(span("size", "Size")); head.appendChild(span("num", "Score")); head.appendChild(span("track"));
+    host.appendChild(head);
+    rows.forEach(function (r) {
+      var row = document.createElement("div"); row.className = "row " + r[1]; row.setAttribute("role", "listitem");
+      row.setAttribute("data-v", r[2].toFixed(3)); row.setAttribute("data-t", r[0] + " · " + kind[r[1]] + " · " + r[3] + " · " + r[4]);
+      var name = span("name", r[0]); name.appendChild(span("tag", tag[r[1]]));
+      var track = span("track"); var dot = span("dot"); dot.style.left = P(r[2]); track.appendChild(dot);
+      row.appendChild(name); row.appendChild(span("size", size[r[0]] || "–")); row.appendChild(span("num", r[2].toFixed(3))); row.appendChild(track);
+      host.appendChild(row); wire(row);
+      var tr = document.createElement("tr");
+      [r[0], kind[r[1]], size[r[0]] || "not a network", r[2].toFixed(3), r[3], r[4]].forEach(function (c, i) { var td = document.createElement("td"); td.textContent = c; if (i === 2 || i === 3) td.className = "n"; tr.appendChild(td); });
+      body.appendChild(tr);
+    });
+    var axis = document.createElement("div"); axis.className = "row axis"; axis.setAttribute("aria-hidden", "true");
+    var at = span("track");
+    [[lo, "chance"], [0.5, "0.5"], [0.6, "0.6"], [0.7, "0.7"], [0.8, "0.8"]].forEach(function (k) { var s = span("tick", k[1]); s.style.left = P(k[0]); at.appendChild(s); });
+    axis.appendChild(span("name")); axis.appendChild(span("size")); axis.appendChild(span("num")); axis.appendChild(at);
+    host.appendChild(axis);
+  })();
+
+  /* ---------- score chart ---------- */
+  var pts = [
+    { d: 5, s: 0.799, name: "Best of three files on the first day", when: "Nov 5" },
+    { d: 10, s: 0.819, name: "M7", when: "Nov 10" },
+    { d: 15, s: 0.827, name: "W14-lite", when: "Nov 15" },
+    { d: 17, s: 0.835, name: "W18", when: "Nov 17" },
+    { d: 21, s: 0.844, name: "W25-ALL6, the score that counts", when: "Nov 21" }
+  ];
+  var extra = { d: 21.9, s: 0.838, name: "W30, last upload", when: "Nov 21, evening" };
+  var BEST = 0.872;
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs, text) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; }
+
+  function drawScore() {
+    var host = document.getElementById("scorechart"); host.textContent = "";
+    var W = Math.max(280, host.clientWidth), narrow = W < 520, H = narrow ? 250 : 300;
+    var m = { l: 44, r: narrow ? 74 : 128, t: 18, b: 34 };
+    var x0 = 4, x1 = 22.4, y0 = 0.79, y1 = 0.88;
+    var X = function (d) { return m.l + (d - x0) / (x1 - x0) * (W - m.l - m.r); };
+    var Y = function (s) { return m.t + (y1 - s) / (y1 - y0) * (H - m.t - m.b); };
+    var tight = X(17) - X(15) < 56;
+    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, width: W, height: H });
+    [0.80, 0.82, 0.84, 0.86, 0.88].forEach(function (g) {
+      svg.appendChild(el("line", { x1: m.l, x2: W - m.r, y1: Y(g), y2: Y(g), stroke: css("--rule"), "stroke-width": 1 }));
+      svg.appendChild(el("text", { x: m.l - 8, y: Y(g) + 4, "text-anchor": "end", "class": "axis-text" }, g.toFixed(2)));
+    });
+    [5, 10, 15, 17, 21].forEach(function (d, i) {
+      svg.appendChild(el("text", { x: X(d), y: H - 10, "text-anchor": "middle", "class": "axis-text" }, tight && i ? String(d) : "Nov " + d));
+    });
+    /* best entry at close: a short dashed reference at the right, not a target fixed since day one */
+    svg.appendChild(el("line", { x1: X(19.5), x2: W - m.r, y1: Y(BEST), y2: Y(BEST), stroke: css("--deemph"), "stroke-width": 1.5, "stroke-dasharray": "5 4" }));
+    svg.appendChild(el("text", { x: W - m.r + 8, y: Y(BEST) + 4, "class": "label-sub" }, narrow ? "best 0.872" : "best entry 0.872"));
+    var path = pts.map(function (p, i) { return (i ? "L" : "M") + X(p.d).toFixed(1) + " " + Y(p.s).toFixed(1); }).join(" ");
+    svg.appendChild(el("path", { d: path, fill: "none", stroke: css("--accent"), "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+    var last = pts[pts.length - 1];
+    svg.appendChild(el("line", { x1: X(last.d), y1: Y(last.s), x2: X(extra.d), y2: Y(extra.s), stroke: css("--deemph"), "stroke-width": 2 }));
+    pts.forEach(function (p) { dot(svg, X(p.d), Y(p.s), css("--accent"), css("--accent"), p); });
+    dot(svg, X(extra.d), Y(extra.s), css("--bg"), css("--deemph"), extra);
+    svg.appendChild(el("text", { x: X(last.d) - 10, y: Y(last.s) - 12, "text-anchor": "end", "class": "label-text" }, narrow ? "0.844" : "0.844, our final score"));
+    svg.appendChild(el("text", { x: X(extra.d) + 12, y: Y(extra.s) + 5, "class": "label-sub" }, narrow ? "0.838" : "0.838, last upload"));
+    svg.appendChild(el("text", { x: X(pts[0].d) + 2, y: Y(pts[0].s) + 22, "class": "label-sub" }, "0.799"));
+    if (!tight) pts.slice(1, -1).forEach(function (p) { svg.appendChild(el("text", { x: X(p.d), y: Y(p.s) - 12, "text-anchor": "middle", "class": "label-sub" }, p.s.toFixed(3))); });
+    host.appendChild(svg);
+  }
+  function dot(svg, cx, cy, fill, stroke, p) {
+    svg.appendChild(el("circle", { cx: cx, cy: cy, r: 7, fill: css("--bg") }));
+    svg.appendChild(el("circle", { cx: cx, cy: cy, r: 5, fill: fill, stroke: stroke, "stroke-width": 2 }));
+    var hit = el("circle", { cx: cx, cy: cy, r: 14, fill: "transparent", "data-v": p.s.toFixed(3), "data-t": p.when + " · " + p.name });
+    svg.appendChild(hit); wire(hit);
+  }
+
+  drawScore();
+  var t; window.addEventListener("resize", function () { clearTimeout(t); t = setTimeout(drawScore, 120); });
+  if (window.matchMedia) { var mq = window.matchMedia("(prefers-color-scheme: dark)"); if (mq.addEventListener) mq.addEventListener("change", drawScore); }
+  if (window.MutationObserver) new MutationObserver(drawScore).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(drawScore);
+})();
+</script>

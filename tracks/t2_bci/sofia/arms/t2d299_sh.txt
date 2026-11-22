@@ -1,0 +1,2 @@
+# T2-D299 (backlog 73): ShallowNet-EA vr line, the anchor's seeds 168-179, kit + seen1
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_xm5 --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser

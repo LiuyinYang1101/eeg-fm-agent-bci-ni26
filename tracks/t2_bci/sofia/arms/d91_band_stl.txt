@@ -1,0 +1,3 @@
+# D91 ST-L (1 process per GPU)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns wz --fm-band 4:40   # B1 (twin: st_large D82 recipe)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns wz --fm-band 1:40   # B5 diagnostic (descriptive)

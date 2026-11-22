@@ -1,0 +1,2 @@
+# T2-D247r: the stacked ST-L (re-colouring 0.75 + layer-wise lr decay 0.75, T2-D247's arm), kit, FRESH seeds 12-23. 1 process per H200
+NSHARDS=1 --protocols kit --seeds 12,13,14,15,16,17,18,19,20,21,22,23 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

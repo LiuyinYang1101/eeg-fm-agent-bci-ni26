@@ -1,0 +1,2 @@
+# T2-D382: M6's fbcnet_bboth line at 360 epochs (r1_pulxx_vp2_e360_vr_rc75_tl15) on FRESH seeds 228-239, kit + seen1, copies, plain + tv8 + tv8c
+NSHARDS=1 --protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e360_vr_rc75_tl15 --seeds 228,229,230,231,232,233,234,235,236,237,238,239 --peruser --tta-vp 8 --tta-copies

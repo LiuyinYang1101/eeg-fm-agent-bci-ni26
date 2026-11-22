@@ -1,0 +1,3 @@
+# T2-D326 (two-ST-L replicate): the shipped ST-L recipe (T2-D247) on FRESH seeds 24-35; was: ST-L (the D112a recipe: CPT d111-with + gain + sz + mixup 0.4, 30 epochs) + T2-D235's re-colouring 0.75 (--fm-rc 0.75) + layer-wise lr decay 0.75
+# (--fm-llrd 0.75; the dose fixed by the row's rule: ll75 +0.0044 > ll85 +0.0031 > ll65 +0.0018), seen1, seeds 0-11, vs the D112a runs on disk. 1 process per H200
+NSHARDS=1 --protocols seen1 --seeds 24,25,26,27,28,29,30,31,32,33,34,35 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

@@ -1,0 +1,2 @@
+# T2-D437: ShallowNet (M7 pooled recipe r1_pulx_vp2_e180_vr, causal EA), K-net bag per seed (--bag uw4), FRESH seeds 372-383, kit + seen1; no copies / views (the bag branch is pooled-only).
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 372,373,374,375,376,377,378,379,380,381,382,383 --bag uw4

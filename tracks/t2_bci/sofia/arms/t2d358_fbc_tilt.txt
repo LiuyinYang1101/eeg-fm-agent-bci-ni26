@@ -1,0 +1,2 @@
+# T2-D358 (the augmentation backlog's last near-miss: T2-D300's spectral tilt on FBCNet, re-read with tv8c on the current stack): FBCNet rc75 + tilt 0.15, seeds 192-203 (paired with fbc_tv8c), kit + seen1, copies, plain + tv8 + tv8c
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15 --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser --tta-vp 8 --tta-copies

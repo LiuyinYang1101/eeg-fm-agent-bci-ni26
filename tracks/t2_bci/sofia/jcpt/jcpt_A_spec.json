@@ -1,0 +1,138 @@
+{
+ "_doc": "T2-D350 J-CPT arm A (ST-L, ni26 pools only, no replay): paths relative to $S1_ROOT/data/ni26 (t2p_jcpt.slurm stages them and writes 'path'); holdouts: PROTEUS + its session crops = pool 'jcpt' (P01 P02 P03 P06 P07 + P10 s1); T1 Alljoined = stim_train (split train / val) minus xuser4 fold 0's held-out + inner users (seeds 12, 13), never stim_test; the other T1 image sets = their train (+ val) splits; T3 = the kit-train nights (split train) only; licence rule (the user's ruling 2026-11-05 21:38 by date, typed in the manager shell, relayed): the CC-BY-NC-ND sets are IN (BNCI2014_001, BNCI2015_001, Scherer2015: public and redistributable verbatim; each declared with its licence in T2_METHOD); Weibo2014 out until its licence is verified; non-redistributable sets (TUH, SEED) out",
+ "proteus_group": "T2",
+ "group_weights": {
+  "T1": 0.3333333333333333,
+  "T2": 0.3333333333333333,
+  "T3": 0.3333333333333333
+ },
+ "pools": [
+  {
+   "rel": "t2_proteus/cpt_pools/proteus_sessions_v1",
+   "group": "T2",
+   "proteus_rule": "jcpt"
+  },
+  {
+   "rel": "t2_proteus/export_dreyer2023_wide_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/cho2017_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/lee2019_mi_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/physionetmi_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/schirrmeister2017_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/shin2017b_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/stieger2021_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/bnci2014_001_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/bnci2015_001_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/export_scherer2015_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t1_image/export_alljoined16m_v1",
+   "group": "T1",
+   "keep": {
+    "split": [
+     "train",
+     "val"
+    ]
+   },
+   "xuser4": {
+    "fold": 0,
+    "seeds": [
+     12,
+     13
+    ]
+   }
+  },
+  {
+   "rel": "t1_image/export_gifford2022large_v1",
+   "group": "T1",
+   "keep": {
+    "split": [
+     "train",
+     "val"
+    ]
+   }
+  },
+  {
+   "rel": "t1_image/export_grootswagers2022human_v1",
+   "group": "T1",
+   "keep": {
+    "split": [
+     "train",
+     "val"
+    ]
+   }
+  },
+  {
+   "rel": "t1_image/export_zhang2025nodeeg_v1",
+   "group": "T1",
+   "keep": {
+    "split": [
+     "train"
+    ]
+   }
+  },
+  {
+   "rel": "t3_sleep/export_muse_v1",
+   "group": "T3",
+   "keep": {
+    "split": [
+     "train"
+    ]
+   }
+  },
+  {
+   "rel": "t3_sleep/stage_v1/pn18_muse",
+   "group": "T3",
+   "keep": {
+    "split": [
+     "train"
+    ]
+   }
+  },
+  {
+   "rel": "t3_sleep/stage_v1/hmc_muse",
+   "group": "T3",
+   "keep": {
+    "split": [
+     "train"
+    ]
+   }
+  },
+  {
+   "rel": "t3_sleep/stage_v1/dod_muse",
+   "group": "T3",
+   "keep": {
+    "split": [
+     "train"
+    ]
+   }
+  }
+ ]
+}

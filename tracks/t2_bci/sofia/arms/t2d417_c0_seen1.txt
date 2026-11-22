@@ -1,0 +1,2 @@
+# T2-D417: ST-L member the PAIRED CONTROL = M7's LP-FT member recipe (lp10), fresh seeds 108-119, seen1 (read as M7's lp10 slot swap)
+NSHARDS=1 --protocols seen1 --seeds 108,109,110,111,112,113,114,115,116,117,118,119 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lp-epochs 10

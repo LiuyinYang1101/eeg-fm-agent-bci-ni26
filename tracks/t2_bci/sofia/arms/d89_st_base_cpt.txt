@@ -1,0 +1,12 @@
+# D89 st_base from the CPT checkpoint (1453336); first line = C1 (the D82 recipe), the rest mirror d88_st_base.txt arm by arm
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-layer 6 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H1
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-epochs 12 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H2
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-ema 0.995 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H3
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-lora 8 --fm-lr-enc 1e-3 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H4
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:attn --aligns wz --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H5
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H6
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-mixup 0.4 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H7
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns wz --fm-drop-path 0.1 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H8
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H9
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns none --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stbase-d89/checkpoint-cpt.pth   # H10

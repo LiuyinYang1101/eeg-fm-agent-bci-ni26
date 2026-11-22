@@ -1,0 +1,6 @@
+# T2-D253 stage 1 (pre-registered before any number): out-of-fold CNN outputs on the ST-L's training windows. Per training user j of kit
+# (6 users) and seen1 (7 users), the POOLED net of the package's recipe (no per-user copies) trained on the other training users predicts
+# j's training windows (folds kitoof_<j> / seen1oof_<j>, no val, `last`); seeds 0-2. t2p_bench.oof_pcnn reads them back (FBCNet 4/7 +
+# ShallowNet 3/7, seed means) for --fm-sw. 2 x 13 folds x 3 seeds = 78 result files.
+--protocols kitoof,seen1oof --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 0,1,2
+--protocols kitoof,seen1oof --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 0,1,2

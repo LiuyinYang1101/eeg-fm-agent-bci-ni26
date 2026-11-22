@@ -1,0 +1,4223 @@
+[
+ {
+  "id": "D1",
+  "date": "2026-10-05",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Cheap one-run proxy screen ranks models like the full protocol (Spearman ρ = 0.95); adopted as the screening tier of the proxy phase"
+ },
+ {
+  "id": "D2",
+  "date": "2026-10-05",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "CNN anchor choice on two proxy corpora: FBCNet +0.0285 on one, −0.130 on the other; no family promoted, EEGNet stays the anchor"
+ },
+ {
+  "id": "D3",
+  "date": "2026-10-05",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "EOG / EMG channels as extra inputs on a proxy corpus: +0.0059 / +0.0018, under the bar (the sealed contract later had no EOG / EMG)"
+ },
+ {
+  "id": "D4",
+  "date": "2026-10-05",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "A calibration session of the scored user is worth +0.074 (EEGNet) / +0.114 (ShallowNet) on the proxy corpus"
+ },
+ {
+  "id": "D5",
+  "date": "2026-10-05",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Late fusion of a CNN with a filter-bank tangent-space stream on the proxy: −0.0322 / −0.0067; rejected"
+ },
+ {
+  "id": "D6",
+  "date": "2026-10-05",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Proxy check: Dreyer2023 is not feedback-confounded (pre-feedback crop keeps 94 % of the gain); class information starts +0.11 s after the cue"
+ },
+ {
+  "id": "D7",
+  "date": "2026-10-06",
+  "theme": "Ensembling and blend weights",
+  "verdict": "never-read",
+  "one_line": "Fresh-seed ensemble test on the proxies: registered, the row still reads 'pending' (no verdict was written)"
+ },
+ {
+  "id": "D8",
+  "date": "2026-10-06",
+  "theme": "CNN families and their training",
+  "verdict": "never-read",
+  "one_line": "Two-pathway evoked + induced network: registered, the method was never built (row still 'pending')"
+ },
+ {
+  "id": "D81",
+  "date": "2026-10-13",
+  "theme": "CNN families and their training",
+  "verdict": "descriptive",
+  "one_line": "First PROTEUS screen: the band-power CNN FBCNet leads EEGNet by +0.143 (10/10 participants); per-session aligners do not help the CNNs"
+ },
+ {
+  "id": "D82",
+  "date": "2026-10-13",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "First FM screen (ST-EEGFormer, MOR, REVE, LaBraM vs EEGNet): the random-init twin was cancelled and the protocol was replaced (D88) before a verdict; re-decided in D88"
+ },
+ {
+  "id": "D83",
+  "date": "2026-10-13",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Causal prior correction failed its EEGNet-anchor rule (0/4 alignments) while lifting FBCNet +0.0325; re-registered on FBCNet with fresh seeds (D85)"
+ },
+ {
+  "id": "D84",
+  "date": "2026-10-13",
+  "theme": "External and extra labelled data",
+  "verdict": "closed",
+  "one_line": "BNCI2015_004 added to CNN training: FBCNet −0.0347 on ten new participants while the two leaderboard users gained +0.023; not used"
+ },
+ {
+  "id": "D85",
+  "date": "2026-10-13",
+  "theme": "CNN families and their training",
+  "verdict": "shipped",
+  "one_line": "FBCNet confirmed as the CNN base (+0.1148 over EEGNet); causal prior correction adopted for it (+0.0230 / +0.0356), later generalised to the Sinkhorn decode"
+ },
+ {
+  "id": "D86",
+  "date": "2026-10-13",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "FM harnessing round 1 (ten single-change arms): its leave-one-subject-out protocol was dropped before a verdict; the same arms were decided on the kit split in D88"
+ },
+ {
+  "id": "D87",
+  "date": "2026-10-13",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Learned stream integrator (LSTM fusion) 0.4261 vs the parameter-free prior correction 0.4602 on kit test; not adopted"
+ },
+ {
+  "id": "D88",
+  "date": "2026-10-13",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Kit-split protocol adopted; prior correction +0.0648 on FBCNet; every FM except LaBraM beats EEGNet, none beats FBCNet (0.4476 vs 0.4865); later replaced by leave-one-user-out panels"
+ },
+ {
+  "id": "D89",
+  "date": "2026-10-13",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "CPT of ST-EEGFormer base: kit test −0.0097 / +0.0099 (two recipes), val up in both; not adopted for the base model (the large model's CPT is D94)"
+ },
+ {
+  "id": "D90",
+  "date": "2026-10-13",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Joint FM + FBCNet feature fusion: 0.4159 / 0.4098 kit test vs FBCNet alone 0.4888; all four arms not adopted"
+ },
+ {
+  "id": "D91",
+  "date": "2026-10-13",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Band-passing the FM input to 4–40 Hz: kit val +0.085 but kit test −0.045; not adopted for any FM"
+ },
+ {
+  "id": "D93",
+  "date": "2026-10-13",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Euclidean alignment: no gain for FBCNet even with a whole-session oracle (0.4849 vs 0.4865); FMs gain on val (+0.127) and lose on test (−0.012); not adopted"
+ },
+ {
+  "id": "D94",
+  "date": "2026-10-13",
+  "theme": "Continued pre-training",
+  "verdict": "shipped",
+  "one_line": "CPT + gain-calibrated input adopted for ST-EEGFormer large (+0.0223 kit test / +0.0787 kit val); the recipe every later ST-L member starts from"
+ },
+ {
+  "id": "D95",
+  "date": "2026-10-14",
+  "theme": "Ensembling and blend weights",
+  "verdict": "adopted-then-superseded",
+  "one_line": "FBCNet + CPT ST-EEGFormer large at 4 : 1: +0.0247 kit test (6/6 seeds); the first package with an FM member, later rebuilt with more families and a larger FM share"
+ },
+ {
+  "id": "D96",
+  "date": "2026-10-14",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "REVE as the ensemble's FM member: −0.0052 kit test / −0.0055 kit val; not adopted"
+ },
+ {
+  "id": "D97",
+  "date": "2026-10-14",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Drop path 0.1 on ST-EEGFormer large: +0.0035 kit test, under the +0.01 bar; not adopted"
+ },
+ {
+  "id": "T2-D99",
+  "date": "2026-10-14",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "MOR as a third ensemble member: validation picked weight 0 (0.7361 vs 0.7259 at 0.5); not adopted"
+ },
+ {
+  "id": "T2-D100",
+  "date": "2026-10-14",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Per-stream BatchNorm adaptation of FBCNet: kit test −0.0126, 0/6 seeds up; not adopted"
+ },
+ {
+  "id": "T2-D101",
+  "date": "2026-10-14",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Diagnostic: a returning user's later sessions score ≈ 0.80 against ≈ 0.51 for unseen users; the FM adds +0.058 there (6/6 seeds)"
+ },
+ {
+  "id": "T2-D102",
+  "date": "2026-10-14",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "More ST-L members at a larger FM weight: picked on validation, lost on confirmation (−0.006 kit test / −0.022 kit val)"
+ },
+ {
+  "id": "T2-D103",
+  "date": "2026-10-14",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Supervised pre-fine-tune of ST-L on 10 labelled BCI corpora: −0.0080 kit test alone, −0.0038 in the ensemble; not adopted"
+ },
+ {
+  "id": "T2-D104",
+  "date": "2026-10-14",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Geometric pooling of the two families: −0.0118 kit test (0/12); per-family prior correction −0.0109; linear pooling stays"
+ },
+ {
+  "id": "T2-D105",
+  "date": "2026-10-14",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Supervised pre-fine-tune of ST-L on a smaller labelled pool: −0.0068 kit test alone, −0.0107 in the ensemble; not adopted"
+ },
+ {
+  "id": "T2-D106",
+  "date": "2026-10-14",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Supervised pre-fine-tune of MOR on labelled BCI corpora (4,000 steps): −0.0143 kit test (3/12 up); not adopted"
+ },
+ {
+  "id": "T2-D107",
+  "date": "2026-10-14",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Per-session RMS scaling + gain calibration as MOR's input: +0.0048 kit test, −0.0085 kit val; per-window z stays"
+ },
+ {
+  "id": "T2-D108",
+  "date": "2026-10-14",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "MOR supervised post-training with the pool fit: −0.0588 kit test (0/12), −0.0503 with the masked loss kept; closed"
+ },
+ {
+  "id": "T2-D109",
+  "date": "2026-10-14",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "CPT on an 8× bigger unlabelled pool: −0.0006 kit test, +0.0171 kit val; the small close-domain CPT v1 stays"
+ },
+ {
+  "id": "T2-D110",
+  "date": "2026-10-14",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Pre-fine-tuned ST-L as an extra member: −0.0008 kit test / −0.0007 kit val; supervised pre-fine-tuning closed for good"
+ },
+ {
+  "id": "T2-D111",
+  "date": "2026-10-15",
+  "theme": "Continued pre-training",
+  "verdict": "shipped",
+  "one_line": "Returning-user capacity: user-id input, expert head and routers failed; CPT on the public users' own windows adopted (+0.0156 seen, +0.0185 unseen)"
+ },
+ {
+  "id": "T2-D112",
+  "date": "2026-10-15",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "shipped",
+  "one_line": "Mixup 0.4 on the ST-L fine-tune: +0.0227 kit test alone (11/12), adopted; FBCNet augmentations (jitter, shift, channel dropout) all negative"
+ },
+ {
+  "id": "T2-D113",
+  "date": "2026-10-15",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Entropy / pseudo-label self-training inside predict: collapses to one class (kit val 0.337–0.516 vs 0.715); closed"
+ },
+ {
+  "id": "T2-D114",
+  "date": "2026-10-15",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Router-free averaging of per-user copies: seen −0.004 to +0.007, none reaches +0.01; not adopted"
+ },
+ {
+  "id": "T2-D115",
+  "date": "2026-10-15",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "FBCNet hyperparameter screen: the validation pick (stride 2) gave −0.0010 on kit test; defaults stay"
+ },
+ {
+  "id": "T2-D116",
+  "date": "2026-10-15",
+  "theme": "CNN families and their training",
+  "verdict": "shipped",
+  "one_line": "ShallowNet with Euclidean alignment as a second CNN family: +0.0145 kit test / +0.0148 kit val (7/7 seeds); adopted"
+ },
+ {
+  "id": "T2-D117",
+  "date": "2026-10-15",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Leave-one-user-out FBCNet bags vs seed bags: −0.0098 kit test (1/12 up); closed"
+ },
+ {
+  "id": "T2-D118",
+  "date": "2026-10-15",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "A fourth CNN family (IFNet picked among seven on validation): −0.0002 kit test on confirmation; three families stay"
+ },
+ {
+  "id": "T2-D119",
+  "date": "2026-10-15",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "FM weight re-pick 0.2 → 0.4: −0.0062 kit test, +0.0140 kit val on confirmation; 0.2 stays"
+ },
+ {
+  "id": "T2-D120",
+  "date": "2026-10-15",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Stronger prior correction picked on validation: −0.0265 kit test (0/6 up) on confirmation; α 1 / n0 3 stays"
+ },
+ {
+  "id": "T2-D121",
+  "date": "2026-10-15",
+  "theme": "Ensembling and blend weights",
+  "verdict": "adopted-then-superseded",
+  "one_line": "More seeds per member (10 / 10 / 3 vs 5 / 5 / 1): E[Δ] +0.0072 kit test, smaller seed spread; the bigger build was deferred"
+ },
+ {
+  "id": "T2-D122",
+  "date": "2026-10-15",
+  "theme": "CNN families and their training",
+  "verdict": "shipped",
+  "one_line": "13-band FBCNet bank (adds 1–4 Hz and 40–58 Hz): +0.0121 kit test in package shape (12/12); adopted"
+ },
+ {
+  "id": "T2-D123",
+  "date": "2026-10-15",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Close-domain MAE CPT of MOR: −0.0110 kit test, +0.0145 kit val; not adopted"
+ },
+ {
+  "id": "T2-D124",
+  "date": "2026-10-15",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Fingerprint router with rejection threshold: identity solved (100 %), but new users cannot be rejected; gate failed"
+ },
+ {
+  "id": "T2-D125",
+  "date": "2026-10-15",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Test-time MAE training of the ST-L member: 5.4× the runtime, +0.0119 kit test but −0.0230 kit val (0/6); closed"
+ },
+ {
+  "id": "T2-D124b",
+  "date": "2026-10-15",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Open-set rejection for the router: calibration AUC 0.51 / 0.56; the resulting constant blend gave seen +0.0241, new −0.0060; not met by 0.001"
+ },
+ {
+  "id": "T2-D124c",
+  "date": "2026-10-15",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "shipped",
+  "one_line": "Constant 1/3 blend toward the fingerprint-nearest user's FBCNet copy: seen +0.0200 (12/12), new −0.0026, mix +0.0087; adopted"
+ },
+ {
+  "id": "T2-D126",
+  "date": "2026-10-15",
+  "theme": "Foundation-model members",
+  "verdict": "descriptive",
+  "one_line": "Shuffle probe: frozen MOR barely uses time order (0.443 → 0.428 kit test when time-shuffled); ST-L uses time and channels"
+ },
+ {
+  "id": "T2-D127",
+  "date": "2026-10-15",
+  "theme": "Subject invariance",
+  "verdict": "closed",
+  "one_line": "Supervised-contrastive cross-user term in the FM fine-tune: MOR −0.0024, ST-L −0.0042 on kit test; not adopted"
+ },
+ {
+  "id": "T2-D128",
+  "date": "2026-10-15",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "MOR regularisation screen: drop path −0.0099 / −0.1064, mixup +0.0075 (under the +0.01 bar); nothing adopted"
+ },
+ {
+  "id": "T2-D129",
+  "date": "2026-10-15",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Continuous-session crops in the CPT pool: ST-L +0.0075 kit test (under the bar), MOR −0.0199; the original pool stays"
+ },
+ {
+  "id": "T2-D130",
+  "date": "2026-10-15",
+  "theme": "Foundation-model members",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Role-specific LoRA for MOR: +0.0188 kit test / +0.0243 kit val, adopted as MOR's recipe; plain LoRA null on both FMs"
+ },
+ {
+  "id": "T2-D131",
+  "date": "2026-10-15",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "FM readout alternatives: every one loses on kit test (−0.0053 to −0.0657); mean pooling stays on both FMs"
+ },
+ {
+  "id": "T2-D132",
+  "date": "2026-10-15",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Joint MAE + supervised fine-tune: ST-L +0.0013, MOR −0.0096 on kit test; not adopted"
+ },
+ {
+  "id": "T2-D133",
+  "date": "2026-10-15",
+  "theme": "Foundation-model members",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Role-LoRA MOR replicates on the returning-user protocol (seen +0.0225, unseen +0.0237); adding mixup −0.0051 kit test"
+ },
+ {
+  "id": "T2-D134",
+  "date": "2026-10-15",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Role-LoRA MOR as a package member, picked on validation: base 0.7472 vs 0.7456 with MOR at 0.1; not adopted"
+ },
+ {
+  "id": "T2-D135",
+  "date": "2026-10-16",
+  "theme": "Runtime and packaging",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Hardened submission template reproduces the existing packages (at most 1 / 2,655 windows differ); used for every package from then on"
+ },
+ {
+  "id": "T2-D136",
+  "date": "2026-10-18",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "All-user build of the three-family package: golden 1.000, 11.48 ms / window (19.1 min projected); eligible as a sealed candidate"
+ },
+ {
+  "id": "T2-D137",
+  "date": "2026-10-18",
+  "theme": "Ensembling and blend weights",
+  "verdict": "adopted-then-superseded",
+  "one_line": "User blend + MOR at 0.1 in package shape: mix +0.0117 (12/12), seen +0.0184, new +0.0049; adopted as package (c)"
+ },
+ {
+  "id": "T2-D138",
+  "date": "2026-10-18",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Big-seed build of package (c): ST-L ×2 failed the time bar (28.0 min); the 10/10/1 fallback met it (12.27 ms / window, 20.4 min)"
+ },
+ {
+  "id": "T2-D139",
+  "date": "2026-10-18",
+  "theme": "Continued pre-training",
+  "verdict": "descriptive",
+  "one_line": "From-scratch MOR pilot: both masking arms use time order (cost ≈ +0.10) where the pinned MOR does not (−0.003); research result, no package path"
+ },
+ {
+  "id": "T2-D140",
+  "date": "2026-10-18",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Package (c) built with MOR and CUDA graphs: golden 1.000, 11.74 / 11.79 ms per window (26.8 before the fix), kit replay 0.5606 vs 0.5435"
+ },
+ {
+  "id": "T2-D141",
+  "date": "2026-10-19",
+  "theme": "Continued pre-training",
+  "verdict": "killed-early",
+  "one_line": "From-scratch MOR checkpoint as the member's start: −0.097 to −0.118 kit test alone (0/6 up); stopped at the member gate"
+ },
+ {
+  "id": "T2-D142",
+  "date": "2026-10-19",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "killed-early",
+  "one_line": "Mixup on the MOR member: kit test −0.0064 alone, failing the gate by 0.0014 (seen +0.0248); package read not run"
+ },
+ {
+  "id": "T2-D143",
+  "date": "2026-10-19",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Mixup MOR member in package shape: mix +0.0012 (8/12 up) against a +0.005 bar; closed"
+ },
+ {
+  "id": "T2-D144",
+  "date": "2026-10-19",
+  "theme": "Continued pre-training",
+  "verdict": "killed-early",
+  "one_line": "Longer from-scratch MOR pretraining (50k steps): −0.0840 / −0.1069 kit test vs the pinned MOR; killed at 50k"
+ },
+ {
+  "id": "T2-D145",
+  "date": "2026-10-19",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Cross-fitted re-pick of weights and blend strength: mix −0.0214 (0/12 up); in-sample optimum only +0.0017; closed"
+ },
+ {
+  "id": "T2-D146",
+  "date": "2026-10-19",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Mixup on the CNN members: mix +0.0009 / −0.0005 / +0.0014 (FBCNet / ShallowNet / both); closed"
+ },
+ {
+  "id": "T2-D147",
+  "date": "2026-10-19",
+  "theme": "Foundation-model members",
+  "verdict": "descriptive",
+  "one_line": "MOR through its pretraining-style front end, member alone: mix +0.0130 (5/6); sent to a package read (D149), which failed"
+ },
+ {
+  "id": "T2-D148",
+  "date": "2026-10-19",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "ShallowNet per-user copies at blend 1/3: mix +0.0007 (9/12) against +0.005; closed at this strength"
+ },
+ {
+  "id": "T2-D149",
+  "date": "2026-10-19",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "MOR's own front end in package shape: mix +0.0009 (5/12) although the member alone gains +0.0102; not adopted"
+ },
+ {
+  "id": "T2-D150",
+  "date": "2026-10-19",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Four extra seed draws of the big-seed package built and gated (12.17–12.24 ms / window); none uploaded"
+ },
+ {
+  "id": "T2-D151",
+  "date": "2026-10-19",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Warm-start in-domain CPT of the pinned MOR: mix −0.0250 / −0.0699 for the two arms; MOR pretraining closed on this track"
+ },
+ {
+  "id": "T2-D152",
+  "date": "2026-10-19",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Cross-fitted re-pick of the prior correction: mix +0.0014 (7/12), kit test −0.0023; (1, 3) stays"
+ },
+ {
+  "id": "T2-D153",
+  "date": "2026-10-19",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Weight EMA for the CNN members: mix −0.0032 (3/12 up); not adopted"
+ },
+ {
+  "id": "T2-D154",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "FBCNet copy fine-tune recipe (lr, epochs): best mix +0.0013; returning users track the fine-tune strength; not adopted"
+ },
+ {
+  "id": "T2-D155",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Stronger FBCNet copy fine-tune (lr 1e-3 + 40 epochs): mix +0.0035 (11/12), seen +0.0082 (12/12); near miss, not adopted"
+ },
+ {
+  "id": "T2-D156",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "80-epoch FBCNet copies: mix +0.0049 (11/12) against a +0.005 bar; near miss, closed as a single-family read"
+ },
+ {
+  "id": "T2-D157",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "FBCNet blend strength 1/2: mix +0.0051 but kit test −0.0052 (2/12 up); r 1/3 stays"
+ },
+ {
+  "id": "T2-D158",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Stronger ShallowNet copies: mix +0.0026 (9/12), kit test +0.0068; sub-bar alone, lifts new users"
+ },
+ {
+  "id": "T2-D159",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "shipped",
+  "one_line": "Per-user copies of both CNN families together: mix +0.0109 (12/12), kit test +0.0085; adopted"
+ },
+ {
+  "id": "T2-D160",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "shipped",
+  "one_line": "ShallowNet blend strength 1/2 on top of both copies: mix +0.0141 (12/12), kit test +0.0141; adopted"
+ },
+ {
+  "id": "T2-D161",
+  "date": "2026-10-21",
+  "theme": "Runtime and packaging",
+  "verdict": "shipped",
+  "one_line": "Template support for ShallowNet per-user copies: flag-off bytewise identical, agreement 1.000, 12.56 ms / window; done"
+ },
+ {
+  "id": "T2-D162",
+  "date": "2026-10-21",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Six candidate ZIPs rebuilt on the two-family copy template pass every package bar (12.03 to 12.60 ms / window); later replaced"
+ },
+ {
+  "id": "T2-D163",
+  "date": "2026-10-21",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Family-weight re-pick with both copy sets, cross-fitted: mix −0.0169 (0/12); the weights stay (0.5, 0.2, 0.2, 0.1)"
+ },
+ {
+  "id": "T2-D164",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "ShallowNet per-user copies at 80 epochs: mix −0.0018 (4/12), new −0.0030; not adopted"
+ },
+ {
+  "id": "T2-D165",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Soft top-2 routing of per-user copies: seen −0.0104 (0/12), new +0.0037, mix −0.0033; the hard route stays"
+ },
+ {
+  "id": "T2-D166",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Per-user heads on the frozen MOR: mix +0.0004 (8/12); not adopted, the FM members stay pooled"
+ },
+ {
+  "id": "T2-D167",
+  "date": "2026-10-21",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Kit-split twin of the two-family copy template: official-kit replay 0.5677 vs 0.5606 (+0.0071, one draw)"
+ },
+ {
+  "id": "T2-D168",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "FBCNet per-user copies at 160 epochs: mix +0.0010 (7/12); the dose is flat, 80 epochs stay"
+ },
+ {
+  "id": "T2-D169",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "ShallowNet per-user copies at 20 epochs: mix +0.0003 (9/12); 40 epochs stay"
+ },
+ {
+  "id": "T2-D170",
+  "date": "2026-10-21",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Prior-correction constants re-picked on the copy package: mix +0.0024, kit test −0.0062 (3/12); (1, 3) stays"
+ },
+ {
+  "id": "T2-D171",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "FBCNet copy share r 0.4: mix +0.0003 (8/12), kit test −0.0045; r 1/3 stays"
+ },
+ {
+  "id": "T2-D172",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "ShallowNet copy share r 2/3: mix +0.0002 (5/12), kit test −0.0033; r 1/2 stays"
+ },
+ {
+  "id": "T2-D173",
+  "date": "2026-10-21",
+  "theme": "Runtime and packaging",
+  "verdict": "descriptive",
+  "one_line": "Time profile: 13.01 ms / window; the MOR (9.24 ms) and ST-L (6.37 ms) forwards dominate; D174 and D175 judged infeasible"
+ },
+ {
+  "id": "T2-D174",
+  "date": "2026-10-21",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "killed-early",
+  "one_line": "ST-L per-user copies: closed before training, one extra ST-L forward does not fit under 14.5 ms / window"
+ },
+ {
+  "id": "T2-D175",
+  "date": "2026-10-21",
+  "theme": "Ensembling and blend weights",
+  "verdict": "killed-early",
+  "one_line": "15-seed CNN families: closed on runtime (1.5 × the CNN components over 14.5 ms / window); reopened later as D211"
+ },
+ {
+  "id": "T2-D176",
+  "date": "2026-10-21",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "ST-L weight soup of 3 fine-tunes: better alone (≈ +0.012 mix) but mix −0.0040 (3/12) in the package; not adopted"
+ },
+ {
+  "id": "T2-D177",
+  "date": "2026-10-21",
+  "theme": "Ensembling and blend weights",
+  "verdict": "never-read",
+  "one_line": "MOR member soup: not run, its condition (the ST-L soup of D176 passing) failed"
+ },
+ {
+  "id": "T2-D178",
+  "date": "2026-10-21",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Track 2 method write-up: done"
+ },
+ {
+  "id": "T2-D179",
+  "date": "2026-10-21",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Second official-kit draw: 0.5532 vs 0.5490 (+0.0042); 2-draw mean +0.0056 for the two-family copy template"
+ },
+ {
+  "id": "T2-D180",
+  "date": "2026-10-22",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Copy gain under 3-seed members: mix +0.0110 (12/12) vs +0.0141 at 1 seed; the returning gain survives, the new-user gain halves"
+ },
+ {
+  "id": "T2-D181",
+  "date": "2026-10-22",
+  "theme": "Ensembling and blend weights",
+  "verdict": "never-read",
+  "one_line": "ST-L soup of 5: not run, its condition (adoption of D176) failed"
+ },
+ {
+  "id": "T2-D182",
+  "date": "2026-10-22",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Per-member temperature before pooling: mix −0.0086 (0/12); the untempered pool stays"
+ },
+ {
+  "id": "T2-D183",
+  "date": "2026-10-22",
+  "theme": "Ensembling and blend weights",
+  "verdict": "never-read",
+  "one_line": "ST-L soup under tempered pooling: not run, its condition (D182) failed"
+ },
+ {
+  "id": "T2-D184",
+  "date": "2026-10-22",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Lesson written back from D176: a better member can make a worse ensemble"
+ },
+ {
+  "id": "T2-D185",
+  "date": "2026-10-22",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Local copies of the candidate ZIPs checked: 7/7 equal"
+ },
+ {
+  "id": "T2-D186",
+  "date": "2026-10-22",
+  "theme": "Decoding and test-time methods",
+  "verdict": "killed-early",
+  "one_line": "Oracle per-interface prior correction: mix −0.0047 (0/12); killed, no interface detector pursued"
+ },
+ {
+  "id": "T2-D187",
+  "date": "2026-10-22",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Between-user IAF spread: sd 1.08 Hz (within-user 1.49 Hz); the IAF warp stays a candidate"
+ },
+ {
+  "id": "T2-D188",
+  "date": "2026-10-22",
+  "theme": "Runtime and packaging",
+  "verdict": "descriptive",
+  "one_line": "Routed-LoRA single-pass profile: 15.09 vs 12.90 ms / window; passes the 18.1 ms bar, so D189 proceeds"
+ },
+ {
+  "id": "T2-D189",
+  "date": "2026-10-22",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "killed-early",
+  "one_line": "ST-L per-user LoRA deltas: killed at the kill check, member-alone seen −0.0134 (0/6)"
+ },
+ {
+  "id": "T2-D190",
+  "date": "2026-10-22",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "never-read",
+  "one_line": "MOR per-user LoRA deltas: not run, its condition (D189) failed"
+ },
+ {
+  "id": "T2-D191",
+  "date": "2026-10-22",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "IAF warp of the FBCNet input: mix −0.0225 (0/12); closed"
+ },
+ {
+  "id": "T2-D192",
+  "date": "2026-10-22",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Upload-readiness check of the approved ZIPs: 7/7 present and equal"
+ },
+ {
+  "id": "T2-D193",
+  "date": "2026-10-22",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Virtual participants for the CNNs, first dose: new +0.0088 (11/12) but mix +0.0035 (8/12); near miss, re-dosed in D195"
+ },
+ {
+  "id": "T2-D194",
+  "date": "2026-10-22",
+  "theme": "Runtime and packaging",
+  "verdict": "killed-early",
+  "one_line": "Fingerprint on every k-th window to free runtime: mix −0.0018 / −0.0021, ≤ 1.09 ms freed; killed"
+ },
+ {
+  "id": "T2-D195",
+  "date": "2026-10-22",
+  "theme": "CNN families and their training",
+  "verdict": "shipped",
+  "one_line": "Virtual participants at 10 mm (vp2): mix +0.0180 (12/12), new +0.0228; adopted for the CNN families"
+ },
+ {
+  "id": "T2-D196",
+  "date": "2026-10-22",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "vp2 ZIPs built, all seven pass; the kit twin replays 0.5301 vs 0.5677, partly an ST-L redraw at the same seed"
+ },
+ {
+  "id": "T2-D197",
+  "date": "2026-10-22",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Virtual participants at 15 / 20 mm: mix +0.0036 / −0.0009, kit test −0.0061 / −0.0111; 10 mm stands"
+ },
+ {
+  "id": "T2-D198",
+  "date": "2026-10-22",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Virtual participants on the ST-L member: mix −0.0007 (5/12), kit test −0.0070 (1/12); ST-L stays unaugmented"
+ },
+ {
+  "id": "T2-D199",
+  "date": "2026-10-23",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Copy shares re-picked under vp2: all eight alternatives ≤ 0 mix (best −0.0002); r stays 1/3 and 1/2"
+ },
+ {
+  "id": "T2-D200",
+  "date": "2026-10-23",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Augmented per-user copies: pv10 mix +0.0054 (11/12) but new −0.0028; not adopted, replicated in D201"
+ },
+ {
+  "id": "T2-D201",
+  "date": "2026-10-23",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Augmented copies replicate: pooled mix +0.0036 (18/24), new −0.0036; the copies stay unaugmented"
+ },
+ {
+  "id": "T2-D202",
+  "date": "2026-10-23",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "vp2 training length 90 / 120 epochs: mix +0.0044 / +0.0048, just under the bar; bank of 256: +0.0006; re-dosed in D203"
+ },
+ {
+  "id": "T2-D203",
+  "date": "2026-10-23",
+  "theme": "CNN families and their training",
+  "verdict": "shipped",
+  "one_line": "vp2 CNNs at 180 pooled epochs: mix +0.0081 (10/12), kit test +0.0130; adopted"
+ },
+ {
+  "id": "T2-D204",
+  "date": "2026-10-23",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "vp2 CNNs at 240 / 360 epochs: mix −0.0009 / +0.0001; 180 epochs stands"
+ },
+ {
+  "id": "T2-D205",
+  "date": "2026-10-23",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "180-epoch vp2 ZIPs built, all seven pass (11.99–12.65 ms / window); the kit twin replays 0.5537"
+ },
+ {
+  "id": "T2-D206",
+  "date": "2026-10-23",
+  "theme": "Ensembling and blend weights",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Weights re-picked for the vp2 CNNs, MOR dropped: mix +0.0091 (10/12); adopted, then replaced by D209's pick that keeps MOR"
+ },
+ {
+  "id": "T2-D207",
+  "date": "2026-10-23",
+  "theme": "Runtime and packaging",
+  "verdict": "closed",
+  "one_line": "MOR-free ZIPs fail the time bar (15.27–15.96 vs 15.06 ms / window): the CUDA-graph path was keyed on the MOR member"
+ },
+ {
+  "id": "T2-D208",
+  "date": "2026-10-23",
+  "theme": "Runtime and packaging",
+  "verdict": "adopted-then-superseded",
+  "one_line": "MOR-free ZIPs repacked onto the CUDA-graph path: 8.49–9.15 ms / window, all bars pass; set aside when D209 kept MOR"
+ },
+ {
+  "id": "T2-D209",
+  "date": "2026-10-23",
+  "theme": "Ensembling and blend weights",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Leave-one-participant-out weight pick: FBCNet 0.4 / ShallowNet 0.3 / ST-L 0.2 / MOR 0.1, held-out mean +0.0074 (5/5); adopted"
+ },
+ {
+  "id": "T2-D210",
+  "date": "2026-10-23",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Ten ZIPs repacked to the new weights incl. a clean pair that differs only in the CNN recipe: all pass, 12.39–12.48 ms / window"
+ },
+ {
+  "id": "T2-D212",
+  "date": "2026-10-23",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Prior constants cross-fitted by user under vp2: held-out mean −0.0002 (3/5); the prior stays (1, 3)"
+ },
+ {
+  "id": "T2-D213",
+  "date": "2026-10-23",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Per-user copy length halved / doubled under vp2-180: mix −0.0007 / −0.0003; the copies stay 80 / 40 epochs"
+ },
+ {
+  "id": "T2-D211",
+  "date": "2026-10-23",
+  "theme": "Ensembling and blend weights",
+  "verdict": "shipped",
+  "one_line": "15-seed CNN families: both builds pass at 13.09 / 13.05 ms per window; adopted as a build option"
+ },
+ {
+  "id": "T2-D214",
+  "date": "2026-10-23",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "vp bank gain / shift doses: mix +0.0004 / +0.0013; both flat, not adopted"
+ },
+ {
+  "id": "T2-D215",
+  "date": "2026-10-23",
+  "theme": "CNN families and their training",
+  "verdict": "shipped",
+  "one_line": "Virtual references in the CNN augmentation bank: mix +0.0056 (10/12); adopted, a narrow pass"
+ },
+ {
+  "id": "T2-D216",
+  "date": "2026-10-23",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "CNN lr 2e-3 / wd 5e-2 under vp2-180: mix −0.0019 / +0.0009; not adopted"
+ },
+ {
+  "id": "T2-D215r",
+  "date": "2026-10-23",
+  "theme": "CNN families and their training",
+  "verdict": "descriptive",
+  "one_line": "Virtual-reference replicate: +0.0040 (10/12); pooled 24 indices mix +0.0048 (20/24); D215 stands"
+ },
+ {
+  "id": "T2-D217",
+  "date": "2026-10-23",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "vp2 + virtual-reference candidate ZIP pre-built: passes every bar at 12.47 ms per window"
+ },
+ {
+  "id": "T2-D218",
+  "date": "2026-10-23",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Larger weight for the side-input MOR: mix −0.0041, no fold picks it; closed, ST-L's share is worth more than MOR's"
+ },
+ {
+  "id": "T2-D219",
+  "date": "2026-10-23",
+  "theme": "External and extra labelled data",
+  "verdict": "closed",
+  "one_line": "BNCI2015_004 as labelled CNN training data: mix −0.0650 / −0.0475 (0/12) at two doses; closed for the CNN members"
+ },
+ {
+  "id": "T2-D220",
+  "date": "2026-10-23",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Stronger virtual-reference dose / CNN mixup under vp2: mix +0.0022 / −0.0005; not adopted, CNN mixup closed"
+ },
+ {
+  "id": "T2-D221",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Wider CNNs under vp2: mix +0.0022 / −0.0004 / +0.0040; no arm meets the bar, the ShallowNet arm is re-read in D222"
+ },
+ {
+  "id": "T2-D222",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Wider ShallowNet on fresh seeds: mix +0.0005 (5/12) vs +0.0040 on its selection seeds; CNN width closed"
+ },
+ {
+  "id": "T2-D223",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "CNN label smoothing 0 / 0.2 vs 0.1: mix −0.0092 / +0.0022; 0.1 stays"
+ },
+ {
+  "id": "T2-D224",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "SAM for the pooled CNN nets: mix −0.0040 / −0.0190, kit test down on 0/12 seeds; not adopted"
+ },
+ {
+  "id": "T2-D225",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Pooled CNN batch size 32 / 128 vs 64: mix −0.0044 / +0.0010; batch 64 stays"
+ },
+ {
+  "id": "T2-D226",
+  "date": "2026-10-24",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Label smoothing 0.2 / 0.3 on the per-user copies: new up, seen down, mix −0.0012 / −0.0043; not adopted"
+ },
+ {
+  "id": "T2-D227",
+  "date": "2026-10-24",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "SWA of the per-user copies: null (mix −0.0002 / +0.0001); not adopted"
+ },
+ {
+  "id": "T2-D228",
+  "date": "2026-10-24",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Partial fine-tuning of the per-user copies (head only / features only): mix −0.0050 / +0.0005; the copy line closed"
+ },
+ {
+  "id": "T2-D229",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Random frequency warp of CNN training windows (virtual alpha frequency): mix −0.0009 / +0.0015, new < 0 in both; not adopted"
+ },
+ {
+  "id": "T2-D230",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "shipped",
+  "one_line": "Covariance re-colouring of FBCNet training windows: strength 0.5 mix +0.0059 (12/12), candidate; rc10 +0.0036 below the bar"
+ },
+ {
+  "id": "T2-D230r",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Replicate of FBCNet re-colouring at strength 0.5: mix +0.0063 (11/12), adopted; the dose was replaced the same day (D231r)"
+ },
+ {
+  "id": "T2-D231",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "shipped",
+  "one_line": "FBCNet re-colouring dose 0.25 / 0.75: strength 0.75 mix +0.0065 (11/12), candidate; the dose curve is flat between 0.5 and 0.75"
+ },
+ {
+  "id": "T2-D231r",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "shipped",
+  "one_line": "FBCNet re-colouring rc75 vs rc5 replicate: mix +0.00629 vs +0.00625, a tie; strength 0.75 kept by the pre-fixed rule"
+ },
+ {
+  "id": "T2-D232",
+  "date": "2026-10-24",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Candidate package rebuilt with the re-coloured FBCNet: gates passed, 12.44 ms per window; later replaced by newer builds"
+ },
+ {
+  "id": "T2-D233",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Re-colouring on the aligned ShallowNet: mix −0.0011 / −0.0027, new < 0 for both; not adopted"
+ },
+ {
+  "id": "T2-D234",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "ShallowNet unaligned under the augmentations: mix −0.0254 / −0.0223 (0/12); the alignment stays"
+ },
+ {
+  "id": "T2-D235",
+  "date": "2026-10-24",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Re-colouring 0.75 on the ST-L member: member +0.0099, package mix +0.0042, a near miss; adopted later only stacked with layer-wise lr decay (D247r)"
+ },
+ {
+  "id": "T2-D236",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Random-strength re-colouring for FBCNet: mix −0.0011 / −0.0006; the fixed strength 0.75 stays"
+ },
+ {
+  "id": "T2-D238",
+  "date": "2026-10-24",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Re-colouring 1.0 on the ST-L member: package mix +0.0031, member +0.0015 (below the 0.75 dose); ST-L re-colouring alone closed"
+ },
+ {
+  "id": "T2-D237",
+  "date": "2026-10-24",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Re-colouring toward midpoint virtual users: mix +0.0005 / −0.0013; the real-user targets stay"
+ },
+ {
+  "id": "T2-D239",
+  "date": "2026-10-24",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Per-user copies trained with mapped windows from other users: mix −0.0035 / −0.0053, the seen side loses; closed"
+ },
+ {
+  "id": "T2-D241",
+  "date": "2026-10-24",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Drop path 0.1 / layer-wise lr decay 0.75 on ST-L: package mix +0.0002 / +0.0044 (near miss); the decay was adopted later with re-colouring (D247r)"
+ },
+ {
+  "id": "T2-D242",
+  "date": "2026-10-24",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L fine-tune 60 vs 30 epochs: member +0.0100, package mix −0.0002; 30 epochs stay"
+ },
+ {
+  "id": "T2-D243",
+  "date": "2026-10-24",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Layer-wise lr decay dose 0.85 / 0.65 on ST-L: package mix +0.0031 / +0.0018; peak at 0.75, below the bar when used alone"
+ },
+ {
+  "id": "T2-D244",
+  "date": "2026-10-24",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "FM temperature in the blend: mix +0.0018 / +0.0023 (10/12), below the bar; T 1 stays"
+ },
+ {
+  "id": "T2-D247",
+  "date": "2026-10-24",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "shipped",
+  "one_line": "ST-L re-colouring 0.75 + layer-wise lr decay 0.75 stacked: package mix +0.0086 (11/12), member +0.0248; candidate, adopted by D247r"
+ },
+ {
+  "id": "T2-D245",
+  "date": "2026-10-25",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "ST-L mixup 0.8 and weight EMA 0.995: package mix +0.0020 / −0.0014; neither adopted"
+ },
+ {
+  "id": "T2-D247r",
+  "date": "2026-10-25",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "shipped",
+  "one_line": "Fresh-seed replicate of ST-L re-colouring + layer-wise lr decay: package mix +0.0068 (10/12), member +0.0210; adopted into the ST-L recipe"
+ },
+ {
+  "id": "T2-D248",
+  "date": "2026-10-25",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Candidate package rebuilt with the adopted ST-L fine-tune: gates passed, 12.64 ms per window; later replaced by newer builds"
+ },
+ {
+  "id": "T2-D250",
+  "date": "2026-10-25",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "More blend weight for the adopted ST-L: package mix −0.0051 / −0.0043, held-out mean −0.0021 (2/5 folds); the weights stay"
+ },
+ {
+  "id": "T2-D251",
+  "date": "2026-10-25",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L encoder lr ×2: member +0.0049, package mix +0.0007 (6/12); not adopted"
+ },
+ {
+  "id": "T2-D252",
+  "date": "2026-10-25",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Diagnostic: the package gain tracks the ST-L's gain on CNN-wrong windows (r +0.90; +0.64 without the two large variants) more than its stand-alone gain"
+ },
+ {
+  "id": "T2-D253",
+  "date": "2026-10-25",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L loss up-weighted on CNN-wrong windows: package mix +0.0020 (9/12), member −0.0042; bar not met"
+ },
+ {
+  "id": "T2-D254",
+  "date": "2026-10-25",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "CNN-confidence gate on the blend: package mix −0.0127 / −0.0133 (0/12); the gate line closed"
+ },
+ {
+  "id": "T2-D249",
+  "date": "2026-10-25",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "never-read",
+  "one_line": "Gated seed draws of the candidate package with the adopted ST-L: registered and launch-ready, no result recorded in the row"
+ },
+ {
+  "id": "T2-D255",
+  "date": "2026-10-25",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L loss up-weighting at dose γ 2: package mix +0.0013 (7/12), member −0.0040; the complementary-weight line closed"
+ },
+ {
+  "id": "T2-D256",
+  "date": "2026-10-25",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "killed-early",
+  "one_line": "Re-colouring 0.75 on MOR: killed by its rule (MOR alone kit test −0.0168); package mix +0.0045, just under the bar"
+ },
+ {
+  "id": "T2-D258",
+  "date": "2026-10-25",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "MOR fine-tune 24 vs 12 epochs: killed (MOR alone kit test −0.0234); 12 epochs stay"
+ },
+ {
+  "id": "T2-D259",
+  "date": "2026-10-25",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "killed-early",
+  "one_line": "Re-colouring 0.5 on MOR: killed (MOR alone kit test −0.0166); package mix +0.0035, under the bar; MOR re-colouring closed"
+ },
+ {
+  "id": "T2-D257",
+  "date": "2026-10-26",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Gain jitter + time shift on ST-L: member +0.0047, package mix +0.0009 (7/12); not adopted at the time"
+ },
+ {
+  "id": "T2-D260",
+  "date": "2026-10-26",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Channel dropout 0.1 on ST-L: package mix +0.0011 (7/12), member −0.0018; not adopted at the time"
+ },
+ {
+  "id": "T2-D262",
+  "date": "2026-10-26",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "killed-early",
+  "one_line": "Time shift on MOR: killed (MOR alone kit test −0.0104); package mix +0.0022, under the bar"
+ },
+ {
+  "id": "T2-D261",
+  "date": "2026-10-26",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Label smoothing 0.2 on ST-L: member +0.0032, package mix −0.0004 (4/12); smoothing 0.1 stays"
+ },
+ {
+  "id": "T2-D263",
+  "date": "2026-10-26",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "LP-FT (5 head-only epochs) for ST-L: member +0.0085, package mix +0.0015 (10/12); bar not met"
+ },
+ {
+  "id": "T2-D264",
+  "date": "2026-10-26",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L top-block re-initialisation: a null (package mix +0.0006, member +0.0013); closed"
+ },
+ {
+  "id": "T2-D267",
+  "date": "2026-10-26",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "LP-FT with a 10-epoch probe for ST-L: member +0.0130, package mix +0.0030 (10/12); below the bar"
+ },
+ {
+  "id": "T2-D266",
+  "date": "2026-10-26",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L head lr ×3: member +0.0092, package mix +0.0017 (9/12); the head lr stays 1e-3"
+ },
+ {
+  "id": "T2-D270",
+  "date": "2026-10-26",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "WiSE-FT 0.5 on the ST-L's LP-FT: killed (member kit test −0.0156; package mix −0.0106, 0/12)"
+ },
+ {
+  "id": "T2-D271",
+  "date": "2026-10-26",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Diagnostic: head lr ×3 and LP-FT fix mostly different windows (Jaccard 0.289 vs 0.468 redundant / 0.230 noise); stacking them ranked next"
+ },
+ {
+  "id": "T2-D272",
+  "date": "2026-10-26",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "LP-FT + head lr ×3 on ST-L: member +0.0194 / +0.0213, package mix +0.0017 / +0.0019; the LP-FT line closed"
+ },
+ {
+  "id": "T2-D269",
+  "date": "2026-10-26",
+  "theme": "Foundation-model members",
+  "verdict": "never-read",
+  "one_line": "ST-L fine-tune at batch 32: cancelled after about 25 min under a stop list for single-knob arms; nothing fetched or read"
+ },
+ {
+  "id": "T2-D274",
+  "date": "2026-10-26",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Two ST-L members in the ST-L slot: mix +0.0026 / +0.0032 (10/12 each), below the bar; one ST-L member stays"
+ },
+ {
+  "id": "T2-D275",
+  "date": "2026-10-26",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "FBCNet crop-pair members (1–3 s / 3–5 s): package mix +0.0010 (7/12); the crop line closed"
+ },
+ {
+  "id": "T2-D276",
+  "date": "2026-10-26",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "15-seed builds of the candidate package lines: all gates passed, 13.03 / 13.07 / 13.06 ms per window; later replaced by newer builds"
+ },
+ {
+  "id": "T2-D278",
+  "date": "2026-10-26",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "withdrawn",
+  "one_line": "Worker-error rule for the first uploads: replaced the same day by a revised upload-plan item"
+ },
+ {
+  "id": "T2-D277",
+  "date": "2026-10-26",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "In-domain session-crop continued pre-training for ST-L: package mix −0.0006 (6/12); the pretraining pool stays unchanged"
+ },
+ {
+  "id": "T2-D279",
+  "date": "2026-10-26",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Warm-up twins of the template at 10 / 15 seeds: both finished on the worker, warm-up scores 0.56838 / 0.57095"
+ },
+ {
+  "id": "T2-D280",
+  "date": "2026-10-26",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Draw-noise estimate at the sealed set's size: σ* = 0.0050 (sd of independent draws on kit test 0.0102)"
+ },
+ {
+  "id": "T2-D281",
+  "date": "2026-10-27",
+  "theme": "Runtime and packaging",
+  "verdict": "descriptive",
+  "one_line": "Member audit of 11 shippable packages: all pass, no dead member"
+ },
+ {
+  "id": "T2-D281b",
+  "date": "2026-10-27",
+  "theme": "Runtime and packaging",
+  "verdict": "descriptive",
+  "one_line": "Member audit part 2 (warm-up twins, tail-noise rule): all 13 pass; one ST-L member only narrowly (ratio 0.99)"
+ },
+ {
+  "id": "T2-D282",
+  "date": "2026-10-27",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "descriptive",
+  "one_line": "Test-time training gate read: adapted ST-L +0.0233 on hard windows, package mix +0.0007 (2/6); gate met, step 1 run as D283"
+ },
+ {
+  "id": "T2-D283",
+  "date": "2026-10-27",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Label-free test-time training of ST-L (LayerNorm only): mix +0.0003 / −0.0000; inert, the test-time-training line closed"
+ },
+ {
+  "id": "T2-D284",
+  "date": "2026-10-27",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Eight further 15-seed package draws: all gates and member audits passed; later replaced by newer builds"
+ },
+ {
+  "id": "T2-D285",
+  "date": "2026-10-27",
+  "theme": "Decoding and test-time methods",
+  "verdict": "shipped",
+  "one_line": "Causal Sinkhorn class-balance decode: mix +0.0071 / +0.0068 (12/12 in both reads) over the prior correction; adopted, the run-quota decoder not shipped"
+ },
+ {
+  "id": "T2-D286",
+  "date": "2026-10-27",
+  "theme": "Decoding and test-time methods",
+  "verdict": "shipped",
+  "one_line": "Sinkhorn decoder in the template + its warm-up twin: gates passed, replay 0.5799 vs 0.5709 with the prior correction"
+ },
+ {
+  "id": "T2-D287",
+  "date": "2026-10-27",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Earlier seen-vs-new trades re-weighted to a new-user share of 0.40 and 0.57: no closed row reopens"
+ },
+ {
+  "id": "T2-D288",
+  "date": "2026-10-27",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Sinkhorn repacks of the 15 candidate packages: 15/15 passed, 12.56–13.26 ms per window; later replaced by newer builds"
+ },
+ {
+  "id": "T2-D289",
+  "date": "2026-10-27",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "bf16-scale noise does not explain the SK10 replay-vs-worker gap (flips 1.21 vs 1.04 per 755 windows); SK10's gain holds (+0.0073 mix)"
+ },
+ {
+  "id": "T2-D290",
+  "date": "2026-10-27",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "No stream structure reproduces the worker's SK10 gap; SK10's edge is order dependent (+0.0065 chronological, −0.0023 reversed)"
+ },
+ {
+  "id": "T2-D291",
+  "date": "2026-10-28",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Rule: two or three best uploads first, then iterate; no more pre-built draws or repacks"
+ },
+ {
+  "id": "T2-D292",
+  "date": "2026-10-28",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Per-stream adaptive LDA on band power: even with true labels mix −0.0612 (0/12); the line was killed"
+ },
+ {
+  "id": "T2-D293",
+  "date": "2026-10-28",
+  "theme": "Subject invariance",
+  "verdict": "killed-early",
+  "one_line": "User-adversarial (gradient-reversal) pooled CNNs: mix −0.0083 at λ 0.1 and −0.0614 at λ 0.3; both arms killed"
+ },
+ {
+  "id": "T2-D294",
+  "date": "2026-10-28",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "FM-to-CNN distillation: null on the training windows (mix +0.0012), −0.0241 with external unlabelled windows; not adopted"
+ },
+ {
+  "id": "T2-D295",
+  "date": "2026-10-28",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Re-colouring toward 116 external users' covariances: mix −0.0112 (0/12); rigid cap shift +0.0007; neither adopted"
+ },
+ {
+  "id": "T2-D296",
+  "date": "2026-10-28",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "8-view test-time averaging of the pooled CNNs: mix +0.0030 (11/12), new +0.0061; a near miss, not adopted on this row"
+ },
+ {
+  "id": "T2-D297",
+  "date": "2026-10-28",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Same-class MixStyle across users in the pooled CNNs: mix −0.0127 (0/12); killed"
+ },
+ {
+  "id": "T2-D298",
+  "date": "2026-10-29",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "pv10 copies + tv8 views stacked: mix +0.0047 (10/12), a near miss by 0.0003; not adopted"
+ },
+ {
+  "id": "T2-D299",
+  "date": "2026-10-29",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Same-class cross-user input mixing in the pooled CNNs: mix −0.0018 (4/12); not adopted"
+ },
+ {
+  "id": "T2-D300",
+  "date": "2026-10-29",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Random spectral tilt augmentation in the pooled CNNs: mix −0.0031 (3/12); not adopted"
+ },
+ {
+  "id": "T2-D301",
+  "date": "2026-10-29",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "No window-level order reproduces the worker's SK10 gap; SK10's edge shrinks to +0.0002 / +0.0008 under reversal / shuffles"
+ },
+ {
+  "id": "T2-D302",
+  "date": "2026-10-29",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Test-time views through the per-user copies too (tv8c): mix +0.0041 (11/12), new +0.0101; under the bar on this row"
+ },
+ {
+  "id": "T2-D303",
+  "date": "2026-10-29",
+  "theme": "Foundation-model members",
+  "verdict": "descriptive",
+  "one_line": "Member removal: MOR adds +0.0005 mix (noise level), ST-EEGFormer-L adds +0.0173 (11/12) under the Sinkhorn decode"
+ },
+ {
+  "id": "T2-D304",
+  "date": "2026-10-30",
+  "theme": "Decoding and test-time methods",
+  "verdict": "shipped",
+  "one_line": "Forgetting factor λ 0.95 in the causal Sinkhorn decode: mix +0.0042 (11/12), replicate +0.0035 (10/12); adopted and kept to the final package"
+ },
+ {
+  "id": "T2-D305",
+  "date": "2026-10-30",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "MIRepNet as a fourth member: near chance alone (0.3417 kit test), package mix +0.0000 and −0.0107; dropped"
+ },
+ {
+  "id": "T2-D306",
+  "date": "2026-10-30",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Soft-clip (tanh) input front end for the CNNs: mix −0.0466 per channel, −0.0209 global; not adopted"
+ },
+ {
+  "id": "T2-D307",
+  "date": "2026-10-30",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Training-set cleaning for the CNNs (artefact or hard-label drops): mix −0.0114 / −0.0080; not adopted"
+ },
+ {
+  "id": "T2-D308",
+  "date": "2026-10-30",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Virtual-session drift maps as a CNN augmentation: mix −0.0058 (3/12); not adopted"
+ },
+ {
+  "id": "T2-D309",
+  "date": "2026-10-30",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Sinkhorn knob grid with a holdout: +0.0003 (7/12) on fresh seeds; per-interface oracle decoder −0.0027; the shipped settings stay"
+ },
+ {
+  "id": "T2-D310",
+  "date": "2026-10-30",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "closed",
+  "one_line": "Near-miss stacks on fresh seeds: S1 mix +0.0046 (9/12), S2 +0.0039 (8/12); neither adopted on this row"
+ },
+ {
+  "id": "T2-D311",
+  "date": "2026-10-30",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "FBCNet crop members under the forgetting Sinkhorn: mix +0.0000 (7/12); the crop line stays closed"
+ },
+ {
+  "id": "T2-D312",
+  "date": "2026-10-31",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Multi-seed ST-L slot: 3 seeds vs 1 mix +0.0015 (10/12), under the +0.002 bar; closed on this row"
+ },
+ {
+  "id": "T2-D313",
+  "date": "2026-10-31",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "NeuroRVQ full fine-tune: 0.3764 kit test alone vs ST-L 0.4431; package −0.0551 / −0.0085; not adopted"
+ },
+ {
+  "id": "T2-D313b",
+  "date": "2026-10-31",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "NeuroRVQ with LoRA: 0.3849 kit test alone vs ST-L 0.4431; package −0.0577 / −0.0122; the NeuroRVQ line closed"
+ },
+ {
+  "id": "T2-D314",
+  "date": "2026-10-31",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "568M-parameter MOR variant vs the 100M MOR: member 0.3954 vs 0.4104 kit test, package mix +0.0001; closed"
+ },
+ {
+  "id": "T2-D315",
+  "date": "2026-10-31",
+  "theme": "Subject invariance",
+  "verdict": "closed",
+  "one_line": "Group DRO over training users in the pooled CNNs: mix −0.0007 (6/12), new −0.0064, seen +0.0049; closed"
+ },
+ {
+  "id": "T2-D316",
+  "date": "2026-10-31",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "closed",
+  "one_line": "No internal statistic ranks training draws for new users (validation Spearman +0.177, train loss −0.123); not adopted"
+ },
+ {
+  "id": "T2-D296r",
+  "date": "2026-10-29",
+  "theme": "Decoding and test-time methods",
+  "verdict": "shipped",
+  "one_line": "CNN test-time views replicate on fresh seeds: mix +0.0018 (tv8) / +0.0014 (tv8c), new users +0.0040 / +0.0057; tv8c went into the sealed packages"
+ },
+ {
+  "id": "T2-D317",
+  "date": "2026-11-01",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Fingerprint distance cannot separate returning from new users (AUC 0.472, needed 0.7), although it identifies returning users 35/36"
+ },
+ {
+  "id": "T2-D318",
+  "date": "2026-11-02",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "HEEGNet as a member and a hyperbolic head on FBCNet: mix −0.0028 and −0.0348; closed"
+ },
+ {
+  "id": "T2-D319",
+  "date": "2026-11-05",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Sealed 0.81 vs warm-up 0.57 explained: 6 of the 8 warm-up cells are one hard user (0.588); the other users' cells average 0.800"
+ },
+ {
+  "id": "T2-D321",
+  "date": "2026-11-05",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "human supervisor decisions: runtime bar 18.1 → 40 ms per window, budget 330 → 430 GPU-h, up to 2 uploads with new predict-path code"
+ },
+ {
+  "id": "T2-D320",
+  "date": "2026-11-05",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Re-screen of saved arms on typical users: test-time views incl. copies +0.0070…+0.0096, more FM share +0.0031…+0.0060; λ 0.95 stays"
+ },
+ {
+  "id": "T2-D322",
+  "date": "2026-11-05",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Per-stream member re-weighting by pseudo-labels: typical −0.0313 (0/12); stopped at the first variant"
+ },
+ {
+  "id": "T2-D323",
+  "date": "2026-11-05",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-EEGFormer-L with per-stream Euclidean alignment: typical −0.0084 (2/12), returning user P10 −0.0245; not adopted"
+ },
+ {
+  "id": "T2-D324",
+  "date": "2026-11-05",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Goal recorded: target ≥ 0.830 sealed (the leaders at 0.825, team best 0.806 at the time); risk-on, new-user generalisation first"
+ },
+ {
+  "id": "T2-D325",
+  "date": "2026-11-05",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "ShallowNet ×2 width with test-time views: typical +0.0018 (8/12); not adopted"
+ },
+ {
+  "id": "T2-D326",
+  "date": "2026-11-05",
+  "theme": "Ensembling and blend weights",
+  "verdict": "shipped",
+  "one_line": "Two ST-EEGFormer-L seeds in the FM slot: typical +0.0060 (11/12) on fresh seeds; adopted (the final FM slot holds six members)"
+ },
+ {
+  "id": "T2-D327",
+  "date": "2026-11-05",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M1 package (two ST-L seeds at FM share 0.3) built and gated at 21.03 ms per window; superseded by later builds, never uploaded"
+ },
+ {
+  "id": "T2-D328",
+  "date": "2026-11-05",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Filter-bank tangent-space + logistic regression member: typical +0.0013 at weight 0.05, alone 0.585 vs 0.813; not adopted"
+ },
+ {
+  "id": "T2-D329",
+  "date": "2026-11-05",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "LoRA r16 on ST-EEGFormer-L vs the full fine-tune: typical −0.0190 (0/12), member 0.652 vs 0.739; the full fine-tune stays"
+ },
+ {
+  "id": "T2-D330",
+  "date": "2026-11-05",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Virtual-participant augmentation on ST-EEGFormer-L: best member alone (0.753 vs 0.739) but typical +0.0014 (7/12) in the package; not adopted"
+ },
+ {
+  "id": "T2-D331",
+  "date": "2026-11-05",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Two-shot plan: uploads held unless the local typical gain is ≥ +0.025 (≈ +0.009 sealed at the observed 0.35 lab-to-sealed transfer)"
+ },
+ {
+  "id": "T2-D332",
+  "date": "2026-11-05",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M2 package (four ST-L seeds at FM share 0.35) built and gated at 29.98 ms per window; a final candidate at the time, later superseded"
+ },
+ {
+  "id": "T2-D333",
+  "date": "2026-11-05",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "closed",
+  "one_line": "Recipe-diverse FM slot (one virtual-participant ST-L seed): typical +0.0017 (8/12), under the rule; M2 stays first pick, M3 built as runner-up"
+ },
+ {
+  "id": "T2-D334",
+  "date": "2026-11-05",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M4 hedge package (pv10 copies, FM share 0.3) built and gated at 30.07 ms; a second-shot candidate at the time, later superseded"
+ },
+ {
+  "id": "T2-D335",
+  "date": "2026-11-05",
+  "theme": "Decoding and test-time methods",
+  "verdict": "descriptive",
+  "one_line": "Knob sweep on the candidate stack (decoder, blend strength, augmentation dose, external data): nothing moves typical by ≥ +0.002"
+ },
+ {
+  "id": "T2-D336",
+  "date": "2026-11-05",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "IFNet as a third CNN family: typical +0.0026 (11/12) at weight 0.1, just under the +0.003 bar on this row"
+ },
+ {
+  "id": "T2-D337",
+  "date": "2026-11-05",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Session-crop-CPT ST-L as an added FM-slot member: typical −0.0001 (6/12); closed"
+ },
+ {
+  "id": "T2-D338",
+  "date": "2026-11-05",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Fifth FM-slot member: typical +0.0011 (8/12); the slot was judged saturated at four members on this row"
+ },
+ {
+  "id": "T2-D339",
+  "date": "2026-11-05",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "15 mm virtual-participant bank for the CNNs: typical −0.0009 (4/12); the shipped bank (vp2) stays"
+ },
+ {
+  "id": "T2-D340",
+  "date": "2026-11-05",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "FM share 0.40 / 0.45 vs 0.35: typical +0.0006 / +0.0012, hard user −0.0051 / −0.0131; 0.35 stays"
+ },
+ {
+  "id": "T2-D341",
+  "date": "2026-11-05",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "CBraMod as an extra FM member: at chance alone (kit test 0.337); killed at the 0.60 typical-level line"
+ },
+ {
+  "id": "T2-D342",
+  "date": "2026-11-05",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "16 instead of 8 CNN test-time views: typical −0.0010 (4/12); 8 views stay"
+ },
+ {
+  "id": "T2-D343",
+  "date": "2026-11-05",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Forgetting factor / pseudo-count re-dosed on the candidate stack: all within −0.0034 … +0.0013; λ 0.95 / n0 3 stay"
+ },
+ {
+  "id": "T2-D344",
+  "date": "2026-11-05",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "16 test-time views on the M4 hedge: hard user +0.0052 but typical −0.0025 (2/12); M4 stays as built"
+ },
+ {
+  "id": "T2-D345",
+  "date": "2026-11-05",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "IFNet 0.10 + five-member FM slot, screen: typical +0.0045 (9/12), short of the raised bar by the up-count; replicated in D345r"
+ },
+ {
+  "id": "T2-D345r",
+  "date": "2026-11-05",
+  "theme": "Ensembling and blend weights",
+  "verdict": "shipped",
+  "one_line": "IFNet at 0.10 + five-member FM slot (nm35): typical +0.0047 (10/12) on fresh seeds; adopted; IFNet at 0.10 and a multi-member FM slot are in the final package"
+ },
+ {
+  "id": "T2-D346",
+  "date": "2026-11-05",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "EEGNeX as a fourth CNN family: screen +0.0031 (10/12), fresh-seed replicate +0.0012 (8/12); closed"
+ },
+ {
+  "id": "T2-D347",
+  "date": "2026-11-05",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "killed-early",
+  "one_line": "Re-aligning returning users to their stored training-session geometry: +0.0034 (7/12) against a +0.015 kill line; killed"
+ },
+ {
+  "id": "T2-D348",
+  "date": "2026-11-05",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "CPT length 1k / 2k / 10k vs the shipped 5k steps: member level peaks at 5k (0.7393); no change"
+ },
+ {
+  "id": "T2-D349",
+  "date": "2026-11-05",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "All-token grid head on ST-EEGFormer-L with restarts: typical −0.0303 (0/12), member 0.639 vs 0.739; the mean readout stays"
+ },
+ {
+  "id": "T2-D350",
+  "date": "2026-11-05",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Joint CPT of ST-EEGFormer-L on all three tracks' EEG: −0.0051…−0.0037 vs the shipped close-domain CPT; no candidate, CPT v1 kept"
+ },
+ {
+  "id": "T2-D351",
+  "date": "2026-11-05",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "ST-L channel dropout 0.1 re-read on the current stack: typical +0.0006 (7/12); closed on this base"
+ },
+ {
+  "id": "T2-D352",
+  "date": "2026-11-05",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Template W11 (third CNN family) and the M5 build: gates pass at 39.23 ms / window; M5 stayed a gated candidate and was replaced by M6 / M7"
+ },
+ {
+  "id": "T2-D353",
+  "date": "2026-11-05",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Budget record: Track 2's GPU allowance raised by 300 H200 GPU-h; no experimental content"
+ },
+ {
+  "id": "T2-D354",
+  "date": "2026-11-05",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Joint-CPT control on Track 2's pools only: at least as good as the cross-track pool; nothing beats the shipped CPT v1"
+ },
+ {
+  "id": "T2-D355",
+  "date": "2026-11-05",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "CBraMod with a token-grid head: 0.455 / 0.488 alone, under the 0.60 kill line; killed"
+ },
+ {
+  "id": "T2-D356",
+  "date": "2026-11-05",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "From-scratch ST-EEGFormer-base as a fallback member: −0.038 / −0.032 vs the shipped ST-L (0/12); no usable fallback member"
+ },
+ {
+  "id": "T2-D357",
+  "date": "2026-11-05",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Approval record: early upload of M5 approved, then put on hold the same evening; no upload followed from this row"
+ },
+ {
+  "id": "T2-D358",
+  "date": "2026-11-05",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "FBCNet spectral tilt 0.15 re-read: typical +0.0023 (9/12), a stable near miss under the bar; closed"
+ },
+ {
+  "id": "T2-D359",
+  "date": "2026-11-05",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Heterogeneously preprocessed members added to the stack: best +0.0026 (10/12), under +0.003; they help only the hardest participant"
+ },
+ {
+  "id": "T2-D360",
+  "date": "2026-11-05",
+  "theme": "Foundation-model members",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Euclidean-aligned ST-L swapped into the FM slot: typical +0.0021 (10/12), hardest participant +0.0053; hedge bar met, replicate in D360r"
+ },
+ {
+  "id": "T2-D360r",
+  "date": "2026-11-05",
+  "theme": "Foundation-model members",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Replicate of the aligned ST-L swap: typical +0.0006 (6/12), hardest participant +0.0055 (12/12); hedge bar met, hedge twin M5h built (D366)"
+ },
+ {
+  "id": "T2-D349b",
+  "date": "2026-11-05",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L all-token readout with a frozen / regularised / LoRA head: −0.0146 … −0.0344 as the slot, at most +0.0029 as an added member; not met"
+ },
+ {
+  "id": "T2-D361",
+  "date": "2026-11-05",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L at 60 / 100 epochs: member alone +0.013 / +0.018, slot +0.0045 (8/12), one draw short of the bar; confirmed on fresh seeds in D379"
+ },
+ {
+  "id": "T2-D362",
+  "date": "2026-11-06",
+  "theme": "Decoding and test-time methods",
+  "verdict": "killed-early",
+  "one_line": "Anchored class-conditional calibration before the Sinkhorn decode: typical −0.0056 (0/12); killed"
+ },
+ {
+  "id": "T2-D363",
+  "date": "2026-11-06",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "CBraMod encoder-output readout: loss 1.0364 / 1.0380 at epoch 30, kit test 0.3406 / 0.3127; step 1 failed, CBraMod closed"
+ },
+ {
+  "id": "T2-D364",
+  "date": "2026-11-06",
+  "theme": "Ensembling and blend weights",
+  "verdict": "killed-early",
+  "one_line": "Per-stream family re-weighting: even the labelled ceiling is negative (typical −0.0058, 8/24); closed at step 0"
+ },
+ {
+  "id": "T2-D365",
+  "date": "2026-11-06",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "User-level feature re-styling in the pooled CNNs: −0.0021 as a swap, +0.0015 (9/12) as a 1 : 1 mix; closed"
+ },
+ {
+  "id": "T2-D366",
+  "date": "2026-11-06",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M5h (M5 with an aligned ST-L member) built and gated at 39.36 ms / window; a hedge twin, never uploaded"
+ },
+ {
+  "id": "T2-D367",
+  "date": "2026-11-06",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Self-supervised pre-training of FBCNet on in-domain windows: −0.0005 / −0.0004; engaged, no gain, killed"
+ },
+ {
+  "id": "T2-D368",
+  "date": "2026-11-06",
+  "theme": "Subject invariance",
+  "verdict": "closed",
+  "one_line": "Cross-user SupCon on the ST-L: −0.0005 added / −0.0000 swapped; no measurable effect, and engagement was never shown"
+ },
+ {
+  "id": "T2-D369",
+  "date": "2026-11-06",
+  "theme": "Subject invariance",
+  "verdict": "descriptive",
+  "one_line": "Person identity is decodable (1.000 / 0.834) but orthogonal to the class read-out; removing it costs ≈ 0, so a marginal adversary should be neutral"
+ },
+ {
+  "id": "T2-D370",
+  "date": "2026-11-06",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Old near-miss FM variants re-read on the current stack: +0.0005 / +0.0010 / +0.0011; no arm near the bar, the rows stay closed"
+ },
+ {
+  "id": "T2-D371",
+  "date": "2026-11-06",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Rule adopted: an arm whose mechanism never engages counts as not tested, not as closed"
+ },
+ {
+  "id": "T2-D372",
+  "date": "2026-11-06",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L LoRA at a LoRA learning rate: engaged, but swap −0.0003 / added +0.0007 at 30 epochs and +0.0011 at 60; closed as tested"
+ },
+ {
+  "id": "T2-D373",
+  "date": "2026-11-06",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Stack of three sub-bar FM singles: typical +0.0027 (8/12), narrowly under the bar; its two-part form went to a fresh-seed replicate (D376)"
+ },
+ {
+  "id": "T2-D374",
+  "date": "2026-11-06",
+  "theme": "Subject invariance",
+  "verdict": "closed",
+  "one_line": "Tuned subject-adversarial FBCNet: the adversary never engaged (person probe 0.963–0.992 vs a 0.80 bar); not tested by the team's rule, closed for the CNNs"
+ },
+ {
+  "id": "T2-D375",
+  "date": "2026-11-06",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Per-stream feature centring: +0.0632 / +0.0418 on a probe head, −0.0017 in the package; the Sinkhorn decode already absorbs it"
+ },
+ {
+  "id": "T2-D376",
+  "date": "2026-11-06",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Replicate of the two-part stack: typical +0.0005 (7/12) against +0.0022 before; not shipped"
+ },
+ {
+  "id": "T2-D377",
+  "date": "2026-11-06",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Split-half selection of small positives: the halves disagree (+0.0048 vs +0.0030 on different stacks); gate not met"
+ },
+ {
+  "id": "T2-D378",
+  "date": "2026-11-06",
+  "theme": "Ensembling and blend weights",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Three-swap stack on fresh seeds: typical +0.0041 (10/12), every typical participant up; became the M6 build, a gated candidate that was never uploaded"
+ },
+ {
+  "id": "T2-D379",
+  "date": "2026-11-06",
+  "theme": "Foundation-model members",
+  "verdict": "shipped",
+  "one_line": "100-epoch ST-L members on fresh seeds: typical +0.0044 (12/12), returning-heavy; adopted as the M7 build (D384)"
+ },
+ {
+  "id": "T2-D380",
+  "date": "2026-11-06",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M6 (M5 + the three-swap stack) built and gated at 39.27 ms / window; a gated candidate, never uploaded"
+ },
+ {
+  "id": "T2-D381",
+  "date": "2026-11-06",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Dropping the copies' test-time views costs −0.0035 (0/12); the views are worth more than any member the freed runtime could buy"
+ },
+ {
+  "id": "T2-D382",
+  "date": "2026-11-06",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "CNN families at 360 epochs: typical +0.0015 (8/12), under the bar; only ShallowNet moved (+0.0022), and that did not replicate (D383)"
+ },
+ {
+  "id": "T2-D383",
+  "date": "2026-11-06",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "ShallowNet at 360 epochs plus a 100-epoch ST-L swap on M6: −0.0003 (5/12); both parts ≈ 0 on fresh seeds; closed"
+ },
+ {
+  "id": "T2-D384",
+  "date": "2026-11-06",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M7 (M5 with 100-epoch ST-L members) built and gated at 39.39 ms / window; held as the second candidate at the time"
+ },
+ {
+  "id": "T2-D385",
+  "date": "2026-11-06",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "M6's ST-L members at 100 epochs: typical −0.0023 (2/12), new −0.0041, returning +0.0061; length closed for M6"
+ },
+ {
+  "id": "T2-D386",
+  "date": "2026-11-06",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "MOR continued pre-training with the challenge pools: ≈ +0.019 member alone at any dose, but every MOR-for-ST-L swap loses (−0.0038 or worse)"
+ },
+ {
+  "id": "T2-D387",
+  "date": "2026-11-06",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M6 with the earlier copy recipe (M6pv): use rule met on existing nets (+0.0217 vs S1, P04 −0.0063); failed its fresh-seed check in D388"
+ },
+ {
+  "id": "T2-D388",
+  "date": "2026-11-06",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "closed",
+  "one_line": "M6pv fresh-seed check: P04 −0.0104 against a −0.010 bar and +0.0021 against +0.003; not met, M7 becomes the second candidate"
+ },
+ {
+  "id": "T2-D389",
+  "date": "2026-11-06",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "withdrawn",
+  "one_line": "Copy blend weight re-tune for M6pv: closed as moot before running, because D388 removed M6pv"
+ },
+ {
+  "id": "T2-D390",
+  "date": "2026-11-06",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Euclidean alignment for FBCNet: typical −0.0021 (2/12), hardest participant −0.0124; FBCNet stays unaligned"
+ },
+ {
+  "id": "T2-D391",
+  "date": "2026-11-06",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Aligned + two-stage ST-L in one member: typical −0.0023 (3/12); closed"
+ },
+ {
+  "id": "T2-D392",
+  "date": "2026-11-06",
+  "theme": "Runtime and packaging",
+  "verdict": "descriptive",
+  "one_line": "Build path for ST-L members from different pre-training checkpoints: coded and dry-run; engineering only"
+ },
+ {
+  "id": "T2-D393",
+  "date": "2026-11-06",
+  "theme": "Decoding and test-time methods",
+  "verdict": "descriptive",
+  "one_line": "Non-causal whole-stream Sinkhorn loses −0.0038 to the causal forgetting form; the 'no headroom' reading was withdrawn as confounded (see D401)"
+ },
+ {
+  "id": "T2-D394",
+  "date": "2026-11-06",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Per-stream density-ratio correction before the decode: −0.0305 (0/12) on the shipped members; killed at step 2"
+ },
+ {
+  "id": "T2-D395",
+  "date": "2026-11-06",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Stream-context head on cached CNN features: −0.0963 on FBCNet; killed as implemented, one bounded repair allowed (D403 / D404)"
+ },
+ {
+  "id": "T2-D396",
+  "date": "2026-11-06",
+  "theme": "External and extra labelled data",
+  "verdict": "closed",
+  "one_line": "CNNs pre-trained on one external labelled corpus: typical −0.0044 (3/12), new −0.0033; closed"
+ },
+ {
+  "id": "T2-D397",
+  "date": "2026-11-07",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "killed-early",
+  "one_line": "Per-user ST-L copies with oracle routing: every arm ≤ 0 (best −0.0007); FM copies closed for accuracy as well as runtime"
+ },
+ {
+  "id": "T2-D398",
+  "date": "2026-11-07",
+  "theme": "External and extra labelled data",
+  "verdict": "closed",
+  "one_line": "CNNs pre-trained on seven external MI corpora: typical −0.0106 (1/12), new users −0.0096; external MI for the CNNs closed"
+ },
+ {
+  "id": "T2-D399",
+  "date": "2026-11-07",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Spectral tilt on one ST-L member: typical +0.0010 (9/12), member alone +0.0052; a consistent near miss under the bar"
+ },
+ {
+  "id": "T2-D400",
+  "date": "2026-11-07",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Spectral tilt on all five ST-L members: typical +0.0025 (10/12), under the +0.003 bar; no build"
+ },
+ {
+  "id": "T2-D401",
+  "date": "2026-11-07",
+  "theme": "Decoding and test-time methods",
+  "verdict": "descriptive",
+  "one_line": "Hindsight Sinkhorn headroom: +0.0080 typical over the causal decode, mostly from future windows; not deployable, diagnostic only"
+ },
+ {
+  "id": "T2-D402",
+  "date": "2026-11-07",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "ST-L trained on a package-aware loss: typical −0.0008 (5/12); it fixes 172 windows and breaks 201; closed"
+ },
+ {
+  "id": "T2-D403",
+  "date": "2026-11-07",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Repaired stream-context head: +0.0035 on FBCNet, under its bars; ShallowNet not engaged; completed on cross-fitted features in D404"
+ },
+ {
+  "id": "T2-D404",
+  "date": "2026-11-07",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Stream-context head on cross-fitted features: −0.1098 / −0.0348 vs the plain probe; the line is closed for both families"
+ },
+ {
+  "id": "T2-D405",
+  "date": "2026-11-07",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Information-maximisation test-time adaptation of FBCNet: kit val 0.7470 vs 0.7507 unadapted; the test-time-gradient line closed"
+ },
+ {
+  "id": "T2-D406",
+  "date": "2026-11-07",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "No feedback-evoked class signal: a phase-locked classifier sits at chance (0.3326 before / 0.3573 after feedback onset); no ERP member"
+ },
+ {
+  "id": "T2-D407",
+  "date": "2026-11-07",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "New MOR generation as a member: +0.0186 / +0.0206 alone over the old MOR, but swaps −0.0050 / −0.0037 (0/12); no route for MOR into the package"
+ },
+ {
+  "id": "T2-D408",
+  "date": "2026-11-07",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Classical tangent-space member added at 0.05: typical −0.0024 (3/12); complementary errors (phi 0.16) but too weak alone (0.585 vs 0.832)"
+ },
+ {
+  "id": "T2-D409",
+  "date": "2026-11-07",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Error anatomy: errors are separability-bound (signal AUC ≈ 0.5 within user vs confidence 0.77); word is in 74 % of errors; no gating fix"
+ },
+ {
+  "id": "T2-D410",
+  "date": "2026-11-07",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "New-user score rises 0.575 → 0.673 from 3 to 9 training users (+0.0093 for the tenth); more users would help, but none are left to add"
+ },
+ {
+  "id": "T2-D411",
+  "date": "2026-11-07",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "EMG / EOG audit: the released data hold 41 EEG channels and no EMG / EOG in all 112 recordings; nothing to use"
+ },
+ {
+  "id": "T2-D412",
+  "date": "2026-11-09",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Class-conditional re-colouring of FBCNet training windows: killed at the kill check (FBCNet alone −0.0219, 0/6); package typical −0.0085 (0/12)"
+ },
+ {
+  "id": "T2-D413",
+  "date": "2026-11-09",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "One-step MeanFlow generator for synthetic new-user windows: failed its fidelity gate (synthetic vs real AUC 1.000); no member trained; re-opened with tuning as D413b"
+ },
+ {
+  "id": "T2-D413b",
+  "date": "2026-11-09",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Tuned generator: synthetic vs real AUC from 1.000 to 0.755 / 0.740, but the final gate failed on one covariance sub-check; no member trained (continued as D413c)"
+ },
+ {
+  "id": "T2-D413c",
+  "date": "2026-11-09",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Generator-augmented FBCNet: member alone +0.0196 kit test (6/6), but typical −0.0034 (4/12) as a swap in the package; not adopted"
+ },
+ {
+  "id": "T2-D413d",
+  "date": "2026-11-09",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Generator-augmented FBCNet as an added member: typical −0.0007 (7/12), about what a second control seed gives; not adopted"
+ },
+ {
+  "id": "T2-D414",
+  "date": "2026-11-09",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "human supervisor decisions recorded: M7 as the fourth sealed upload (local typical +0.0245 over S1, 12/12), new guard and outlier-bet bar, GPU budget 730 → 1,200 H200 GPU-h"
+ },
+ {
+  "id": "T2-D415",
+  "date": "2026-11-09",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Spectral-tilt FBCNet swapped into M7: typical −0.0011 (6/12); the plain FBCNet stays"
+ },
+ {
+  "id": "T2-D416",
+  "date": "2026-11-09",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Log-loss re-weighting of M7's members, cross-fitted: typical −0.0455 (0/12), an objective mismatch; the shipped weights stay"
+ },
+ {
+  "id": "T2-D417",
+  "date": "2026-11-09",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Re-dosed probe-then-fine-tune ST-L member: +0.0119 alone (11/12) but −0.0005 (6/12) inside M7; no dose passes"
+ },
+ {
+  "id": "T2-D416b",
+  "date": "2026-11-09",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Metric-fitted re-weighting of M7's groups: the shipped shares are the optimum of 1,772 grid points; cross-fit typical −0.0147 (0/12); closed"
+ },
+ {
+  "id": "T2-D418",
+  "date": "2026-11-09",
+  "theme": "Runtime and packaging",
+  "verdict": "descriptive",
+  "one_line": "Checks: predict() gets no user or session metadata on sealed, so routing stays inferred; M7 (39.39 ms / window) projects to ≈ 2,050–2,270 s of the 3600 s limit"
+ },
+ {
+  "id": "T2-D419",
+  "date": "2026-11-09",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Pooled FBCNet at 90 instead of 180 epochs: typical +0.0003 (6/12) inside M7, member alone −0.0033; package-neutral, 180 stays"
+ },
+ {
+  "id": "T2-D420",
+  "date": "2026-11-10",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Gradient test-time adaptation of FBCNet (filtered information maximisation, anchored mean-teacher): no variant beats no adaptation on kit val; killed"
+ },
+ {
+  "id": "T2-D421",
+  "date": "2026-11-10",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Riemannian dispersion stretch per stream on the tangent-space classifier: typical −0.0076 (0/12); closed, no CNN row"
+ },
+ {
+  "id": "T2-D422",
+  "date": "2026-11-10",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Re-picked share for the better probe-then-fine-tune ST-L member: cross-fit typical −0.0004 (6/12); not met"
+ },
+ {
+  "id": "T2-D419b",
+  "date": "2026-11-10",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Pooled FBCNet at 60 epochs: typical −0.0023 (4/12) inside M7; the pooled-length line is closed"
+ },
+ {
+  "id": "T2-D423",
+  "date": "2026-11-10",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Codec front-end before a CNN family: the intracranial-fit codec keeps almost nothing of 8–30 Hz (correlation 0.023 vs the bar 0.5); killed"
+ },
+ {
+  "id": "T2-D424",
+  "date": "2026-11-10",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Per-band Euclidean alignment for ShallowNet: member alone typical −0.0301 (0/12); killed at stage 1"
+ },
+ {
+  "id": "T2-D425",
+  "date": "2026-11-10",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "killed-early",
+  "one_line": "Copy-confidence gate to tell returning from new users: AUC 0.624 vs the 0.75 bar; killed at step 0"
+ },
+ {
+  "id": "T2-D426",
+  "date": "2026-11-10",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Alignment from the 8–30 Hz covariance for ShallowNet: member alone typical −0.0340 (0/12); killed at stage 1"
+ },
+ {
+  "id": "T2-D427",
+  "date": "2026-11-10",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Alignment from the 0–8 Hz covariance for ShallowNet: member alone typical −0.0172 (0/12); the band-specific alignment family is closed"
+ },
+ {
+  "id": "T2-D428",
+  "date": "2026-11-10",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Forgetting alignment for ShallowNet: +0.0053 alone (11/12) but −0.0001 (6/12) inside M7; closed"
+ },
+ {
+  "id": "T2-D429",
+  "date": "2026-11-10",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Forgetting alignment on ShallowNet + IFNet: members +0.0042 / +0.0008 alone, typical −0.0006 (7/12) inside M7; line closed"
+ },
+ {
+  "id": "T2-D430",
+  "date": "2026-11-10",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Per-user copies regularised toward the pooled net on other users: cross-fitted typical −0.0047 (1/12); the returning user loses 0.02–0.03 per member; closed"
+ },
+ {
+  "id": "T2-D431",
+  "date": "2026-11-10",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Proposed rule for the fifth upload, keyed to M7's sealed score (≤ 0.808 / ≥ 0.820), predicted 0.817; recorded as proposed, awaiting the human supervisor's line"
+ },
+ {
+  "id": "T2-D432",
+  "date": "2026-11-10",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Stock ShallowNet + alignment 0.619 and EEGNet 0.475 vs our ShallowNet member 0.709 and M7 0.832 on the same cells"
+ },
+ {
+  "id": "T2-D433",
+  "date": "2026-11-10",
+  "theme": "Feature engineering and classical members",
+  "verdict": "killed-early",
+  "one_line": "Random-convolution and frozen time-series-FM members: ≈ 0.53 alone; added to M7 at 0.05: typical −0.0042 / −0.0006; both killed"
+ },
+ {
+  "id": "T2-D434",
+  "date": "2026-11-10",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Fine-tuned time-series FM member: 0.494 vs 0.475 for its random-init twin, bar 0.70; the time-series-FM line is closed"
+ },
+ {
+  "id": "T2-D435",
+  "date": "2026-11-10",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M7 sealed: 0.825, rank #6 at the time, 2,250.21 s (projected 2,266 s); later re-run by the organisers (D445)"
+ },
+ {
+  "id": "T2-D436",
+  "date": "2026-11-10",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Ten ST-L members (five from older recipes) in M7: typical −0.0006 (4/12) at share 0.35, +0.0002 (5/12) at 0.45; not met"
+ },
+ {
+  "id": "T2-D437",
+  "date": "2026-11-10",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "User-share and run-bootstrap bags for ShallowNet: typical +0.0006 … +0.0022 inside M7, all of it one user; bar not met"
+ },
+ {
+  "id": "T2-D438",
+  "date": "2026-11-10",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "User-level boosting of ShallowNet: typical +0.0015 / +0.0023 inside M7, −0.0039 / −0.0033 without one user; not met"
+ },
+ {
+  "id": "T2-D439",
+  "date": "2026-11-10",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Class-wise stacking of M7's member groups: typical −0.0039 (3/12); a later learned stacker −0.0197; stacking closed in linear and class-wise forms"
+ },
+ {
+  "id": "T2-D440",
+  "date": "2026-11-10",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Class-expert ShallowNets (one-vs-rest, pairwise, channel-restricted): typical −0.0034 / +0.0000 / −0.0305 inside M7; closed"
+ },
+ {
+  "id": "T2-D441",
+  "date": "2026-11-10",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "16 instead of 8 test-time views in M7: typical −0.0004 (6/12); the view dose is closed"
+ },
+ {
+  "id": "T2-D442",
+  "date": "2026-11-10",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Spectral tilt on all five ST-L members (M8): +0.0069 alone (12/12) but typical +0.0011 (7/12) in the package; not met here"
+ },
+ {
+  "id": "T2-D443",
+  "date": "2026-11-10",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Ten current-recipe ST-L members: +0.0015 / −0.0009 against the two anchors at share 0.35; more ST-L members closed at this recipe"
+ },
+ {
+  "id": "T2-D444",
+  "date": "2026-11-10",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M7r (fresh-seed redraw of M7) and M8r (+ ST-L tilt) built and gated at 37.99 / 37.68 ms per window; M7r is the supported menu row"
+ },
+ {
+  "id": "T2-D445",
+  "date": "2026-11-10",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Organisers' re-run: M7 0.825 → 0.819, A1 0.805 → 0.798, S1 0.808 → 0.799, MOR 0.806 → 0.798; chronological delivery no longer promised"
+ },
+ {
+  "id": "T2-D446",
+  "date": "2026-11-11",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Wide-add screen: +0.0068 from 11 recipe variants is mostly more nets (control +0.0049); variants − seeds −0.0006 at equal count; closed"
+ },
+ {
+  "id": "T2-D447",
+  "date": "2026-11-11",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Per-stream self-trained linear head on frozen CNN features: −0.0054 … −0.0360 with the package's own labels; killed"
+ },
+ {
+  "id": "T2-D448",
+  "date": "2026-11-11",
+  "theme": "Decoding and test-time methods",
+  "verdict": "descriptive",
+  "one_line": "Order simulation: a session-wide shuffle costs the decode −0.0143 / −0.0148; forgetting 1.0 would recover +0.0044 / +0.0041 there; a forgetting-1.0 copy built, not uploaded (D459)"
+ },
+ {
+  "id": "T2-D449",
+  "date": "2026-11-11",
+  "theme": "Decoding and test-time methods",
+  "verdict": "killed-early",
+  "one_line": "Run-block class balancing on top of the Sinkhorn decode: typical −0.0064 (1/12) even with true run boundaries; dead"
+ },
+ {
+  "id": "T2-D450",
+  "date": "2026-11-11",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Reverse read: ≈ 80 % of M7's sealed step is FM-side (five ST-L members instead of one: +0.0109 locally); CNN-side user-specific changes did not transfer"
+ },
+ {
+  "id": "T2-D451",
+  "date": "2026-11-11",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "FM / IFNet shares re-read on typical users: the shipped FM 0.35 is the optimum (0.25 −0.0091, 0.55 −0.0046); no repack"
+ },
+ {
+  "id": "T2-D452",
+  "date": "2026-11-11",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "REVE and LaBraM under the current recipe: 0.582 / 0.484 alone vs 0.75 for ST-L; as a sixth member −0.0043 … −0.0098; killed"
+ },
+ {
+  "id": "T2-D453",
+  "date": "2026-11-11",
+  "theme": "External and extra labelled data",
+  "verdict": "closed",
+  "one_line": "Outside users added one at a time (BNCI2015_004): every one hurts (−0.0235 … −0.0569 typical, 0/12); nothing to select; closed"
+ },
+ {
+  "id": "T2-D454",
+  "date": "2026-11-11",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Task-expert ST-L members from outside corpora, voted: +0.0004 (6/12) inside M7; the arithmetic and word experts lose −0.0375 / −0.0344; vote closed"
+ },
+ {
+  "id": "T2-D455",
+  "date": "2026-11-11",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "MI-expert ST-L members inside M7: +0.0008 / +0.0025 (8/12), under the +0.003 bar; closed here (the final package has an MI-expert slot via later rows)"
+ },
+ {
+  "id": "T2-D456",
+  "date": "2026-11-12",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Biased decoder start: typical +0.0017 (9/12) on test cells, under the +0.003 bar; closed here, confirmed in constant form in D459"
+ },
+ {
+  "id": "T2-D457",
+  "date": "2026-11-12",
+  "theme": "Decoding and test-time methods",
+  "verdict": "descriptive",
+  "one_line": "Oracle decoder start state: ceiling typical +0.0046, all of it in the first run; undetermined by the rule, no row follows"
+ },
+ {
+  "id": "T2-D458",
+  "date": "2026-11-12",
+  "theme": "Decoding and test-time methods",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Tilt members + biased decoder start as one stack: typical +0.0041 (10/12); a candidate for one fresh-seed confirmation (D459)"
+ },
+ {
+  "id": "T2-D459",
+  "date": "2026-11-12",
+  "theme": "Decoding and test-time methods",
+  "verdict": "shipped",
+  "one_line": "Constant non-uniform decoder start vector: typical +0.0042 (12/12) on fresh draws; template change approved by the human supervisor; start vectors stay to the final package"
+ },
+ {
+  "id": "T2-D460",
+  "date": "2026-11-12",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "Smaller ST-EEGFormers as members: base + CPT 0.713 alone vs 0.774 for ST-L, small lower still; stopped; size pays monotonically"
+ },
+ {
+  "id": "T2-D461",
+  "date": "2026-11-12",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "descriptive",
+  "one_line": "Shipped route vs oracle route on returning users: −0.0006; routing is 0.975–1.000 accurate; the copies deliver +0.0439 on returning cells"
+ },
+ {
+  "id": "T2-D462",
+  "date": "2026-11-12",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Copy blend weight re-dosed inside M7: no multiplier passes (×1.33 +0.0003, ×2 −0.0058); the copies are worth +0.0063 typical; closed"
+ },
+ {
+  "id": "T2-D463",
+  "date": "2026-11-12",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "Newer in-house FM checkpoint as a member: 0.646 (adapters) / 0.727 (full fine-tune) alone vs ST-L 0.774–0.780; below the 0.744 stop line; closed"
+ },
+ {
+  "id": "T2-D464",
+  "date": "2026-11-12",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Attention-residual layer-mix readout for ST-L: −0.0011 alone and −0.0011 / −0.0021 inside M7; a null, closed at this configuration"
+ },
+ {
+  "id": "T2-D465",
+  "date": "2026-11-12",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "EEGConformer as a fourth CNN family: 0.657 alone vs 0.705 / 0.727 for ShallowNet / IFNet, below the 0.68 stop line; stopped"
+ },
+ {
+  "id": "T2-D466",
+  "date": "2026-11-12",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Pruning M7: removing any member costs (FBCNet −0.0186 … IFNet −0.0023); greedy selection −0.0014 out of sample; nothing to prune"
+ },
+ {
+  "id": "T2-D467",
+  "date": "2026-11-12",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Block of four classical members: 0.563 alone vs 0.829 for the package; added at 0.10: −0.0035 (1/12); closed"
+ },
+ {
+  "id": "T2-D468",
+  "date": "2026-11-12",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "FM learning curves: training accuracy reaches 1.000 by epoch 40 while held-out val plateaus at 0.61–0.68; the gap is between people, not under-training"
+ },
+ {
+  "id": "T2-D469",
+  "date": "2026-11-12",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Bayesian test-time adaptation with a per-session mixture bank: below the Sinkhorn decoder on both splits (picked on val → test −0.0047); killed"
+ },
+ {
+  "id": "T2-D470",
+  "date": "2026-11-13",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Per-stream BatchNorm tracking in the CNNs: every family loses on val and test (FBCNet −0.0064, IFNet −0.0151 on test); killed"
+ },
+ {
+  "id": "T2-D471",
+  "date": "2026-11-13",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "M7r2-B3 (M7's recipe on fresh seeds + the decoder start vector) built and gated at 37.7 ms per window; a redraw candidate that fed the per-family-decode repack (D476)"
+ },
+ {
+  "id": "T2-D472",
+  "date": "2026-11-13",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Two-timescale Sinkhorn decoder: −0.0008 (5/12) against the single forgetting rate 0.95; closed"
+ },
+ {
+  "id": "T2-D473",
+  "date": "2026-11-13",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Task physiology: with a common average reference MI shows the expected sensorimotor ERD (beta C3 −1.90 dB); the delivered reference masks it; led to D475"
+ },
+ {
+  "id": "T2-D474",
+  "date": "2026-11-13",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Frontal slow-wave occlusion read: one held-out user loses 0.03, the other gains 0.02; mostly uninformative, two of the four users were in-sample"
+ },
+ {
+  "id": "T2-D475",
+  "date": "2026-11-13",
+  "theme": "Foundation-model members",
+  "verdict": "shipped",
+  "one_line": "CAR-input ST-L members mixed with plain ones: typical +0.0064 (9/10), replicate +0.0055 (8/10); swapping loses −0.0010; FBCNet on CAR −0.0025; CAR-view FM members adopted"
+ },
+ {
+  "id": "T2-D476",
+  "date": "2026-11-13",
+  "theme": "Decoding and test-time methods",
+  "verdict": "shipped",
+  "one_line": "Per-family causal Sinkhorn decode with per-family start vectors: typical +0.0046 (10/12) and +0.0052 (10/10) on two draw sets, no runtime cost; adopted, kept to the final"
+ },
+ {
+  "id": "T2-D477",
+  "date": "2026-11-13",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "IFNet band variants and a longer ShallowNet temporal filter: −0.0023 to −0.0049 in the stack; none passes, the default settings stay"
+ },
+ {
+  "id": "T2-D478",
+  "date": "2026-11-13",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Stream-balanced training loss for the CNNs: alone −0.0037 / −0.0006 / −0.0008 (kill line), in the stack +0.0003 (6/12); closed"
+ },
+ {
+  "id": "T2-D479",
+  "date": "2026-11-14",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "In-house C2L300 nets as an extra family: −0.0016 to +0.0001 cross-fitted, negative at higher weight; adds nothing, closed"
+ },
+ {
+  "id": "T2-D480",
+  "date": "2026-11-14",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Surface-Laplacian view for ST-L members: −0.0048 (0/10), replicate −0.0042 (1/10); the reference lever closes with plain + CAR members"
+ },
+ {
+  "id": "T2-D481",
+  "date": "2026-11-14",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Family weights and per-family decoder knobs re-fitted with cross-fitting: +0.0009 / −0.0000 and −0.0094 / −0.0029; neither passes, the shipped constants stay"
+ },
+ {
+  "id": "T2-D482",
+  "date": "2026-11-14",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "W14 package (per-family decode + 5 plain / 3 CAR ST-L members) built and gated at 51.3 ms per window (bar 52 ms); replaced by its lighter 3 + 3 form (D496)"
+ },
+ {
+  "id": "T2-D483",
+  "date": "2026-11-14",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "CAR-trained nets mixed into the FBCNet family: −0.0003 to −0.0008; no gain, CAR is a new view only for the FM"
+ },
+ {
+  "id": "T2-D484",
+  "date": "2026-11-14",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "CPT matched to the CAR view: −0.0027 (0/10) / −0.0019 (4/10) in the stack, −0.0056 alone; closed, the CAR members keep the plain CPT"
+ },
+ {
+  "id": "T2-D485",
+  "date": "2026-11-14",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Five CNN near misses re-read at 9 training users: EEGNeX +0.0058 (5/5) in a simple mix but −0.0039 (0/10) in the shipped stack; closed"
+ },
+ {
+  "id": "T2-D486",
+  "date": "2026-11-14",
+  "theme": "External and extra labelled data",
+  "verdict": "closed",
+  "one_line": "CNNs trained on random 4-s crops of the long trial epoch: typical −0.0113 (0/10), one user −0.0540, another +0.0339; closed"
+ },
+ {
+  "id": "T2-D487",
+  "date": "2026-11-14",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Imaginary-coherency classical member: error correlation +0.033 with the stack but 0.373 alone; +0.0012 (7/10) in the stack, under the +0.003 bar"
+ },
+ {
+  "id": "T2-D488",
+  "date": "2026-11-14",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "One MI-expert ST-L member in the FM slot: +0.0004 (5/10) / +0.0010 (5/10), far under +0.003; the task-expert line closed on this row"
+ },
+ {
+  "id": "T2-D489",
+  "date": "2026-11-14",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "killed-early",
+  "one_line": "FM-embedding gate for returning vs new users: AUC 0.629 / 0.607 (needed 0.85); killed, no open-set gate on public evidence"
+ },
+ {
+  "id": "T2-D490",
+  "date": "2026-11-14",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Cross-user soft targets for the CNNs: ShallowNet +0.0205 alone (10/10) but −0.0003 (5/10) for the stack; not passed"
+ },
+ {
+  "id": "T2-D493",
+  "date": "2026-11-14",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Uniform soup of five ST-L fine-tunes vs their ensemble: −0.0133 (0/6), worse than a single member; closed"
+ },
+ {
+  "id": "T2-D491",
+  "date": "2026-11-14",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Deep SPD family with per-stream re-centring: 0.5328 alone against a 0.70 kill line; killed before any stack read"
+ },
+ {
+  "id": "T2-D492",
+  "date": "2026-11-14",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "CPT for REVE and LaBraM, then each as an added family: −0.0035 / −0.0060 in the stack, −0.0321 / −0.0237 alone; closed for both"
+ },
+ {
+  "id": "T2-D494",
+  "date": "2026-11-14",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Population prior in the causal Euclidean alignment: −0.0017 / −0.0040 at 10 / 30 pseudo-windows; closed"
+ },
+ {
+  "id": "T2-D490r",
+  "date": "2026-11-14",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "ShallowNet soft-target replicate: +0.0196 alone (9/10) again, +0.0004 (4/10) in the stack; the soft-target line is closed"
+ },
+ {
+  "id": "T2-D496",
+  "date": "2026-11-14",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "W14-lite (3 plain + 3 CAR ST-L members, ≈ 42.4 ms per window): +0.0014 (5/10) vs the full W14, so it holds; the form that was uploaded next (D514)"
+ },
+ {
+  "id": "T2-D495",
+  "date": "2026-11-14",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "killed-early",
+  "one_line": "Copy routing for strangers by label-free model evidence: oracle copy +0.0161 (kill line +0.02), causal rule +0.0088; killed"
+ },
+ {
+  "id": "T2-D497",
+  "date": "2026-11-14",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Per-family decode on ten strangers: +0.0006 on average (−0.0148 … +0.0106 per user), +0.0039 on returning sessions; a caveat on its expected sealed transfer"
+ },
+ {
+  "id": "T2-D497b",
+  "date": "2026-11-14",
+  "theme": "Decoding and test-time methods",
+  "verdict": "killed-early",
+  "one_line": "Per-stream gate between joint and per-family decode: +0.0003 / +0.0014 with a user below −0.003; killed"
+ },
+ {
+  "id": "T2-D491b",
+  "date": "2026-11-14",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "SPD family without re-centring: 0.5594 alone (kill line 0.70); the SPD family closes with both forms read"
+ },
+ {
+  "id": "T2-D498",
+  "date": "2026-11-14",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Full stack with all ten users served as strangers: 0.7440 vs 0.8410 on the kit protocol; the loss is on the stranger side, and re-fitted shares lose −0.0100"
+ },
+ {
+  "id": "T2-D499",
+  "date": "2026-11-14",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "killed-early",
+  "one_line": "Same-day ten-user returning-user read: fails its validity check (0.0056 vs 0.005); not an instrument, the returning side stays read on two users"
+ },
+ {
+  "id": "T2-D500",
+  "date": "2026-11-14",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "never-read",
+  "one_line": "Doubled copy-weight twin: registered (config only); the row carries no build or result, and D501 then priced the stranger cost locally"
+ },
+ {
+  "id": "T2-D501",
+  "date": "2026-11-15",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "killed-early",
+  "one_line": "Returning-user gate for a higher copy dose: false accept ≥ 0.76 at 95 % detection; the doubled dose costs strangers −0.0196; killed"
+ },
+ {
+  "id": "T2-D502",
+  "date": "2026-11-15",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Per-stream output remap, true-label ceiling: +0.0238 on the four hardest strangers (needed +0.05); the causal form is not built"
+ },
+ {
+  "id": "T2-D503",
+  "date": "2026-11-15",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "descriptive",
+  "one_line": "Copy staleness by family: the unaligned FBCNet copy's gain falls +0.087 → +0.008 by session 3, the aligned IFNet copy keeps +0.082 → +0.071"
+ },
+ {
+  "id": "T2-D504",
+  "date": "2026-11-15",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "IFNet copy weight 0.5 → 1.0: typical −0.0007 (4/10); the copy-dose line is closed in every per-family and global form"
+ },
+ {
+  "id": "T2-D505",
+  "date": "2026-11-15",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "descriptive",
+  "one_line": "Pooled nets keep a returning user's own-session gain into session 3 in every family (+0.06 … +0.24); no further returning-side mechanism on record"
+ },
+ {
+  "id": "T2-D506",
+  "date": "2026-11-15",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Stranger failure anatomy: missing coverage, not weak signal; 0.697 → 0.820 (+0.123) once a user's own labels are in training"
+ },
+ {
+  "id": "T2-D507",
+  "date": "2026-11-15",
+  "theme": "External and extra labelled data",
+  "verdict": "closed",
+  "one_line": "BNCI2015_004 added to the ShallowNet trunk in four like-for-like forms: −0.093 to −0.002 on the not-covered strangers; no arm passes, closed"
+ },
+ {
+  "id": "T2-D509",
+  "date": "2026-11-15",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "descriptive",
+  "one_line": "True-label in-stream fine-tune ceiling: +0.159 on the not-covered strangers at 100 windows; opens the decoded-teacher row (D510)"
+ },
+ {
+  "id": "T2-D510",
+  "date": "2026-11-15",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Stack-as-teacher in-stream ShallowNet student: +0.0077 on ten strangers, inside the +0.005 … +0.010 band that called for one more family before a verdict (D510b)"
+ },
+ {
+  "id": "T2-D510b",
+  "date": "2026-11-15",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "In-stream teacher with ShallowNet + IFNet students: +0.0067, under the +0.010 bar; the line closes in this form and is re-registered in a diagnosed form (D511)"
+ },
+ {
+  "id": "T2-D511",
+  "date": "2026-11-15",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "shipped",
+  "one_line": "In-stream students on re-decoded labels, refits at 60 / 100 / 150 windows: the ShallowNet + IFNet form reads +0.0050 (3/3 repeats); a part, and the form kept to the final"
+ },
+ {
+  "id": "T2-D512",
+  "date": "2026-11-15",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "shipped",
+  "one_line": "Final-week stack on fresh seeds: in-stream students (+0.0033 leave-one-out) and tilt FM members (+0.0068) kept, +0.0126 together on ten strangers; built as W15"
+ },
+ {
+  "id": "T2-D513",
+  "date": "2026-11-15",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "W15 template (W14 + in-stream adaptation): two builds gated at 48.6 to 49.5 ms per window (≈ 2,880 s projected); not uploaded, the base of the next two templates"
+ },
+ {
+  "id": "T2-D514",
+  "date": "2026-11-15",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "W14-lite sealed 0.827 (+0.008 over M7's 0.819): about half of the summed local gain (+0.016) transferred; later superseded by a newer upload"
+ },
+ {
+  "id": "T2-D515",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "adopted-then-superseded",
+  "one_line": "16,454-feature sweep + gradient-boosted trees as a fifth family: +0.0054 at share 0.10 on ten strangers; passed its part rule, then traced to the window mean (D515d)"
+ },
+ {
+  "id": "T2-D515b",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Tree family replicates on fresh seeds (+0.0070 at share 0.10, 3/3); the rule's shippable share is 0.075; superseded by the window-mean form"
+ },
+ {
+  "id": "T2-D515c",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "adopted-then-superseded",
+  "one_line": "Restricted tree feature set keeps the part (+0.0051); 64 features carry it (+0.0052 at share 0.075); superseded once the gain was traced to the window mean"
+ },
+ {
+  "id": "T2-D515d",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "descriptive",
+  "one_line": "Audit: the 16k-feature tree family's gain does not survive de-meaning (−0.0067 at share 0.075); it was the per-window mean that the nets throw away"
+ },
+ {
+  "id": "T2-D516",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "shipped",
+  "one_line": "Window-mean (DC) tree family: 82 per-channel window means, error correlation 0.023 with the stack, +0.0118 on ten strangers at share 0.075; approved, kept to the final"
+ },
+ {
+  "id": "T2-D516b",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "shipped",
+  "one_line": "Window-mean tree family on the final-week stack: +0.0073 at share 0.075, returning −0.0016; the whole stack +0.0200 over the base on ten strangers"
+ },
+ {
+  "id": "T2-D517",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "shipped",
+  "one_line": "Window-mean side nets for ShallowNet / IFNet: +0.0074 on top of the tree family (blend in thirds); de-meaning off and half-second means are not parts; kept to the final"
+ },
+ {
+  "id": "T2-D518",
+  "date": "2026-11-15",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Config-diverse members instead of seeds: +0.0002, not a part; five seeds beat one net by +0.0026 (seed count, not diversity)"
+ },
+ {
+  "id": "T2-D519",
+  "date": "2026-11-15",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Preprocessing-view members (moving average / smoothing / detrend): −0.0003 vs plain seeds; not a part"
+ },
+ {
+  "id": "T2-D520",
+  "date": "2026-11-15",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Grid (all-token) head as a seventh FM member: −0.0000 vs a plain seventh, and any seventh member costs −0.0024 to −0.0025; the six-member slot stays"
+ },
+ {
+  "id": "T2-D521",
+  "date": "2026-11-15",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Raw end-to-end net with a learned front end: 0.617 / 0.594 alone vs 0.670 for aligned nets, −0.0048 in the stack; not a part"
+ },
+ {
+  "id": "T2-D522",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Tree family on half-second window means (656 inputs): −0.0043 vs the 82 window means; not a part"
+ },
+ {
+  "id": "T2-D523",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Window-mean family share re-read with the side nets in: 0.05 −0.0012, 0.10 −0.0004; 0.075 stays"
+ },
+ {
+  "id": "T2-D524",
+  "date": "2026-11-15",
+  "theme": "Feature engineering and classical members",
+  "verdict": "shipped",
+  "one_line": "Window-mean side heads on the ST-L members: +0.0062 on ten strangers (3/3 draws), returning −0.0021; a part, nominated for the fresh-draw stack read; kept to the final"
+ },
+ {
+  "id": "T2-D525",
+  "date": "2026-11-16",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Imaginary-coherency family re-read: +0.0006 (3/3) on used draws, −0.0008 (1/3) on fresh draws; dropped"
+ },
+ {
+  "id": "T2-D526",
+  "date": "2026-11-16",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Family shares re-fitted, cross-fitted by stranger halves: +0.0003 with a negative sealed mix (−0.0002); selection, not a part"
+ },
+ {
+  "id": "T2-D527",
+  "date": "2026-11-16",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Joint / per-family decode gate re-read: −0.0021; closed"
+ },
+ {
+  "id": "T2-D528",
+  "date": "2026-11-16",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "FM-family temperature before its decoder, re-read on W17: ten strangers −0.0047 (0/3 draws); closed"
+ },
+ {
+  "id": "T2-D529",
+  "date": "2026-11-16",
+  "theme": "Foundation-model members",
+  "verdict": "shipped",
+  "one_line": "One MI-expert FM member swapped into the FM family: ten strangers +0.0057 (3/3 draws); kept, and it is the head-less MI slot of the final package"
+ },
+ {
+  "id": "T2-D530",
+  "date": "2026-11-16",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "ShallowNet on out-of-fold soft targets: +0.0205 alone, −0.0032 in the stack (0/3 draws); closed"
+ },
+ {
+  "id": "T2-D531",
+  "date": "2026-11-16",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "descriptive",
+  "one_line": "Preparation row for the W18 fresh-draw stack read (fresh FM seeds in both forms, template drafted); no decision of its own"
+ },
+ {
+  "id": "T2-D532",
+  "date": "2026-11-16",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "W18 = W17 + FM window-mean side heads + one MI-expert member: ten strangers +0.0044 (3/3 draws) on fresh draws; the coherence family dropped (−0.0008)"
+ },
+ {
+  "id": "T2-D533",
+  "date": "2026-11-16",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Clamp on the window-mean side vector: +0.0010 on the first draws, −0.0001 on fresh draws; closed, enters no build"
+ },
+ {
+  "id": "T2-D534",
+  "date": "2026-11-16",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "W18 built, gated and uploaded: sealed 0.835 vs an expected 0.839, +0.008 over the previous upload (0.827); the best score until W25-ALL6"
+ },
+ {
+  "id": "T2-D535",
+  "date": "2026-11-16",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "XGBoost / CatBoost in the window-mean tree family: +0.0006 / −0.0003 vs LightGBM; none nominated, the LightGBM bag stays"
+ },
+ {
+  "id": "T2-D536",
+  "date": "2026-11-16",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "closed",
+  "one_line": "First W19 attempt (W18 + clamp): ten strangers −0.0001 on fresh draws, no W19; W18's margin over W17 (+0.0074) held on fresh CNN draws"
+ },
+ {
+  "id": "T2-D537",
+  "date": "2026-11-16",
+  "theme": "Foundation-model members",
+  "verdict": "never-read",
+  "one_line": "Non-MI task-expert FM member: rated ≈ 0.07 against a 0.08 launch bar and not run (the word variant was run later as D544)"
+ },
+ {
+  "id": "T2-D538",
+  "date": "2026-11-16",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "Window-mean side nets for FBCNet: +0.029 alone, ten strangers −0.0015 in the stack, returning −0.0035; closed"
+ },
+ {
+  "id": "T2-D539",
+  "date": "2026-11-16",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "In-stream refit of the side heads at pull 10: ten strangers −0.0002; closed (pull 1 re-registered as D539b)"
+ },
+ {
+  "id": "T2-D539b",
+  "date": "2026-11-16",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "shipped",
+  "one_line": "Side-head in-stream refit at pull 1: kept by the leave-one-out of D540a's stack read; one of the in-stream parts of the final package"
+ },
+ {
+  "id": "T2-D540",
+  "date": "2026-11-16",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "withdrawn",
+  "one_line": "Item-by-item W19 confirmation read: replaced by D540a's one-stack rule before any output was read"
+ },
+ {
+  "id": "T2-D540a",
+  "date": "2026-11-16",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "W19 = W18 + side-head refit + ten side nets + low-LR FM continuation: ten strangers +0.0021, stack bar met; IFNet share 0.15 dropped (−0.0012)"
+ },
+ {
+  "id": "T2-D541",
+  "date": "2026-11-16",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Window-mean side head on the MI-expert member: ten strangers −0.0018; closed, the MI slot stays head-less"
+ },
+ {
+  "id": "T2-D542",
+  "date": "2026-11-16",
+  "theme": "Feature engineering and classical members",
+  "verdict": "closed",
+  "one_line": "XGBoost instead of LightGBM in the window-mean tree family, second read: ten strangers −0.0008 (0/3 draws); closed"
+ },
+ {
+  "id": "T2-D543",
+  "date": "2026-11-16",
+  "theme": "Ensembling and blend weights",
+  "verdict": "shipped",
+  "one_line": "Ten side nets per family instead of five: ten strangers +0.0008 at nomination, kept in the W19 stack and carried forward"
+ },
+ {
+  "id": "T2-D544",
+  "date": "2026-11-16",
+  "theme": "Foundation-model members",
+  "verdict": "closed",
+  "one_line": "Word-task expert FM member by weight interpolation: +0.0065 alone, ten strangers −0.0011 in the stack; closed"
+ },
+ {
+  "id": "T2-D545",
+  "date": "2026-11-16",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "IFNet share 0.10 → 0.15: ten strangers +0.0002 at nomination, dropped in the stack's leave-one-out; the share stays 0.10"
+ },
+ {
+  "id": "T2-D546",
+  "date": "2026-11-16",
+  "theme": "Foundation-model members",
+  "verdict": "shipped",
+  "one_line": "Low-LR continuation of converged FM members: re-initialising heads + top block fails (−0.0114 alone); plain continuation +0.0003 in the mix, kept (two final FM slots)"
+ },
+ {
+  "id": "T2-D547",
+  "date": "2026-11-16",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "ShallowNet side nets at 65 epochs: +0.0024 alone, ten strangers −0.0022 in the mix; closed"
+ },
+ {
+  "id": "T2-D548",
+  "date": "2026-11-16",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "FBCNet at 240 epochs: 0.5987 vs 0.6006 at 180; not under-trained, stays at 180"
+ },
+ {
+  "id": "T2-D549",
+  "date": "2026-11-17",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "W19 built and fully gated (54.72 ms / window, ≈ 2,825 s projected); held as a fallback, never uploaded"
+ },
+ {
+  "id": "T2-D550",
+  "date": "2026-11-17",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Pool screen of 994 stored member outputs against the stack's wrong windows: only more-IFNet variants flag (≤ +0.0017); the pool is exhausted"
+ },
+ {
+  "id": "T2-D551",
+  "date": "2026-11-17",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "closed",
+  "one_line": "W19 stack re-read with two more weak parts on reused draws: ten strangers +0.0005, bar failed; W19 then went ahead only as the human supervisor's override of this bar"
+ },
+ {
+  "id": "T2-D552",
+  "date": "2026-11-17",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Gap analysis: strangers wrong on 29.9 % of windows, word the weakest class (0.693); +0.004 sealed needs +0.0070 on strangers, one untried mechanism named (D553)"
+ },
+ {
+  "id": "T2-D553",
+  "date": "2026-11-17",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "shipped",
+  "one_line": "In-stream refit of the FM side heads: ten strangers +0.0026 (3/3 draws), returning +0.0020; adopted and part of the final package"
+ },
+ {
+  "id": "T2-D554",
+  "date": "2026-11-17",
+  "theme": "CNN families and their training",
+  "verdict": "killed-early",
+  "one_line": "Log-spectrogram 2-D CNN from scratch: 0.532 alone (0.547 with a spatial front end) vs 0.626–0.659 for the shipped CNN families; killed"
+ },
+ {
+  "id": "T2-D555",
+  "date": "2026-11-17",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "In-stream refit of the FM main heads: ten strangers +0.0002 on the first read; its second read (D558) failed and it stayed out"
+ },
+ {
+  "id": "T2-D556",
+  "date": "2026-11-17",
+  "theme": "Ensembling and blend weights",
+  "verdict": "descriptive",
+  "one_line": "Slimmer FM family: dropping one of six members costs ≈ 0 (ten +0.0003), three break a guard (−0.0226); the MI member is the most valuable (+0.0043)"
+ },
+ {
+  "id": "T2-D557",
+  "date": "2026-11-17",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "shipped",
+  "one_line": "Combined FM augmentation recipe: ten strangers +0.0052 / +0.0084 on two reads and +0.0101 on top of W20; adopted, the largest single lever of the final week"
+ },
+ {
+  "id": "T2-D558",
+  "date": "2026-11-17",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Second reads on fresh seeds: FM main-head refit −0.0014 (out), augmentation recipe +0.0084 (in); no part of W20 rests on one read"
+ },
+ {
+  "id": "T2-D559",
+  "date": "2026-11-17",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Denser in-stream refit schedule (8 points): +0.0019 on one set, −0.0026 on the next; closed, 60 / 100 / 150 stays"
+ },
+ {
+  "id": "T2-D560",
+  "date": "2026-11-17",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "shipped",
+  "one_line": "FM prototypes + MI-head in-stream refit (W20): ten strangers +0.0015 / +0.0010 / +0.0012 on three reads; adopted and part of the final package"
+ },
+ {
+  "id": "T2-D561",
+  "date": "2026-11-17",
+  "theme": "External and extra labelled data",
+  "verdict": "descriptive",
+  "one_line": "Synthetic windows at a 20 % vs 50 % dose: every CNN family gains alone (pooled +0.0194 at both); 20 % is not better, no stack read triggered"
+ },
+ {
+  "id": "T2-D562",
+  "date": "2026-11-17",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Score normalisation, LDA-space prototypes and learned fusion on top of W20: −0.0061 … +0.0017 on the screen, the one pass fails confirmation (−0.0031)"
+ },
+ {
+  "id": "T2-D563",
+  "date": "2026-11-17",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "In-stream kNN datastore on top of W20: +0.0002 / +0.0035, then −0.0013 on fresh FM fits (one user −0.0262); closed"
+ },
+ {
+  "id": "T2-D564",
+  "date": "2026-11-17",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Window-mean family inside the in-stream teacher: ten strangers −0.0004 / −0.0012; closed after the first set"
+ },
+ {
+  "id": "T2-D565",
+  "date": "2026-11-17",
+  "theme": "Runtime and packaging",
+  "verdict": "descriptive",
+  "one_line": "Local-GPU fallback for timing and FM lines: W19 projected ≈ 2,855 s; the local lines were dropped when the cluster jobs started"
+ },
+ {
+  "id": "T2-D566",
+  "date": "2026-11-18",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Feedback-faithful re-read of W20: still +0.0024 / +0.0008 / +0.0009 over W19 on three sets; no contradiction, W20 stays the default"
+ },
+ {
+  "id": "T2-D567",
+  "date": "2026-11-18",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Augmentation recipe on the MI-expert member: ten strangers −0.0007 / −0.0015 / −0.0029 on three reads; closed"
+ },
+ {
+  "id": "T2-D569",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "shipped",
+  "one_line": "Label propagation over FM features as the teacher of the CNN refits: ten strangers +0.0025 / +0.0022 / +0.0016; adopted as W21 and part of the final package"
+ },
+ {
+  "id": "T2-D568",
+  "date": "2026-11-18",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Stronger dose of the FM augmentation recipe: ten strangers −0.0007, returning −0.0021; closed, the first dose stays"
+ },
+ {
+  "id": "T2-D570",
+  "date": "2026-11-18",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Recomputed decoder start vectors vs the shipped ones: −0.0011 / −0.0014 / −0.0010; the shipped starts stay"
+ },
+ {
+  "id": "T2-D571",
+  "date": "2026-11-18",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Complete-pathway read of the augmented FM members on W20: ten strangers +0.0105, sealed +0.0134; the default is confirmed"
+ },
+ {
+  "id": "T2-D572",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Unadapted teacher for the in-stream refits: ten strangers −0.0017; closed, the feedback teacher stays"
+ },
+ {
+  "id": "T2-D573",
+  "date": "2026-11-18",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Sealed-score forecast for W21: ≈ 0.8442 at half transfer, ≈ 0.8535 at full transfer; transfer is the dominant uncertainty"
+ },
+ {
+  "id": "T2-D574",
+  "date": "2026-11-18",
+  "theme": "CNN families and their training",
+  "verdict": "descriptive",
+  "one_line": "Stack read of the killed log-spectrogram CNN at a small share: ten strangers +0.0005 / −0.0002; the closure stands"
+ },
+ {
+  "id": "T2-D575",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Early head-only refit at window 40: ten strangers −0.0015; closed"
+ },
+ {
+  "id": "T2-D576",
+  "date": "2026-11-18",
+  "theme": "External and extra labelled data",
+  "verdict": "descriptive",
+  "one_line": "FBCNet with 20 % synthetic windows in the current stack: ten strangers +0.0009 (the 50 % dose had read −0.0034); insight only, not shipped"
+ },
+ {
+  "id": "T2-D577",
+  "date": "2026-11-18",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "never-read",
+  "one_line": "W21 combination read: never triggered, because the stronger augmentation dose (D568) failed its first set"
+ },
+ {
+  "id": "T2-D578",
+  "date": "2026-11-18",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Untouched fourth draw set confirms the label-propagation part: ten strangers +0.0012, returning +0.0016; W21 stays the default"
+ },
+ {
+  "id": "T2-D579",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Label propagation for the FM refits: ten strangers −0.0033 / −0.0001; closed, it helps only the CNN-side refits"
+ },
+ {
+  "id": "T2-D580",
+  "date": "2026-11-18",
+  "theme": "CNN families and their training",
+  "verdict": "closed",
+  "one_line": "Mixup for the CNN side nets: ten strangers +0.0001 / +0.0003, returning −0.0009; null, closed"
+ },
+ {
+  "id": "T2-D581",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Soft prototypes: ten strangers 0.0000; closed"
+ },
+ {
+  "id": "T2-D582",
+  "date": "2026-11-18",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Virtual participants on the FM members: strangers +0.0014, returning −0.0043 pooled; closed by its returning guard"
+ },
+ {
+  "id": "T2-D583",
+  "date": "2026-11-18",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Within-class segment recombination on the FM members: pooled ten strangers +0.0007, sealed −0.0003; closed"
+ },
+ {
+  "id": "T2-D584",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Confidence- and balance-weighted in-stream refits: +0.0012 on one set, +0.0001 with sealed −0.0011 on the next; closed"
+ },
+ {
+  "id": "T2-D585",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Prototypes shrunk toward the trained head directions: ten strangers −0.0028; closed"
+ },
+ {
+  "id": "T2-D586",
+  "date": "2026-11-18",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Shared-phase Fourier surrogate on one FM member: pooled ten strangers +0.0008, sealed −0.0002; closed"
+ },
+ {
+  "id": "T2-D587",
+  "date": "2026-11-18",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Head- and decode-level lab arms stopped after twelve failures in a row on W21 (a judgement stop by the manager session)"
+ },
+ {
+  "id": "T2-D588",
+  "date": "2026-11-18",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "closed",
+  "one_line": "Two-view consistency loss in the FM fine-tune: pooled ten strangers +0.0023 but returning −0.0040 and one user below −0.020 on both sets; closed"
+ },
+ {
+  "id": "T2-D589",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Mixup inside the in-stream students' fine-tune: pooled ten strangers −0.0005 over four sets; closed"
+ },
+ {
+  "id": "T2-D590",
+  "date": "2026-11-18",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Pooled three-set decision rule fixed before the reads: a part displaces W21 only at pooled ten strangers ≥ +0.002 with user, returning and sealed-mix guards"
+ },
+ {
+  "id": "T2-D591",
+  "date": "2026-11-18",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "FM share 0.35 → 0.45 on W21: pooled ten strangers +0.0017 (< +0.002), worst user −0.0350; closed"
+ },
+ {
+  "id": "T2-D592",
+  "date": "2026-11-18",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Conditional approval recorded for a W22 = W21 + every part clearing the pooled bar; the combination rule and the build automation were registered before any part passed"
+ },
+ {
+  "id": "T2-D594",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Set-valued loss on teacher-disagreement rows for the in-stream students: the rule covers 0.03-0.12 % of rows; stopped at the diagnostic"
+ },
+ {
+  "id": "T2-D594b",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Low-margin set-valued loss for the in-stream students: pooled ten strangers −0.0001; does not displace W21"
+ },
+ {
+  "id": "T2-D595",
+  "date": "2026-11-18",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Decoder-history reset at in-stream refits: pooled ten strangers +0.0008, under the +0.002 bar; prepared as code only, then replaced by the informed restart (D603)"
+ },
+ {
+  "id": "T2-D596",
+  "date": "2026-11-18",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "Word-margin loss in the FM fine-tune: ten strangers −0.0013 on the first set; killed, the other sets deleted unread"
+ },
+ {
+  "id": "T2-D598",
+  "date": "2026-11-18",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Template-faithful re-read of D557 and D569: +0.0103 / +0.0017 / +0.0012 ten strangers, no sign flips; the recorded gains stand"
+ },
+ {
+  "id": "T2-D600",
+  "date": "2026-11-18",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Returning users' late-stream decline is session drift in one user's online runs, not in-stream adaptation (which adds +0.0097 / +0.0024 late)"
+ },
+ {
+  "id": "T2-D601",
+  "date": "2026-11-18",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Family-excluded in-stream teacher: confident-half label accuracy falls 0.8030 → 0.7829 / 0.8024; closed at the cached gate"
+ },
+ {
+  "id": "T2-D603",
+  "date": "2026-11-19",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Informed decoder restart at refits: sealed mix +0.0008 in recording order, +0.00003 / −0.00045 under shuffled orders; recommendation withdrawn, prebuild cancelled"
+ },
+ {
+  "id": "T2-D606",
+  "date": "2026-11-19",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Past-only output calibration: pooled ten strangers +0.0005, one returning user −0.0003; closed"
+ },
+ {
+  "id": "T2-D607",
+  "date": "2026-11-19",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Re-scoring the FM decoder history under refit heads: pooled ten strangers +0.0004, a sign-consistent sub-bar positive; does not displace W21"
+ },
+ {
+  "id": "T2-D608",
+  "date": "2026-11-19",
+  "theme": "Decoding and test-time methods",
+  "verdict": "killed-early",
+  "one_line": "Context-weighted decoder history on top of the informed restart: ten strangers −0.0027, worst user −0.0212; killed at the first set"
+ },
+ {
+  "id": "T2-D609",
+  "date": "2026-11-19",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "D603 + D607 combined: sealed mix +0.00087 vs +0.00082 for D603 alone; the combination closed"
+ },
+ {
+  "id": "T2-D611",
+  "date": "2026-11-19",
+  "theme": "Foundation-model members",
+  "verdict": "killed-early",
+  "one_line": "8–30 Hz band-pass specialist FM member: ten strangers −0.0013, returning −0.0013 on the first set; killed"
+ },
+ {
+  "id": "T2-D613",
+  "date": "2026-11-19",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Reciprocal-neighbour label-propagation graph: confident-half label accuracy 0.8030 → 0.7969; stopped at the cached gate"
+ },
+ {
+  "id": "T2-D614",
+  "date": "2026-11-19",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Copy-initialised IFNet in-stream student: both gate clauses fail (−0.048 returning, −0.040 strangers); closed without code"
+ },
+ {
+  "id": "T2-D615",
+  "date": "2026-11-19",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Fresh draw set E for the restart read: sealed mix +0.0000672, the recommendation stands by a thin margin (withdrawn hours later on the order check, D603)"
+ },
+ {
+  "id": "T2-D616",
+  "date": "2026-11-19",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "In-stream student ensemble: closed on runtime (+262 s per extra student against 72 s of headroom) before any read; re-read cheaply in D641"
+ },
+ {
+  "id": "T2-D618",
+  "date": "2026-11-19",
+  "theme": "FM augmentation and regularisation",
+  "verdict": "killed-early",
+  "one_line": "Left-right mirror-augmented FM member: ten strangers −0.0018 on the first set; killed (the fifth spatial-invariance augmentation to lose in the stack)"
+ },
+ {
+  "id": "T2-D619",
+  "date": "2026-11-19",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Mirroring the test stream at FBCNet's input: ten strangers −0.0718; the polarity is right for 8 / 10 users and the others cannot be found label-free"
+ },
+ {
+  "id": "T2-D620",
+  "date": "2026-11-19",
+  "theme": "Decoding and test-time methods",
+  "verdict": "withdrawn",
+  "one_line": "Four output-calibration ideas closed by mechanism without a run (each repeats a closed row or is not cache-testable); a cue-order regularity recorded as never to be used"
+ },
+ {
+  "id": "T2-D621",
+  "date": "2026-11-19",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "withdrawn",
+  "one_line": "Unused number, merged into D620"
+ },
+ {
+  "id": "T2-D622",
+  "date": "2026-11-19",
+  "theme": "Ensembling and blend weights",
+  "verdict": "killed-early",
+  "one_line": "Geometric pooling / label-free selection among the decoded families: −0.0011 and −0.011…−0.069; closed at the first screen"
+ },
+ {
+  "id": "T2-D623",
+  "date": "2026-11-19",
+  "theme": "Ensembling and blend weights",
+  "verdict": "killed-early",
+  "one_line": "Per-component temperature before the blend: +0.0011 on the screen set, −0.0033 on the next; killed"
+ },
+ {
+  "id": "T2-D624",
+  "date": "2026-11-19",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Window-mean family share 0.075 → 0.05: sealed mix +0.0004, order-robust, but one returning user −0.0016 breaks the −0.001 guard; closed"
+ },
+ {
+  "id": "T2-D625",
+  "date": "2026-11-19",
+  "theme": "Feature engineering and classical members",
+  "verdict": "killed-early",
+  "one_line": "Ocular-event features inside the window-mean tree family: ten strangers −0.0033; closed at the first screen"
+ },
+ {
+  "id": "T2-D626",
+  "date": "2026-11-19",
+  "theme": "Feature engineering and classical members",
+  "verdict": "killed-early",
+  "one_line": "Self-signed lateralisation feature: within-user AUC 0.595 against a 0.60 gate (0.616 with an oracle sign); the lateralisation family closed"
+ },
+ {
+  "id": "T2-D627",
+  "date": "2026-11-19",
+  "theme": "Decoding and test-time methods",
+  "verdict": "killed-early",
+  "one_line": "Per-stream Dawid–Skene confusion correction: sealed mix −0.0028 even with true prefix labels, −0.0053 unlabelled; killed"
+ },
+ {
+  "id": "T2-D628",
+  "date": "2026-11-19",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "In-stream teacher errors are noise-like (−0.0042 / +0.0005 vs permuted errors); the cost is the error count (0.148 / 0.141 on the selected rows)"
+ },
+ {
+  "id": "T2-D629",
+  "date": "2026-11-19",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "killed-early",
+  "one_line": "Confident third instead of half for the in-stream students: proxy gain +0.0023 / +0.0003 against +0.005; closed without a real arm"
+ },
+ {
+  "id": "T2-D630",
+  "date": "2026-11-19",
+  "theme": "Subject invariance",
+  "verdict": "closed",
+  "one_line": "User-balanced loss for the pooled CNNs: 8 strangers +0.001685, under +0.002; closed, but it exposed a −0.021 routing cost in the shipped composition (D631)"
+ },
+ {
+  "id": "T2-D631",
+  "date": "2026-11-19",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Copy share halved: 8 strangers +0.0125 and OLD sealed +0.0052 in recording order, −0.0010 under an in-run shuffle; not passed. Root cause found: a routing hub"
+ },
+ {
+  "id": "T2-D632",
+  "date": "2026-11-19",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Session-1 route space: 8 strangers +0.009227 but OLD sealed +0.003880, just under the +0.004 bar; closed by its rule (then pre-built as W23 on the human supervisor's exception, D634)"
+ },
+ {
+  "id": "T2-D633",
+  "date": "2026-11-19",
+  "theme": "Personalisation, per-user copies and routing",
+  "verdict": "closed",
+  "one_line": "Covariance router for the per-user copies: 8 strangers +0.0119, OLD sealed +0.0040, −0.0015 under an in-run shuffle; not passed"
+ },
+ {
+  "id": "T2-D634",
+  "date": "2026-11-19",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "adopted-then-superseded",
+  "one_line": "W23 (W21 + session-1 route space) pre-built and fully gated at 55.10 ms per window; never promoted, the final package stayed on W21's router"
+ },
+ {
+  "id": "T2-D635",
+  "date": "2026-11-19",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "descriptive",
+  "one_line": "Lab-vs-shipped fit-composition audit of W21: only the copy router is distorted (a hub); the z-priors differ by a median 0.012 sd"
+ },
+ {
+  "id": "T2-D636",
+  "date": "2026-11-19",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Decoder start vectors refit to the shipped composition: 8 strangers +0.0020, OLD sealed −0.00005; closed"
+ },
+ {
+  "id": "T2-D637",
+  "date": "2026-11-19",
+  "theme": "Subject invariance",
+  "verdict": "closed",
+  "one_line": "User-balanced CNNs under the session-1 router: OLD sealed +0.0032, under the +0.004 bar; closed"
+ },
+ {
+  "id": "T2-D639",
+  "date": "2026-11-19",
+  "theme": "Subject invariance",
+  "verdict": "descriptive",
+  "one_line": "User-balanced FM training judged not feasible in the remaining time (≈ 16–20 h serial); overturned hours later by running it in parallel (D642)"
+ },
+ {
+  "id": "T2-D638",
+  "date": "2026-11-19",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "closed",
+  "one_line": "Full-stack 2 × 2 (balanced CNNs × session-1 router): W23 ≈ W21 (−0.0008), balanced CNNs fail (OLD sealed +0.0001); W24′ not built"
+ },
+ {
+  "id": "T2-D640",
+  "date": "2026-11-19",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "Seed picking for the pooled CNNs: worth ≤ +0.0004 at the stack (split-half r +0.137 / +0.065 / −0.371); no seed search"
+ },
+ {
+  "id": "T2-D641",
+  "date": "2026-11-19",
+  "theme": "In-stream adaptation and self-training",
+  "verdict": "closed",
+  "one_line": "Two-repeat mean of the ShallowNet in-stream student: pooled ten strangers +0.00001; closed"
+ },
+ {
+  "id": "T2-D642",
+  "date": "2026-11-19",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "shipped",
+  "one_line": "W25-ALL6: all six FM members with a user-balanced loss; mean OLD sealed +0.0050 over two full-chain reads (strangers +0.0075 / +0.0049); promoted, the final upload (D657)"
+ },
+ {
+  "id": "T2-D644",
+  "date": "2026-11-19",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "killed-early",
+  "one_line": "W27 (channel-embedding lr release on two FM slots): no slot passes the member screen (+0.0013 and +0.0161 with worst users −0.0366 / −0.0255); closed"
+ },
+ {
+  "id": "T2-D645",
+  "date": "2026-11-19",
+  "theme": "Subject invariance",
+  "verdict": "killed-early",
+  "one_line": "Group DRO over users in the FM fine-tune: member strangers −0.0047, and −0.0125 vs the static user balance; closed at the member screen"
+ },
+ {
+  "id": "T2-D646",
+  "date": "2026-11-20",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "descriptive",
+  "one_line": "Third W25-ALL6 read: strangers +0.0011, OLD sealed −0.0017; no veto, but the unselected size shrinks to ≈ +0.003 strangers / ≈ +0.0007 OLD sealed"
+ },
+ {
+  "id": "T2-D647",
+  "date": "2026-11-20",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "killed-early",
+  "one_line": "W28 (half-dose user balancing): member strangers +0.0090 but returning −0.0114 (bar −0.007); killed at stage 1"
+ },
+ {
+  "id": "T2-D648",
+  "date": "2026-11-20",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "shipped",
+  "one_line": "Fourth W25-ALL6 read: unselected mean strangers +0.0030, OLD sealed +0.0003 (≥ 0): W25-ALL6 stays the pick by the pinned rule, with an expected gain of about zero"
+ },
+ {
+  "id": "T2-D649",
+  "date": "2026-11-20",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "never-read",
+  "one_line": "W29 (FM subject adversary): engaged at λ 0.1 (adversary accuracy 0.986 → 0.091, chance 0.111), then cut for cluster capacity; never read"
+ },
+ {
+  "id": "T2-D650",
+  "date": "2026-11-20",
+  "theme": "Subject invariance",
+  "verdict": "closed",
+  "one_line": "User-balanced CNNs on top of W25-ALL6: strangers −0.0026, OLD sealed −0.0013; closed after one read"
+ },
+ {
+  "id": "T2-D651",
+  "date": "2026-11-20",
+  "theme": "Evaluation method and diagnostics",
+  "verdict": "never-read",
+  "one_line": "Pseudo-returning tie-breaker for W21 vs W25-ALL6: launched, then made descriptive when the re-weighted estimate it fed was withdrawn; the row records no number"
+ },
+ {
+  "id": "T2-D652",
+  "date": "2026-11-20",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "closed",
+  "one_line": "W30 (virtual-participant recipe on five FM members): lab mean strangers +0.0060, OLD sealed +0.0024; included, uploaded last, scored below the final (D659)"
+ },
+ {
+  "id": "T2-D654",
+  "date": "2026-11-20",
+  "theme": "Decoding and test-time methods",
+  "verdict": "never-read",
+  "one_line": "FM test-time views: registered and partly launched, then cut for cluster capacity before any number; never read"
+ },
+ {
+  "id": "T2-D655",
+  "date": "2026-11-20",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "FM share 0.35 → 0.40 on W25-ALL6: strangers +0.0006 carried by two users (3/8 up); not included"
+ },
+ {
+  "id": "T2-D656",
+  "date": "2026-11-21",
+  "theme": "Decoding and test-time methods",
+  "verdict": "closed",
+  "one_line": "Order hedge (decode λ 0.98 / 1.0 on W25-ALL6): OLD sealed −0.0066 / −0.0069 under a session shuffle; no hedge file"
+ },
+ {
+  "id": "T2-D657",
+  "date": "2026-11-21",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "descriptive",
+  "one_line": "W25-ALL6 sealed 0.844 (the final), +0.009 over W18's 0.835; lab-to-sealed transfer about 0.37; runtime 2,795.3 s"
+ },
+ {
+  "id": "T2-D658",
+  "date": "2026-11-21",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "FM share 0.35 → 0.55 as a risky variant for the last upload: composite −0.0035 (bound −0.003), per-user spread +0.0255 … −0.0423; not offered"
+ },
+ {
+  "id": "T2-D659",
+  "date": "2026-11-22",
+  "theme": "Package candidates and sealed uploads",
+  "verdict": "descriptive",
+  "one_line": "W30 sealed 0.838, 0.006 below the final 0.844 (lab estimate +0.0024); post-mortem: the member-level returning reads (−0.0206 / −0.0114) had pointed down"
+ },
+ {
+  "id": "T2-FM-D1",
+  "date": "2026-11-05",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Joint CPT over all three tracks' unlabelled pools: typical −0.0037 … −0.0051 vs the shipped close-domain CPT; no checkpoint became a candidate"
+ },
+ {
+  "id": "T2-FM-D2",
+  "date": "2026-11-05",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "ST-EEGFormer base from scratch on a public pool: −0.0382 / −0.0320 vs the shipped FM member; no usable fallback member"
+ },
+ {
+  "id": "T2-FM-D3",
+  "date": "2026-11-05",
+  "theme": "Budget, approvals and bookkeeping",
+  "verdict": "descriptive",
+  "one_line": "Licence check of the replay corpora for the joint CPT: sources with a verifiable open licence admitted, one left out because its files do not name the channels"
+ },
+ {
+  "id": "T2-FM-D4",
+  "date": "2026-11-05",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Joint CPT with 1/4 replay of the original pretraining corpus: typical −0.0042 … −0.0058 vs the shipped CPT; not met"
+ },
+ {
+  "id": "T2-FM-D5",
+  "date": "2026-11-05",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Joint CPT with 1/2 replay of the original pretraining corpus: typical −0.0023 … −0.0055 vs the shipped CPT; not met"
+ },
+ {
+  "id": "T2-FM-D6",
+  "date": "2026-11-06",
+  "theme": "Continued pre-training",
+  "verdict": "closed",
+  "one_line": "Supervised post-training (P1) of ST-EEGFormer large: typical −0.0012 … −0.0055 as a member, +0.0000 as a swap, +0.0018 as an addition; not a candidate"
+ },
+ {
+  "id": "T2-FM-D7",
+  "date": "2026-11-07",
+  "theme": "Ensembling and blend weights",
+  "verdict": "closed",
+  "one_line": "FM slot built from differently pre-trained backbones instead of seeds: typical −0.0027 (3/12); backbone diversity does not help"
+ }
+]

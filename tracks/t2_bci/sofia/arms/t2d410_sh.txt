@@ -1,0 +1,2 @@
+# T2-D410: the learning curve over the number of training users, ShallowNet vr EA (M6's pooled CNN base, D253's OOF line), lc3 / lc5 / lc7 / lc9 x 10 cyclic folds, seed 400
+NSHARDS=4 --protocols lc3,lc5,lc7,lc9 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 400

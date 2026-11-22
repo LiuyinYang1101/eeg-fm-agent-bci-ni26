@@ -1,0 +1,2 @@
+# T2-D529: the MI-expert ST-L member, seed 826 (the W18 fresh-draw read, D532: swapped for D531's CTL s826): stage 1 = D454's nine MI corpora from the PUBLIC root (ni26-t2p-preft-d529-mi-root), stage 2 = D512's plain tilt line exactly, folds lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 (half a)
+NSHARDS=1 --protocols lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 --seeds 826 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-preft-d529-mi-root/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15

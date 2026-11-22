@@ -1,0 +1,2 @@
+# T2-D588 (registered 2026-11-18 before any job): t2d557_stlcarsd_s829_b.txt's line + --fm-cons 1.0 (B ARM; REF = D582's bref)
+NSHARDS=1 --protocols lc9_5,lc9_6,lc9_7,lc9_8,lc9_9 --seeds 829 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean --fm-cons 1.0

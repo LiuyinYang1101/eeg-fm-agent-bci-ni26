@@ -1,0 +1,2 @@
+# T2-D521 raw: RawNet (src/ni26/rawnet.py) on the delivered window with ONE global gain (no de-mean), K = 9 folds lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 (half a), 15 seeds
+NSHARDS=1 --protocols lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 --models rawnet --aligns none --keep-mean --recipe r1_pulx_vp2_e180_vr --seeds 810,1810,2810,3810,4810,811,1811,2811,3811,4811,812,1812,2812,3812,4812

@@ -1,0 +1,2 @@
+# T2-D396: the PAIRED control (no init) of t2d396_sh_p1 on the same seeds
+NSHARDS=1 --protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 228,229,230,231,232,233,234,235,236,237,238,239 --peruser --tta-vp 8 --tta-copies

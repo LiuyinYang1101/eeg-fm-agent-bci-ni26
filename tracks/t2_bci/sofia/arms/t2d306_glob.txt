@@ -1,0 +1,4 @@
+# T2-D306: the 2025 softclip (glob) on the pooled CNNs (FBCNet rc75 204-215, ShallowNet vr 168-179), kit + seen1, copies as the lines'
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser --softclip glob
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser --softclip glob
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser --softclip glob

@@ -1,0 +1,5 @@
+# D88 CNN arms on the competition (start-kit) split; seeds 0-2 of the first arm exist in D81 (re-run harmlessly)
+--protocols kit --models eegnet,shallow,fbcnet --aligns none,wz,sz,ea --seeds 0,1,2,3,4,5,6,7,8,9
+--protocols kit --models eegnet,shallow,fbcnet --aligns wz,ea --seeds 0,1,2,3,4,5 --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1
+--protocols kit2 --models fbcnet --aligns wz --seeds 0,1,2,3,4,5
+--protocols kit2 --models shallow --aligns ea --seeds 0,1,2,3,4,5

@@ -1,0 +1,2 @@
+# T2-D201: ShallowNet-EA r1_pulx_vp2_pv10, arm: copies through the full bank (T2-D200 replicate), FRESH seeds 96-107, kit + seen1, with per-user copies (blend r 1/2 locally)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_pv10 --seeds 96,97,98,99,100,101,102,103,104,105,106,107 --peruser

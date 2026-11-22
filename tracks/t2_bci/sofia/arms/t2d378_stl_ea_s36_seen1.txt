@@ -1,0 +1,2 @@
+# T2-D378: T2-D323 / D360r's EA ST-L on FRESH seeds 36-47 (12-23 = D360r's), seen1
+NSHARDS=1 --protocols seen1 --seeds 36,37,38,39,40,41,42,43,44,45,46,47 --models fm:st_large:mean --aligns ea --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

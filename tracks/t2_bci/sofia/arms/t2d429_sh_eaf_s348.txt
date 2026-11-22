@@ -1,0 +1,2 @@
+# T2-D429: M7's shallow recipe (r1_pulx_vp2_e180_vr, copies + tv8c), --aligns eaf, FRESH seeds 348-359, kit + seen1 (forgetting EA on BOTH EA families at once).
+--protocols kit,seen1 --models shallow --aligns eaf --recipe r1_pulx_vp2_e180_vr --seeds 348,349,350,351,352,353,354,355,356,357,358,359 --peruser --tta-vp 8 --tta-copies

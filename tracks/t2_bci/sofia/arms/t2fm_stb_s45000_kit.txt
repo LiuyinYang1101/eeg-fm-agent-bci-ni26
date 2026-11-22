@@ -1,0 +1,2 @@
+# T2-FM-D2: ST-base from scratch (fm-t2-stbase, stb) checkpoint step 45000 -> the shipped ST-L line on st_base (kit), seeds 0-11
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_base:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/fm/fm-t2-stbase/ck_stb_s45000/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75

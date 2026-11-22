@@ -1,0 +1,5 @@
+# T2-D256 (pre-registered 2026-10-25 22:15, before any D256 number): re-colouring 0.75 on the MOR member (seen1, seeds 0-11). Line 1 = ctl: the package's MOR
+# fine-tune exactly as T2-D130 / D133 (role-specific input-dropout LoRA r16, wz, 12 epochs, lr 1e-3) on today's code; line 2 = rc: the same + --fm-rc 0.75
+# (T2-D230's re-colouring toward a random other training user, on MOR's target windows). 1 process per H200 (hook LoRA memory)
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-rc 0.75

@@ -1,0 +1,2 @@
+# T2-D463: C2L300 (annealed) as a T2 member, T2-D386's MOR line (role-LoRA r16, E12, wz, rc 0.75), seen1, fresh seeds 500-513
+NSHARDS=1 --protocols seen1 --seeds 500,501,502,503,504,505,506,507,508,509,510,511,512,513 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-rc 0.75 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-d463-ckpt-ann/c2l.pt

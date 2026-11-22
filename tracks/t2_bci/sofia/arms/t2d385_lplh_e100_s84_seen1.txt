@@ -1,0 +1,2 @@
+# T2-D385: M6's second LP-FT + lh3 ST-L member (T2-D376 line) at 100 epochs on FRESH seeds 84-95, seen1; = t2d376_lplh_s36_seen1.txt except seeds + --fm-epochs 100
+NSHARDS=1 --protocols seen1 --seeds 84,85,86,87,88,89,90,91,92,93,94,95 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lr-head 3e-3 --fm-lp-epochs 10 --fm-epochs 100

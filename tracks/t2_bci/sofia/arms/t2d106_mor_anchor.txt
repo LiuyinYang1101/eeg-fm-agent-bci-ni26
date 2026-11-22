@@ -1,0 +1,5 @@
+# T2-D106 anchor + T2-D107 arm (no dependency on the pre-FT): mor_p1v2 E12, seeds 0-11, 3 shards per H200
+# line 1 = the D88 adopted MOR recipe (E12 + align wz, calib zwin) = the anchor of T2-D106 AND T2-D107 (re-run in one job)
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12
+# line 2 = T2-D107: the MOR's own scaling family (causal per-session RMS sz + the MOR gain 1.29, clamp 20), E12
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns sz --fm-calib gain --fm-epochs 12

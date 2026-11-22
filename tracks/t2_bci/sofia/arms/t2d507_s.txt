@@ -1,0 +1,2 @@
+# T2-D507 arm S: CAR + Scherer2015, shared head, w 1
+NSHARDS=3 --protocols lc9 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 780,781,782,783,784,785 --car --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1

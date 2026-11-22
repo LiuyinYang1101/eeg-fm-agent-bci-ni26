@@ -1,0 +1,2 @@
+# T2-D99 fresh-seed MOR member (mor_p1v2, D88 adopted recipe E12 + align wz), seeds 6-11; FBCNet + ST-L seeds 6-11 exist (D95)
+--protocols kit --seeds 6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12

@@ -1,0 +1,25 @@
+# Shared by the local env (env/setup_local.sh) and the sofia env "ni26" (hub/remote/env/ni26.txt mirrors it).
+# Pins match the Codabench worker image: third_party/2026-competition/requirements.txt @ 2067faf.
+# torch is NOT listed: locally it comes from the cu128 wheel index, on sofia from the module stack.
+benchopt>=1.10
+neuralset==0.3.1
+neuralfetch==0.3.1
+neuralbench==0.3.1
+exca==0.5.29
+moabb
+mne
+braindecode
+pandas
+scikit-learn
+pyriemann
+h5py
+einops
+timm
+safetensors
+huggingface_hub
+
+# Tracks 1 and 4 (added 2026-10-06): emg2pose downloads via eegdash (kit T4 README); THINGS-EEG2 unzip; DINOv2 targets
+eegdash>=0.8.2
+patool
+pyunpack
+transformers

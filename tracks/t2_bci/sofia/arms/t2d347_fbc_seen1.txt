@@ -1,0 +1,2 @@
+# T2-D347 (outlier bet B2 kill test): the shipped FBCNet line (seeds 192-203, = the D296r nets by per-seed determinism) on seen1 with the TEST streams re-aligned to the routed user's training geometry (--recolour-own); plain + tv8 + tv8c + copies in one training. LOCAL ONLY (the fingerprint path is local)
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75 --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser --tta-vp 8 --tta-copies --recolour-own ~/workspace/outputs/neural_interface_challenge/t2_d124b/fp_proteus.npy

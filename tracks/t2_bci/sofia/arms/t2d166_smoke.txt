@@ -1,0 +1,2 @@
+# T2-D166 smoke: the shipped role-LoRA MOR member (T2-D130 / D133 flags) with --fm-peruser-heads, kit, seed 0, 1 epoch (the per-user head path + the pu twin format)
+NSHARDS=1 --protocols kit --seeds 0 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 1 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-peruser-heads

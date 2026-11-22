@@ -1,0 +1,3 @@
+# T2-D224: FBCNet B3 under vp2-180 + vr: pooled SAM rho 0.05 (vr_sam05) and 0.2 (vr_sam2) vs none, the T2-D215r seeds 204-215 (reference = D215r's vr runs), kit, with per-user copies (unchanged, no SAM)
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_sam05 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_sam2 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser

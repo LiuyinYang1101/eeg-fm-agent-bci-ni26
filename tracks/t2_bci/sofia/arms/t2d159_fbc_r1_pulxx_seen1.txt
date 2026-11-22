@@ -1,0 +1,2 @@
+# T2-D159 / D160: FBCNet B3 recipe r1_pulxx (per-user FT lr 1e-3 + 80 epochs (= T2-D156's arm); pooled training = r1), FRESH seeds 48-59, seen1, with per-user FT copies (the D124c blend runs locally)
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx --seeds 48,49,50,51,52,53,54,55,56,57,58,59 --peruser

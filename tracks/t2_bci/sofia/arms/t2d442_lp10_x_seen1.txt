@@ -1,0 +1,2 @@
+# T2-D442: M7 LP-FT member (lp10, 30 epochs; t2d417_c0 line) on FRESH seeds, seen1; the PAIRED control
+NSHARDS=1 --seeds 400,401,402,403,404,405,406,407,408,409,410,411 --protocols seen1 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lp-epochs 10

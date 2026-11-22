@@ -1,0 +1,2 @@
+# T2-D378: the tilt-trained FBCNet (r1_pulxx_vp2_e180_vr_rc75_tl15, T2-D358) on FRESH seeds 204-215 (192-203 = nm35's fbc_tv8c / D358's twin), kit + seen1, copies, plain + tv8 + tv8c
+NSHARDS=1 --protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser --tta-vp 8 --tta-copies

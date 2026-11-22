@@ -1,0 +1,4 @@
+# T2-D266, arm lh3 (pre-registered 2026-10-26 07:17, before any D266 number): the adopted ST-L (T2-D247r: the D112a recipe + --fm-rc 0.75 --fm-llrd 0.75)
+# with the head's lr x 3 (--fm-lr-head 3e-3, an existing flag: the head's AdamW groups at 3e-3 on the same 3-epoch warm-up + cosine; the encoder
+# groups unchanged at 1e-4 under LLRD 0.75; stem lh0.003), kit, seeds 0-11, vs the stl_rcll runs of T2-D247 on disk. 1 process per H200
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-lr-head 3e-3

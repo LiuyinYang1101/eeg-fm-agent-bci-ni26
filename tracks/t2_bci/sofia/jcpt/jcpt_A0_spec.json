@@ -1,0 +1,54 @@
+{
+ "_doc": "T2-D354 J-CPT arm A0 (the matched task-only counterfactual): arm A's T2 group only (the same pools, holdouts and licence ruling); every other setting = arm A",
+ "proteus_group": "T2",
+ "group_weights": {
+  "T2": 1.0
+ },
+ "pools": [
+  {
+   "rel": "t2_proteus/cpt_pools/proteus_sessions_v1",
+   "group": "T2",
+   "proteus_rule": "jcpt"
+  },
+  {
+   "rel": "t2_proteus/export_dreyer2023_wide_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/cho2017_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/lee2019_mi_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/physionetmi_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/schirrmeister2017_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/shin2017b_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/stieger2021_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/bnci2014_001_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/cpt_pools/bnci2015_001_v1",
+   "group": "T2"
+  },
+  {
+   "rel": "t2_proteus/export_scherer2015_v1",
+   "group": "T2"
+  }
+ ]
+}

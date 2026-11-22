@@ -1,0 +1,5 @@
+# D93 EA for the FMs (each = its D88 recipe with align ea instead of wz; the FM's own prep still z-scores per window)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:mor_p1v2:mean --aligns ea --fm-epochs 12
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:mor_p1v2:mean --aligns ea --fm-epochs 12 --n0 30
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns ea --fm-mixup 0.4
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_base:mean --aligns ea --fm-mixup 0.4 --n0 30

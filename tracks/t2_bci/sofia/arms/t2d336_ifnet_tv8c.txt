@@ -1,0 +1,2 @@
+# T2-D336 (a distinct CNN family on the final stack): IFNet-EA under the shipped ShallowNet recipe r1_pulx_vp2_e180_vr, seeds 156-167 (paired with sh_tv8c), kit + seen1, per-user copies, plain + tv8 + tv8c in one training
+--protocols kit,seen1 --models ifnet --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 156,157,158,159,160,161,162,163,164,165,166,167 --peruser --tta-vp 8 --tta-copies

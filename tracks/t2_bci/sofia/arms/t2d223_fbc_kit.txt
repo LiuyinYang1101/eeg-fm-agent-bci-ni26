@@ -1,0 +1,3 @@
+# T2-D223: FBCNet B3 under vp2-180 + vr: pooled label smoothing 0 (vr_ls0) and 0.2 (vr_ls2) vs 0.1, the T2-D215r seeds 204-215 (reference = D215r's vr runs), kit, with per-user copies (unchanged, PERUSER LS 0.1)
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_ls0 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser
+--protocols kit --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_ls2 --seeds 204,205,206,207,208,209,210,211,212,213,214,215 --peruser

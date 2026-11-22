@@ -1,0 +1,2 @@
+# T2-D554 kill-read: the speech-recipe family (specnet, SpecAugment + mixup 0.4, 180 epochs), EA, lc9 pooled members, seed 824
+NSHARDS=3 --protocols lc9 --models specnet --aligns ea --recipe r1_spec_e180_mx4 --seeds 824

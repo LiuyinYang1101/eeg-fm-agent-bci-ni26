@@ -1,0 +1,2 @@
+# T2-D376 (the user's S2 replicate, relayed 08:3x): the CNN-wrong-weighted ST-L (sw2, the D253 OOF weights; the 6th member) on FRESH seeds 36,37,38,39,40,41,42,43,44,45,46,47 (never used for an ST-L member); otherwise t2d255_stl_sw2_kit.txt's exact line
+NSHARDS=1 --protocols kit --seeds 36,37,38,39,40,41,42,43,44,45,46,47 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-sw 2 --fm-sw-oof $S1_ROOT/runs/ni26/ni26-t2p-d253-oof-1535295/runs

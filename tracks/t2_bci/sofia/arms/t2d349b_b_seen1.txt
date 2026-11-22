@@ -1,0 +1,2 @@
+# T2-D349b (b): grid + a strong head regulariser: token dropout 0.5, head wd 0.5, head lr 3e-4 (seen1)
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:grid --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-token-drop 0.5 --fm-head-wd 0.5 --fm-lr-head 3e-4

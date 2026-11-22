@@ -1,0 +1,3 @@
+# T2-D258 (pre-registered 2026-10-25 23:15, before any D258 number): the MOR member's fine-tune at 24 epochs (vs 12), kit, seeds 0-11, today's code; vs T2-D256's ctl.
+# The package's MOR recipe otherwise (role-specific input-dropout LoRA r16, wz, lr 1e-3). 1 process per H200 (hook LoRA memory)
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mean --aligns wz --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-epochs 24

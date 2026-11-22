@@ -1,0 +1,2 @@
+# T2-D407: the in-house FM project's C + P1 arm 1 (8 sources) via its contract link; T2-D256's rc 0.75 MOR line (D386's arm line) on FRESH seeds 36-47 (0-35 used), kit; 1 process per H200
+NSHARDS=1 --protocols kit --seeds 36,37,38,39,40,41,42,43,44,45,46,47 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 1e-3 --fm-rc 0.75 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-d407-ckpts/CP1a.pt

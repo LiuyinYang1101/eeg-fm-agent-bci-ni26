@@ -1,0 +1,5 @@
+# T2-D131 readout settlement on the MOR (E12 wz), kit seeds 0-11, vs mean pooling (1457205); 3 shards per H200
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:early --aligns wz --fm-epochs 12
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:mlmean --aligns wz --fm-epochs 12
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:tp --aligns wz --fm-epochs 12
+--protocols kit --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:mor_p1v2:grid --aligns wz --fm-epochs 12

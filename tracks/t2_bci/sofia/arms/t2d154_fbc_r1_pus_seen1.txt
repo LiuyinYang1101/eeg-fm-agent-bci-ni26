@@ -1,0 +1,2 @@
+# T2-D154: FBCNet B3 recipe r1_pus (pooled training = r1; per-user FT 10 epochs, else PERUSER), seeds 12-23, seen1, with per-user FT copies (the D124c blend runs locally); control = T2-D146 sofia r1 (1516836 / 1516837)
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_pus --seeds 12,13,14,15,16,17,18,19,20,21,22,23 --peruser

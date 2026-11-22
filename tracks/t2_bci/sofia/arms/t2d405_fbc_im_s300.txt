@@ -1,0 +1,3 @@
+# T2-D405 (backlog 103): IM test-time adaptation kill test — the shipped POOLED FBCNet recipe (tl15, align none) on FRESH seeds 300-311, kit + seen1;
+# twins plIM1 / plIM2 = T-TIME-style IM (Adam, buffer 16, from window 8) streamed per stream from a fresh copy; no copies / views (member level)
+NSHARDS=1 --protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_tl15 --seeds 300,301,302,303,304,305,306,307,308,309,310,311 --tta-pl IM1,IM2

@@ -1,0 +1,2 @@
+# T2-D365 (outlier B6-1): FBCNet rc75 + user-level feature re-styling (ustyle 0.5, s 0.75), seeds 192-203 (paired with nm35's fbc_tv8c = t2d296r_fbc), kit + seen1, copies, plain + tv8 + tv8c
+--protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_us5 --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser --tta-vp 8 --tta-copies

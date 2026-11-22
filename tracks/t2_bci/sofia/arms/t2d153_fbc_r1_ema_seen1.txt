@@ -1,0 +1,2 @@
+# T2-D153: FBCNet B3 recipe r1_ema (weight EMA 0.995), seeds 12-23, seen1, with per-user FT copies (from the EMA nets; the D124c blend runs locally); control = T2-D146 sofia r1 (1516836 / 1516837)
+--protocols seen1 --models fbcnet_bboth --aligns none --recipe r1_ema --seeds 12,13,14,15,16,17,18,19,20,21,22,23 --peruser

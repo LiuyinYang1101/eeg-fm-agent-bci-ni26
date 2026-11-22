@@ -1,0 +1,4 @@
+# T2-D144 50k read: TP-2 arm B ckpt_s50000 (warm restart of TP-1 B) as the MOR start, the D130 / D133 role-LoRA recipe at lr-enc 3e-4, seeds 0-5, kit + seen1
+# NSHARDS=1 = 1 process per H200 (hook LoRA memory, review T2 P3j)
+NSHARDS=1 --protocols kit --seeds 0,1,2,3,4,5 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 3e-4 --fm-ckpt $S1_ROOT/runs/ni26/ni26-fm-tp2-B/pilot/ckpt_s50000/checkpoint-cpt.pt
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5 --models fm:mor_p1v2:mean --aligns wz --fm-epochs 12 --fm-lora-in 16 --fm-lora-in-roles --fm-lr-enc 3e-4 --fm-ckpt $S1_ROOT/runs/ni26/ni26-fm-tp2-B/pilot/ckpt_s50000/checkpoint-cpt.pt

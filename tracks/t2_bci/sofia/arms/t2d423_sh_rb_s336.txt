@@ -1,0 +1,2 @@
+# T2-D423 Stage B ARM: the same recipe and seeds on the RE-EXPRESSED export (run with S1_EXPORT=T2P_EXPORT=<the codec job's export_rb>)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 336,337,338,339,340,341,342,343,344,345,346,347 --peruser --tta-vp 8 --tta-copies

@@ -1,0 +1,2 @@
+# fit audit 2026-11-09 (lead/FIT_AUDIT_2026-11-09/BRIEF.md §4): the ST-L fine-tune with the regularisers OFF (mixup 0, rc 0, LS 0, wd 0, drop_path 0) at 3x the LP-FT member's 30 epochs; seed 0, kit; the logged train_loss is then the clean CE (no mixup / LS)
+NSHARDS=1 --protocols kit --seeds 0 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0 --fm-rc 0 --fm-llrd 0.75 --fm-wd 0 --fm-ls 0 --fm-epochs 90

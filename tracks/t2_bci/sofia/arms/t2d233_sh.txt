@@ -1,0 +1,3 @@
+# T2-D233: ShallowNet-EA under vp2-180 + vr, pooled training windows (EA inputs) re-coloured toward a random other training user at 0.75 (vr_rc75) / 1.0 (vr_rc10), copies = the vr line's, the T2-D215r seeds 168-179 (reference = D215r's vr runs; FBCNet = D231's rc75), kit + seen1
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_rc75 --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr_rc10 --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser

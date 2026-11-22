@@ -1,0 +1,4 @@
+# T2-D257, arm aug (pre-registered 2026-10-26 00:24, before any D257 number): the adopted ST-L (T2-D247r: the D112a recipe + --fm-rc 0.75 --fm-llrd 0.75)
+# + T2-D112's G1 / G2 on its target training windows (--fm-aug 0.2:30: per-window per-channel gain x exp(U(-0.2, 0.2)) and a circular shift of +-30 samples
+# = +-0.25 s at 120 Hz, after rc; tag aug0.2-30), seen1, seeds 0-11, vs the stl_rcll runs of T2-D247 on disk. 1 process per H200
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-aug 0.2:30

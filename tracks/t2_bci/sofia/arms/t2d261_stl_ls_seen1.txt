@@ -1,0 +1,4 @@
+# T2-D261, arm ls (pre-registered 2026-10-26 03:19, before any D261 number): the adopted ST-L (T2-D247r: the D112a recipe + --fm-rc 0.75 --fm-llrd 0.75)
+# with label smoothing 0.2 in its fine-tune's cross-entropy (--fm-ls 0.2; every FM fine-tune since T2-D82 used 0.1; tag ls0.2 after rc0.75, before cpt;
+# no augmentation), seen1, seeds 0-11, vs the stl_rcll runs of T2-D247 on disk. 1 process per H200
+NSHARDS=1 --protocols seen1 --seeds 0,1,2,3,4,5,6,7,8,9,10,11 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d111-with/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-ls 0.2

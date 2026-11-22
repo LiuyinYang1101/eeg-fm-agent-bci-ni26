@@ -1,0 +1,2 @@
+# T2-D512: stlcar ST-L member seed 824 on K = 9 folds lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 (half a), public ST-L checkpoint, 100 epochs
+NSHARDS=1 --protocols lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 --seeds 824 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car

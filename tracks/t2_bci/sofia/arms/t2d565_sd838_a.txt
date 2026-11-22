@@ -1,0 +1,2 @@
+# T2-D565 C': D558's SD-CAR line 838 (fold half a), run on zen5_vis with NI26_FM_GRADCKPT=1 (the recipe identical; a different GPU type)
+NSHARDS=1 --protocols lc9_0,lc9_1,lc9_2,lc9_3,lc9_4 --seeds 838 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean

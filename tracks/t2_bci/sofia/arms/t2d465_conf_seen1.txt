@@ -1,0 +1,2 @@
+# T2-D465: EEGConformer under M7's ShallowNet / IFNet recipe (r1_pulx_vp2_e180_vr, causal EA, per-user copies + tv8c), seen1, fresh seeds 528-539
+NSHARDS=2 --protocols seen1 --models conformer --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 528,529,530,531,532,533,534,535,536,537,538,539 --peruser --tta-vp 8 --tta-copies

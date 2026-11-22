@@ -1,0 +1,2 @@
+# T2-D642 (W25) slot fm_1 = t2d578_aug_stlsd_s843's line, seed 901, arm C (user-balanced); ss8 + rt = 12 folds
+NSHARDS=8 --protocols ss8,rt --seeds 901 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-aug 0.2:30:0.1 --fm-mixup 0.8 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-tilt 0.15 --side dcmean --fm-side dcmean --user-balance

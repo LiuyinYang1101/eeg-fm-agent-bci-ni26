@@ -1,0 +1,2 @@
+# T2-D524 SMOKE: the CAR side arm (seed 823) on fold lc9_0, 2 epochs (the new FM side-head path on the H200)
+NSHARDS=1 --protocols lc9_0 --seeds 823 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 2 --car --fm-tilt 0.15 --side dcmean --fm-side dcmean

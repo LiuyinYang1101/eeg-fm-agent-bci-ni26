@@ -1,0 +1,2 @@
+# D97 ST-L CPT + gain-sz + drop path 0.1 (T1 D76), seeds 0-5 vs D94 ST-L CPT gain-sz (1455390); 1 process per GPU (NSHARDS=1)
+--protocols kit --seeds 0,1,2,3,4,5 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-drop-path 0.1 --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth

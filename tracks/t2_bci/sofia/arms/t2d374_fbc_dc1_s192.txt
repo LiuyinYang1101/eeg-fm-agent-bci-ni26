@@ -1,0 +1,2 @@
+# T2-D374: tuned DANN (dc1) on the FBCNet rc75 line, seeds 192-203 = nm35's fbc_tv8c seeds (paired by design, the row's spec), kit + seen1, copies + tv8c
+NSHARDS=1 --protocols kit,seen1 --models fbcnet_bboth --aligns none --recipe r1_pulxx_vp2_e180_vr_rc75_dc1 --seeds 192,193,194,195,196,197,198,199,200,201,202,203 --peruser --tta-vp 8 --tta-copies

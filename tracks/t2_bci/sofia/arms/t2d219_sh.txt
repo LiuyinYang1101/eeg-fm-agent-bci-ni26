@@ -1,0 +1,3 @@
+# T2-D219: ShallowNet-EA r1_pulx_vp2_e180_vr (the upload-5 line) + Scherer2015 in the POOLED net's training set (x1 / x05 as the FBCNet files), the T2-D215r seeds 168-179 (reference = D215r's vr runs), kit + seen1, with per-user copies (PROTEUS-only)
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1
+--protocols kit,seen1 --models shallow --aligns ea --recipe r1_pulx_vp2_e180_vr --seeds 168,169,170,171,172,173,174,175,176,177,178,179 --peruser --extra $S1_ROOT/data/ni26/t2_proteus/export_scherer2015_v1 --extra-frac 0.5

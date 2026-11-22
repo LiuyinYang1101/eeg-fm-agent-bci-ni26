@@ -1,0 +1,4 @@
+# T2-D468 (diagnostic): clean per-epoch training BA next to the held-out curve; ST-L / base / small with CPT, M7's member recipe (100 epochs), kit, seeds 600-602
+NSHARDS=3 --protocols kit --seeds 600,601,602 --models fm:st_large:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-stlarge-d89b/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-train-eval
+NSHARDS=3 --protocols kit --seeds 600,601,602 --models fm:st_base:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d460-b-kit/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-train-eval
+NSHARDS=3 --protocols kit --seeds 600,601,602 --models fm:st_small:mean --aligns sz --fm-calib gain --fm-ckpt $S1_ROOT/runs/ni26/ni26-t2p-cpt-d460-s-kit/checkpoint-cpt.pth --fm-mixup 0.4 --fm-rc 0.75 --fm-llrd 0.75 --fm-epochs 100 --fm-train-eval

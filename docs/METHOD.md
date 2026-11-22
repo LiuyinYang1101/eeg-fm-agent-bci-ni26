@@ -1,6 +1,6 @@
 # T2 method: PROTEUS BCI decoding (Track 02)
 
-> **2026-11-22: §0 below is the final state (the two files uploaded on Nov 21). `docs/T2_FINAL_STACK.md` is the Nov 14 stack; §1–§6 are the
+> **2026-11-22: §0 below is the final state (the two files uploaded on Nov 21). The Nov 14 stack has its own page, which is not part of this public copy; §1–§6 are the
 > October history (§2 describes the late-October package).**
 
 ## 0. Final state (2026-11-22)
@@ -79,7 +79,7 @@ W25-ALL6 and W21 differ in their configs only in `fm_members`. Every hop of the 
   - Related (A63): decode-only reorder LEVELS are not comparable across orders. Only within-order contrasts are.
 
 T2-D178. This is a summary for the lead and the workshop report. Every number below comes from a pre-registered row in
-`docs/DECISIONS_T2.md` (cited as Dxxx) or a row in `docs/SUBMISSIONS.md`. Where a number and its row disagree, the row wins.
+`docs/log/DECISIONS_T2.md` (cited as Dxxx) or a row in the submissions list (not part of this public copy). Where a number and its row disagree, the row wins.
 
 ## 1. Task and protocol
 - Sealed task: 3 cued commands (kinesthetic MI / mental calculation / word association) from 4 s windows (41 EEG
@@ -166,7 +166,7 @@ Output = 0.5 FBCNet + 0.2 ShallowNet + 0.2 ST-EEGFormer-L + 0.1 our MOR, then a 
   - golden 1.000, worker guard, kit Simulated + warm-up replays, clean replay 0 differences, robustness all_pass;
   - 12.0–12.6 ms per window.
 - They are the big-twin line (seeds 0–9), four seed draws (20–29 … 80–89), and the D140 structural line.
-- SHA-256 and paths: `docs/SUBMISSIONS.md`.
+- SHA-256 and paths: the submissions list (not part of this public copy).
 - They are proposed to replace `f403527d`, D150's four draws and `94ccbbc1` one for one (PLAN §6b item 8). The user
   decides.
 - T2-W4 (candidate): the kit-split twin `b012b1a1…`, for an official warm-up number of the new template.
